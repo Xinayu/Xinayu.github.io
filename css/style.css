@@ -125,8 +125,6 @@ div {
         padding: 7px;
         border-radius: 6px;
         color: white; }
-        #sidebar .widget .tagcloud a:nth-child(0) {
-          background: #00ceda; }
         #sidebar .widget .tagcloud a:nth-child(1) {
           background: #daa145; }
         #sidebar .widget .tagcloud a:nth-child(2) {
@@ -134,7 +132,11 @@ div {
         #sidebar .widget .tagcloud a:nth-child(3) {
           background: #75da89; }
         #sidebar .widget .tagcloud a:nth-child(4) {
-          background: #da6b7c; }
+          background: #ff7676; }
+        #sidebar .widget .tagcloud a:nth-child(5) {
+          background: #60ddff; }
+        #sidebar .widget .tagcloud a:nth-child(6) {
+          background: #d3ff48; }
     #sidebar .widget ul {
       list-style: none;
       padding: 0; }
@@ -254,13 +256,15 @@ div {
     .post .post-content pre code {
       padding: 0 2em; }
     .post .post-content p {
-      margin: 0 0 1.234em; }
+      margin: 0 0 0; }
       .post .post-content p code {
         display: inline-block;
-        margin: 0 5px;
-        padding: 0 5px;
-        background: #f7f8f8;
-        font-family: Menlo, Consolas, monospace !important; }
+        margin: 3px 5px;
+        padding: 0 8px;
+        background: #419eff4d;
+        font-family: Menlo, Consolas, monospace !important;
+        color: black;
+        border-radius: 8px; }
       .post .post-content p a {
         color: #01579f;
         padding-bottom: 2px;
@@ -408,12 +412,12 @@ blockquote, .stressed {
   border-left: none; }
 
 blockquote::before, .stressed-quote::before {
-  content: "\201C";
+  content: "\2658";
   display: block;
   font-family: times;
   font-style: normal;
-  font-size: 48px;
-  color: #444;
+  font-size: 34px;
+  color: #ec4545;
   font-weight: bold;
   line-height: 30px;
   margin-left: -50px;
@@ -1292,13 +1296,15 @@ figure.highlight,
       .post-nav a.pre:before {
         font-family: "FontAwesome";
         content: "\f0d9";
-        padding-right: 0.3em; }
+        padding-right: 0.3em;
+        color: #409eff; }
     .post-nav a.next {
       float: right; }
       .post-nav a.next:after {
         font-family: "FontAwesome";
         content: "\f0da";
-        padding-left: 0.3em; }
+        padding-left: 0.3em;
+        color: #409eff; }
     .post-nav a:hover {
       border-bottom: none;
       color: #222; }
