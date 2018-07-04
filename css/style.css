@@ -139,6 +139,10 @@ div {
           background: #daa145; }
         #sidebar .widget .tagcloud a:nth-child(7) {
           background: #75da89; }
+        #sidebar .widget .tagcloud a:nth-child(8) {
+          background: #376dda; }
+        #sidebar .widget .tagcloud a:nth-child(9) {
+          background: #d2da00; }
     #sidebar .widget ul {
       list-style: none;
       padding: 0; }
@@ -250,7 +254,7 @@ div {
     text-justify: distribute;
     word-break: normal; }
     .post .post-content h2 {
-      margin: 0.2em 0 1.1em;
+      margin: 0.7em 0 0.2em;
       border-bottom: 1px solid #eee;
       overflow: hidden; }
     .post .post-content h3 {
@@ -310,7 +314,7 @@ div {
         .post .post-content ul a:hover, .post .post-content ol a:hover {
           text-decoration: underline; }
   .post .tags {
-    padding-bottom: 1em; }
+    padding: 1em 0 0; }
     .post .tags a {
       margin-right: .5em; }
       .post .tags a:before {
@@ -1163,7 +1167,7 @@ figure.highlight,
 .highlight.xml .title,
 .highlight.xml .name, .highlight.html .title,
 .highlight.html .name {
-  color: #ff0b0b; }
+  color: #f75252; }
 
 .highlight.puppet .title {
   color: #795da3; }
@@ -1269,14 +1273,14 @@ figure.highlight,
 
 .highlight.yml .line,
 .highlight.yml .attr {
-  color: #63a35c; }
+  color: #ff7af4; }
 
 .highlight.yml .line,
 .highlight.yml .string,
 .highlight.yml .type,
 .highlight.yml .literal,
 .highlight.yml .meta {
-  color: #183691; }
+  color: #7ddaff; }
 
 .highlight.yml .number {
   color: #0086b3; }

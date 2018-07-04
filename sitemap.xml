@@ -2,17 +2,17 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>http://yoursite.com/post-sitemap.xml</loc>
-        <lastmod>2018-07-04T03:04:28.812Z</lastmod>
+        <loc>https://github.com/Xinayu/post-sitemap.xml</loc>
+        <lastmod>2018-07-04T06:04:43.808Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite.com/category-sitemap.xml</loc>
+        <loc>https://github.com/Xinayu/category-sitemap.xml</loc>
         <lastmod>2018-05-31T09:06:10.996Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite.com/tag-sitemap.xml</loc>
+        <loc>https://github.com/Xinayu/tag-sitemap.xml</loc>
         <lastmod>2018-05-31T09:06:10.996Z</lastmod>
     </sitemap>
 
