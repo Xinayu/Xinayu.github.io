@@ -839,9 +839,10 @@ figure.highlight,
     width: 100%; }
     figure.highlight .code pre,
     .codeblock .code pre {
-      max-width: 700px;
+      max-width: 44em;
       overflow-x: auto;
-      overflow-y: hidden; }
+      overflow-y: hidden;
+      padding-bottom: 0.7em; }
   figure.highlight .line,
   .codeblock .line {
     height: 1.3em;
@@ -1503,5 +1504,11 @@ em.search-keyword {
   .post-copyright li {
     margin: 8px 0; }
 
-pre::-webkit-scrollbar-button {
-  background: none; }
+pre::-webkit-scrollbar {
+  height: 7px; }
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #6f93de; }
+
+pre::-webkit-scrollbar-track {
+  background: white; }

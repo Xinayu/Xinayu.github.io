@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>https://github.com/Xinayu/2018/03/14/TX-%E7%A7%BB%E5%8A%A8%E7%AB%AF/</loc>
+        <lastmod>2018-07-04T10:06:24.608Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://github.com/Xinayu/2018/07/04/hexo--Hexo+Github/</loc>
-        <lastmod>2018-07-04T06:16:43.754Z</lastmod>
+        <lastmod>2018-07-04T07:10:20.269Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +24,7 @@
 
     <url>
         <loc>https://github.com/Xinayu/2018/07/04/hexo--%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2/</loc>
-        <lastmod>2018-07-04T06:16:43.729Z</lastmod>
+        <lastmod>2018-07-04T07:10:20.248Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -65,14 +73,6 @@
     <url>
         <loc>https://github.com/Xinayu/2018/07/02/Vue--Vuex/</loc>
         <lastmod>2018-07-04T02:49:42.561Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/2018/03/14/TX-%E7%A7%BB%E5%8A%A8%E7%AB%AF/</loc>
-        <lastmod>2018-06-19T02:31:05.611Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
