@@ -122,7 +122,7 @@ div {
       margin-top: 10px; }
       #sidebar .widget .tagcloud a {
         line-height: 2.6;
-        padding: 7px;
+        padding: 5px;
         border-radius: 6px;
         color: white; }
         #sidebar .widget .tagcloud a:nth-child(1) {
