@@ -10,3 +10,19 @@ $("#rocket").click(function() {
     });
     return false;
 });
+
+
+
+
+
+//add sign for each pres
+$('copy').addClass('btn-copy').each(function(index) {
+    //为当前元素下的第一个代码段添加id
+    $(this).parent(':first').nextAll('figure:first').find('pre').attr("id","pre"+(index+1));
+    //添加映射关系
+    $(this).attr('data-clipboard-target',"#pre"+(index+1));
+});
+
+let clipboard = new Clipboard('.btn-copy');
+
+

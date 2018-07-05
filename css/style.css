@@ -1514,3 +1514,18 @@ pre::-webkit-scrollbar-thumb {
 
 pre::-webkit-scrollbar-track {
   background: white; }
+
+.btn-copy {
+  float: right;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  color: #4ca3ff;
+  position: relative;
+  font-style: normal; }
+  .btn-copy:before {
+    content: '\2618 ';
+    font-size: 26px;
+    top: -0.4em;
+    position: absolute;
+    right: 0.3em; }
