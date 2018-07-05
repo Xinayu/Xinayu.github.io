@@ -1522,8 +1522,7 @@ pre::-webkit-scrollbar-track {
   width: 20px;
   height: 20px;
   color: #4ca3ff;
-  position: relative;
-  font-style: normal; }
+  position: relative; }
   .btn-copy:before {
     content: '\2618 ';
     font-size: 26px;

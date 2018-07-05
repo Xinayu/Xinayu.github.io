@@ -16,20 +16,6 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/tags/Gulp/</loc>
-        <lastmod>2018-07-05T06:01:18.691Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/tags/jQuery/</loc>
-        <lastmod>2018-07-05T06:06:36.551Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/Xinayu/tags/JavaScript/</loc>
         <lastmod>2018-07-05T06:14:02.569Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,8 +44,22 @@
     </url>
 
     <url>
+        <loc>https://github.com/Xinayu/tags/Gulp/</loc>
+        <lastmod>2018-07-05T09:14:51.099Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://github.com/Xinayu/tags/hexo/</loc>
-        <lastmod>2018-07-05T09:12:34.436Z</lastmod>
+        <lastmod>2018-07-05T09:17:04.693Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/tags/jQuery/</loc>
+        <lastmod>2018-07-05T09:21:11.782Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
