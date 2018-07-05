@@ -1022,6 +1022,9 @@ figure.highlight,
 .highlight.js .code .title {
   color: #ffffff; }
 
+.highlight.js .code .line {
+  color: #beec4c; }
+
 .highlight.js .code .javadoc {
   color: #969896; }
 
@@ -1037,7 +1040,7 @@ figure.highlight,
 
 .highlight.js .code .literal,
 .highlight.js .code .number {
-  color: #0086b3; }
+  color: #fdfdfd; }
 
 .highlight.json .code .attribute {
   color: #183691; }
