@@ -257,9 +257,15 @@ div {
       margin: 0.7em 0 0.2em;
       border-bottom: 1px solid #eee;
       overflow: hidden;
-      font-size: 1.2em; }
+      font-size: 1.4em; }
+      .post .post-content h2:before {
+        content: '\25BA ';
+        color: #39d4a3;
+        float: left;
+        margin-right: 0.3em; }
     .post .post-content h3 {
-      margin: 1.4em 0 1.1em; }
+      margin: 0.4em 0;
+      font-size: 1.1em; }
     .post .post-content pre code {
       padding: 0 2em; }
     .post .post-content p {
