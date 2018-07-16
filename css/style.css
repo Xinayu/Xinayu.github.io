@@ -254,7 +254,7 @@ div {
     text-justify: distribute;
     word-break: normal; }
     .post .post-content h2 {
-      margin: 0.7em 0 0.2em;
+      margin: 1.2em 0 0.8em;
       border-bottom: 1px solid #eee;
       overflow: hidden;
       font-size: 1.4em; }
@@ -264,7 +264,7 @@ div {
         float: left;
         margin-right: 0.3em; }
     .post .post-content h3 {
-      margin: 0.4em 0;
+      margin: 1em 0 0.4em;
       font-size: 1.1em; }
     .post .post-content pre code {
       padding: 0 2em; }
