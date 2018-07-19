@@ -15,16 +15,11 @@ $("#rocket").click(function() {
 
 
 
-//add sign for each pres
-$('copy').addClass('btn-copy').each(function(index) {
-    //为当前元素下的第一个代码段添加id
-    $(this).parent(':first').nextAll('figure:first').find('pre').attr("id","pre"+(index+1));
-    //添加映射关系
-    $(this).attr({
-        'data-clipboard-target':"#pre"+(index+1),
-        'title':'点击复制'
-    });
+
+//动态append复制按钮，添加映射
+$('figure').each(function(index, el) {
+    $(this).attr("id","figure"+(index+1)).append(' <span class="copy">复制</span>')
+        .find('.copy').attr({'data-clipboard-target':"#figure"+(index+1),'title':'点击复制'})
+        .click(function() {$(this).addClass('on').text('完成');});
 });
-let clipboard = new Clipboard('.btn-copy');
-
-
+let clipboard = new Clipboard('.copy');

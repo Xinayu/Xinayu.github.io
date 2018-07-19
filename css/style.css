@@ -247,7 +247,7 @@ div {
   .post .post-content {
     clear: left;
     font-size: 15px;
-    line-height: 1.77;
+    line-height: 1.5;
     color: #444;
     padding-top: 15px;
     text-align: justify;
@@ -269,7 +269,7 @@ div {
     .post .post-content pre code {
       padding: 0 2em; }
     .post .post-content p {
-      margin: 0 0 0; }
+      margin: 1.5em 0; }
       .post .post-content p code {
         display: inline-block;
         margin: 3px 5px;
@@ -788,6 +788,27 @@ pre {
     background: #2e72b8;
     border-bottom-color: #D26911; }
 
+figure {
+  position: relative;
+  overflow: hidden; }
+  figure .copy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #faff27;
+    color: #262626;
+    padding: 0.24em 0.8em;
+    border-bottom-left-radius: 1em;
+    font-size: 0.7em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    figure .copy.on {
+      background: #1ec241;
+      color: white; }
+
 /* syntax highlight*/
 figure.highlight,
 .codeblock {
@@ -797,7 +818,8 @@ figure.highlight,
   color: #deff33;
   padding-top: 15px;
   overflow: hidden;
-  border-radius: 6px; }
+  border-radius: 6px;
+  border-top-right-radius: 0; }
   figure.highlight table,
   .codeblock table {
     display: block;
@@ -842,7 +864,7 @@ figure.highlight,
     padding: 0.3em 15px; }
   figure.highlight .code,
   .codeblock .code {
-    padding: 0.3em 15px 0.3em 1em;
+    padding: 0.5em 15px 0.3em 1em;
     width: 100%; }
     figure.highlight .code pre,
     .codeblock .code pre {
