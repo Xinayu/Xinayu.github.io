@@ -143,6 +143,10 @@ div {
           background: #376dda; }
         #sidebar .widget .tagcloud a:nth-child(9) {
           background: #d2da00; }
+        #sidebar .widget .tagcloud a:nth-child(10) {
+          background: #da75aa; }
+        #sidebar .widget .tagcloud a:nth-child(11) {
+          background: #a8da7b; }
     #sidebar .widget ul {
       list-style: none;
       padding: 0; }
