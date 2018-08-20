@@ -49,13 +49,6 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/CSS%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-07-17T02:18:19.191Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/Xinayu/categories/hexo%E5%8A%9F%E8%83%BD%E6%95%B4%E5%90%88/</loc>
         <lastmod>2018-07-19T03:20:37.582Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -72,6 +65,20 @@
     <url>
         <loc>https://github.com/Xinayu/categories/TX-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
         <lastmod>2018-08-07T06:28:58.823Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/canvas%E6%94%BB%E7%95%A5/</loc>
+        <lastmod>2018-08-15T04:34:45.518Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/CSS%E6%89%8B%E5%86%8C/</loc>
+        <lastmod>2018-08-20T02:54:34.228Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
