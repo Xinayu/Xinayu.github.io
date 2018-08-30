@@ -1,0 +1,206 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>各种光源 | YOUQUAN</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="stylesheet" type="text/css" href="https://oindk07nf.qnssl.com/atom-one-dark.css"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">各种光源</h1><a id="logo" href="/.">YOUQUAN</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">各种光源</h1><div class="post-meta">Aug 20, 2018<span> | </span><span class="category"><a href="/categories/THREE-js/">THREE.js</a></span></div><div class="post-content"><p><code>THREE.js</code>提供了一系列的光源，各有用途：</p>
+<table>
+<thead>
+<tr>
+<th>光源名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AmbientLight（环境光源）</td>
+<td>颜色会直接作用物体的当前颜色上</td>
+</tr>
+<tr>
+<td>PointLight（点光源）</td>
+<td>一个点向所有方向</td>
+</tr>
+<tr>
+<td>SpotLight（聚光灯）</td>
+<td>聚光灯效果（范围）例如台灯</td>
+</tr>
+<tr>
+<td>DirectionalLight（方向光源）</td>
+<td>平行光源 例如太阳光</td>
+</tr>
+<tr>
+<td>HemisphereLight（半球光）</td>
+<td>创造自然室外光线，模拟反光和光线微弱的天空，太阳升降</td>
+</tr>
+<tr>
+<td>AreaLight（面光源）</td>
+<td>可指定光线的面</td>
+</tr>
+<tr>
+<td>LensFlare（镜头眩光）</td>
+<td>给光源添加眩光效果</td>
+</tr>
+</tbody>
+</table>
+<h3 id="AmbientLight（环境光源）"><a href="#AmbientLight（环境光源）" class="headerlink" title="AmbientLight（环境光源）"></a>AmbientLight（环境光源）</h3><p>环境光可以说是场景的整体基调，它没有特定的来源，同时也不会影响阴影的产生。有点类似于滤镜，营造全局。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// add subtle ambient lighting</span></span><br><span class="line"><span class="keyword">var</span> ambiColor = <span class="string">"#0c0c0c"</span>;    <span class="comment">//浅色，弱化生硬的投影</span></span><br><span class="line"><span class="keyword">var</span> ambientLight = <span class="keyword">new</span> THREE.AmbientLight(ambiColor);</span><br><span class="line">scene.add(ambientLight);</span><br></pre></td></tr></table></figure>
+<p>由于环境光无处不在，也就是说它是没有方向的，当然不能产生阴影。而且，它也不能作为环境中唯一的光源。</p>
+<h3 id="PointLight（点光源）"><a href="#PointLight（点光源）" class="headerlink" title="PointLight（点光源）"></a>PointLight（点光源）</h3><p>可以将点光源想象成萤火虫一样发出的光。由于它的光线也发射到四面八方，在ThreeJS中它也是不能产生阴影的。常用的属性如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color（颜色）</td>
+<td>光源颜色</td>
+</tr>
+<tr>
+<td>intensity（强度）</td>
+<td>光照强度，默认值是1</td>
+</tr>
+<tr>
+<td>distance（距离）</td>
+<td>光源照射的距离</td>
+</tr>
+<tr>
+<td>position（位置）</td>
+<td>光源所在的位置</td>
+</tr>
+<tr>
+<td>visible（是否可见）</td>
+<td>true打开，false关闭</td>
+</tr>
+</tbody>
+</table>
+<h3 id="SpotLight（聚光灯）"><a href="#SpotLight（聚光灯）" class="headerlink" title="SpotLight（聚光灯）"></a>SpotLight（聚光灯）</h3><p>大概是最常用的光源，类比手电筒或灯笼。常用的属性如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>castShadow（阴影）</td>
+<td>true则照射会产生yinying</td>
+</tr>
+<tr>
+<td>shadowCameraNear（投影近点）</td>
+<td>从距离光源的哪一点开始可以生成阴影</td>
+</tr>
+<tr>
+<td>shadowCameraFar（投影远点）</td>
+<td>到距离光源的哪一点为止可以生成阴影</td>
+</tr>
+<tr>
+<td>shadowCameraFov（投影视场）</td>
+<td>用于生成阴影的视场有多大</td>
+</tr>
+<tr>
+<td>target（目标）</td>
+<td>决定光照的fang’xiang</td>
+</tr>
+<tr>
+<td>shadowBias（阴影偏移）</td>
+<td>用来设置阴影的位置</td>
+</tr>
+<tr>
+<td>angle（角度）</td>
+<td>光源射出的光柱有多宽。单位是弧度，默认值是Math.PI/3</td>
+</tr>
+<tr>
+<td>exponent（光强衰减指数）</td>
+<td>光照指向特定目标。在这个方向上距离光源越远，则光强度递减得越快。这个值觉得光照强度递减得有多快</td>
+</tr>
+<tr>
+<td>onlyShadow（仅阴影）</td>
+<td>true这个光源只会生成阴影而不会在场景</td>
+</tr>
+<tr>
+<td>shadowCameraFovVisible（投影方式可见）</td>
+<td>true就可以看到光源在哪里以及如何生成光源</td>
+</tr>
+<tr>
+<td>shadowDarkness（阴影暗度）</td>
+<td>默认值0.5。</td>
+</tr>
+<tr>
+<td>shadowMapWidth（引用映射宽度）</td>
+<td>决定由多少像素来生成阴影。如果阴影的边缘参差不齐或看上去不那么平滑，可以增加这个值。</td>
+</tr>
+<tr>
+<td>shadowMapHeight（引用映射高度）</td>
+<td>决定由多少像素来生成阴影。如果阴影的边缘参差不齐或看上去不那么平滑，可以增加这个值。</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> spotLight = <span class="keyword">new</span> THREE.SpotLight(<span class="number">0xffffff</span>);  <span class="comment">//颜色</span></span><br><span class="line">    spotLight.position.set(<span class="number">0</span>, <span class="number">90</span>, <span class="number">-50</span>);    <span class="comment">//光源位置</span></span><br><span class="line">    spotLight.castShadow = <span class="literal">true</span>;          <span class="comment">//打开照射阴影</span></span><br><span class="line">    spotLight.target = plane;             <span class="comment">//照射目标（照射于中心点）</span></span><br><span class="line">    spotLight.shadowCameraFovVisible = <span class="literal">true</span>;  <span class="comment">//显示阴影的形成</span></span><br><span class="line">    scene.add(spotLight);</span><br></pre></td></tr></table></figure>
+<h3 id="DirectionalLight（方向光源）"><a href="#DirectionalLight（方向光源）" class="headerlink" title="DirectionalLight（方向光源）"></a>DirectionalLight（方向光源）</h3><p>方向光源可以看成是距离很远的光源，就像太阳光一样，达到地球的光线都可以看成是平行光。被方向光光源照亮的整个区域接收到的光强是一样的。</p>
+<p>由于模型的阴影渲染会消耗很多的性能，所以我们需要设置平行光相关的区域能够显示阴影，和阴影显示的良好程度。如下几个属性：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">directionalLight.shadow.camera.near = <span class="number">20</span>; <span class="comment">//产生阴影的最近距离</span></span><br><span class="line">directionalLight.shadow.camera.far = <span class="number">200</span>; <span class="comment">//产生阴影的最远距离</span></span><br><span class="line">directionalLight.shadow.camera.left = <span class="number">-50</span>; <span class="comment">//产生阴影距离位置的最左边位置</span></span><br><span class="line">directionalLight.shadow.camera.right = <span class="number">50</span>; <span class="comment">//最右边</span></span><br><span class="line">directionalLight.shadow.camera.top = <span class="number">50</span>; <span class="comment">//最上边</span></span><br><span class="line">directionalLight.shadow.camera.bottom = <span class="number">-50</span>; <span class="comment">//最下面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这两个值决定使用多少像素生成阴影 默认512</span></span><br><span class="line">directionalLight.shadow.mapSize.height = <span class="number">1024</span>;</span><br><span class="line">directionalLight.shadow.mapSize.width = <span class="number">1024</span>;</span><br></pre></td></tr></table></figure>
+<p><img src="https://miao.su/images/2018/08/23/pl6e21c.png" alt="pl6e21c.png"></p>
+<p>由于所有光线是相互平行的，所以不会有光椎，却而代之的是一个方块。图中方块区域内的元素会显示阴影。</p>
+<h3 id="HemisphereLight（半球光）"><a href="#HemisphereLight（半球光）" class="headerlink" title="HemisphereLight（半球光）"></a>HemisphereLight（半球光）</h3><p>使用半球光可以获得光加贴近自然的光照效果。</p>
+<p>当你使用环境光为场景提供基础色，现实中并非所有的光都来自天空，还有很多散射、地面的反射和其他物体的反射，所有他可以设置如下属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述·</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>groundColor</td>
+<td>从地面发出的光线的颜色</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>从天空中发出的光线的颜色</td>
+</tr>
+<tr>
+<td>intensity</td>
+<td>光照强度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="LensFlare（镜头眩光）"><a href="#LensFlare（镜头眩光）" class="headerlink" title="LensFlare（镜头眩光）"></a>LensFlare（镜头眩光）</h3><p>当你直接朝着太阳拍照时候就会出现镜头眩光，现实中虽然要必然这种现象，但是在游戏场景中，镜头眩光能使得场景更加真实。常用的属性如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>texture（纹理）</td>
+<td>眩光材质，决定炫光的样子</td>
+</tr>
+<tr>
+<td>size（尺寸）</td>
+<td>制定眩光的大小</td>
+</tr>
+<tr>
+<td>distance（距离）</td>
+<td>光源（0）到相机（1）</td>
+</tr>
+<tr>
+<td>blending（融合）</td>
+<td>丰富眩光的材质</td>
+</tr>
+<tr>
+<td>color（颜色）</td>
+<td>眩光的颜色</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> textureFlare0 = THREE.ImageUtils.loadTexture(<span class="string">"lensflare0.png"</span>);  <span class="comment">//加载纹理</span></span><br><span class="line"><span class="keyword">var</span> textureFlare3 = THREE.ImageUtils.loadTexture(<span class="string">"lensflare3.png"</span>);  <span class="comment">//加载纹理</span></span><br><span class="line"><span class="keyword">var</span> flareColor = <span class="keyword">new</span> THREE.Color(<span class="number">0xf0fa78</span>);</span><br><span class="line"><span class="keyword">var</span> lensFlare = <span class="keyword">new</span> THREE.LensFlare(textureFlare0, <span class="number">350</span>, <span class="number">0.0</span>, THREE.AdditiveBlending, flareColor); </span><br><span class="line"><span class="comment">// new THREE.LensFlare(texture, size, distance, blending, color)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//.add ( texture, size, distance, blending, color )</span></span><br><span class="line"><span class="comment">// 添加一个光晕，和构造函数的配置一样</span></span><br><span class="line">lensFlare.add(textureFlare3, <span class="number">60</span>, <span class="number">0.6</span>, THREE.AdditiveBlending); </span><br><span class="line">lensFlare.add(textureFlare3, <span class="number">70</span>, <span class="number">0.7</span>, THREE.AdditiveBlending);</span><br><span class="line">lensFlare.add(textureFlare3, <span class="number">120</span>, <span class="number">0.9</span>, THREE.AdditiveBlending);</span><br><span class="line">lensFlare.add(textureFlare3, <span class="number">70</span>, <span class="number">1.0</span>, THREE.AdditiveBlending);</span><br><span class="line">lensFlare.position.copy(spotLight.position);  <span class="comment">//让镜头眩光出现在点光源处</span></span><br><span class="line"></span><br><span class="line">scene.add(lensFlare);</span><br></pre></td></tr></table></figure>
+<p><img src="https://miao.su/images/2018/08/23/lenf2b614.png" alt="lenf2b614.png"></p>
+</div><div class="tags"><a href="/tags/THREE/">THREE</a></div><div class="post-nav"><a class="pre" href="/2018/08/21/3JS--材质/">材质</a><a class="next" href="/2018/08/18/3JS--场景对象THREE.Scene/">THREE.Scene常用方法和属性</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS手册/">CSS手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gulp使用参考/">Gulp使用参考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS出深入浅/">JS出深入浅</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript框架/">JavaScript框架</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Swiper3-0手册/">Swiper3.0手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/THREE-js/">THREE.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TX-解决方案/">TX-解决方案</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue使用手册/">Vue使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/canvas攻略/">canvas攻略</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo功能整合/">hexo功能整合</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery使用手册/">jQuery使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/弹性布局/">弹性布局</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/供应商/" style="font-size: 15px;">供应商</a> <a href="/tags/THREE/" style="font-size: 15px;">THREE</a> <a href="/tags/Gulp/" style="font-size: 15px;">Gulp</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/JS框架/" style="font-size: 15px;">JS框架</a> <a href="/tags/Swiper3-0/" style="font-size: 15px;">Swiper3.0</a> <a href="/tags/CSS兼容/" style="font-size: 15px;">CSS兼容</a> <a href="/tags/vue2-0/" style="font-size: 15px;">vue2.0</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/flex/" style="font-size: 15px;">flex</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">YOUQUAN.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>THREE.Scene常用方法和属性 | YOUQUAN</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="stylesheet" type="text/css" href="https://oindk07nf.qnssl.com/atom-one-dark.css"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">THREE.Scene常用方法和属性</h1><a id="logo" href="/.">YOUQUAN</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">THREE.Scene常用方法和属性</h1><div class="post-meta">Aug 18, 2018<span> | </span><span class="category"><a href="/categories/THREE-js/">THREE.js</a></span></div><div class="post-content"><p>THREE.Scence 场景是所有对象的容器，所有对象和元素都会被放到场景中才能渲染。</p>
+<table>
+<thead>
+<tr>
+<th>方法（属性）</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add(object)</td>
+<td>用于向场景中添加对象。使用该方法还可以创建对象组。</td>
+</tr>
+<tr>
+<td>children</td>
+<td>用于返回一个场景中所有对象的列表，包括摄像机和光源。</td>
+</tr>
+<tr>
+<td>getObjectByName(name,recursive)</td>
+<td>在创建对象时可以指定唯一的标识 name，使用该方法可以查找特定名字的对象。 当参数 recursive 设置为 false 时，在调用者子元素上查找当参数 recursive 设置为 true 时，在调用者的所有后代对象上查找</td>
+</tr>
+<tr>
+<td>remove(object)</td>
+<td>object 为场景中对象的引用，使用该方法可以将对象从场景中移除。</td>
+</tr>
+<tr>
+<td>traverse(function)</td>
+<td>该方法也可以遍历调用者和调用者的所有后代，function 参数是一个函数，被调用者和每一个后代对象调用 function 方法。</td>
+</tr>
+<tr>
+<td>fog</td>
+<td>使用该属性可以为场景添加雾化效果，可以产生隐藏远处物体的浓雾效果。</td>
+</tr>
+<tr>
+<td>overrideMaterial</td>
+<td>使用该属性可以强制场景中的所有物体使用相同的材质。</td>
+</tr>
+</tbody>
+</table>
+ <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();  <span class="comment">//初始化</span></span><br></pre></td></tr></table></figure>
+<h3 id="add（object）"><a href="#add（object）" class="headerlink" title="add（object）"></a>add（object）</h3><p>场景有了之后，我们需要在场景中放置我们的演员（对象），这里包括物体，相机和光源。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">   <span class="comment">//绘制一个物体</span></span><br><span class="line">   <span class="keyword">var</span> cubeShape = <span class="keyword">new</span> THREE.BoxGeometry(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>);</span><br><span class="line">   <span class="keyword">var</span> cubeMaterial = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;<span class="attr">color</span>: <span class="number">0xff0000</span>, <span class="attr">wireframe</span>: <span class="literal">true</span>&#125;);</span><br><span class="line">   <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(cubeShape, cubeMaterial);</span><br><span class="line"><span class="comment">//把物体放置进场景中</span></span><br><span class="line">   scene.add(cube);</span><br></pre></td></tr></table></figure>
+<h3 id="children"><a href="#children" class="headerlink" title="children"></a>children</h3><p>该属性用于返回<code>scene</code>中所有的对象，在控制台打印<code>scene</code></p>
+<p><img src="https://miao.su/images/2018/08/21/sceneb6363.png" alt="sceneb6363.png"></p>
+<p>可以可到<code>scene</code>中定义的各种属性。当我们往<code>scene</code>中添加对象，这些元素都会存储到<code>scene</code>中的<code>children</code>数组里面。</p>
+<p>所以移除场景中对象，就是除<code>children</code>数组中的值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeEle</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> allChildren = scene.children;</span><br><span class="line">    <span class="keyword">var</span> lastObject = allChildren[num];</span><br><span class="line">    <span class="keyword">if</span> (lastObject <span class="keyword">instanceof</span> THREE.Mesh) &#123;</span><br><span class="line">        scene.remove(lastObject);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们也可以为每一个对象添加属于他自己的<code>name</code> 属性</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//绘制一个立方体</span></span><br><span class="line"><span class="keyword">var</span> cubeShape = <span class="keyword">new</span> THREE.BoxGeometry(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>);</span><br><span class="line"><span class="keyword">var</span> cubeMaterial = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;<span class="attr">color</span>: <span class="number">0xff0000</span>, <span class="attr">wireframe</span>: <span class="literal">true</span>&#125;);</span><br><span class="line"><span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(cubeShape, cubeMaterial);</span><br><span class="line"><span class="comment">// position the cube</span></span><br><span class="line">cube.name = <span class="string">'立方体'</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://miao.su/images/2018/08/21/children3aefd.png" alt="children3aefd.png"></p>
+<p>可以看到<code>name</code>属性成功添加到元素中，后续方便我们查找。</p>
+<h3 id="getObjectByName-name-recursive"><a href="#getObjectByName-name-recursive" class="headerlink" title="getObjectByName(name,recursive)"></a>getObjectByName(name,recursive)</h3><p>上面，<code>cube.name = &#39;立方体&#39;</code>，这个<code>name</code>也是该对象的标识符，通过<code>getObjectByName</code>可以找到该对象</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(scene.getObjectByName(<span class="string">'立方体'</span>));</span><br><span class="line"><span class="comment">//THREE.Mesh &#123;uuid: "B9454ABD-01EF-4333-A6DD-21FA30F8F843", name: "立方体", type: "Mesh", parent: T…E.Scene, children: Array(0), …&#125;</span></span><br><span class="line"><span class="comment">//如果 recursive 为 true，则开启后代查询</span></span><br></pre></td></tr></table></figure>
+<h3 id="remove（object）"><a href="#remove（object）" class="headerlink" title="remove（object）"></a>remove（object）</h3><p>查找到有标识符的对象，就可以对其进行操作，比如删除该对象:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> target = scene.getObjectByName(<span class="string">'立方体'</span>);</span><br><span class="line"><span class="keyword">if</span> (target <span class="keyword">instanceof</span> THREE.Mesh) &#123;</span><br><span class="line">    scene.remove(target);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如此，<code>name</code>属性为’立方体’的对象就会从<code>scene</code>中删除。</p>
+<blockquote>
+<p>移除前我们还要检查下该对象是不是 THREE.Mesh 对象，这样做是为了<strong>避免移除摄像机和光源</strong>。</p>
+</blockquote>
+<h3 id="traverse（function）"><a href="#traverse（function）" class="headerlink" title="traverse（function）"></a>traverse（function）</h3><p>我们可以将一个方法作为参数传递给 <code>traverse()</code>方法，这个传递过来的方法会在<strong>每一个子对象上执行</strong>。</p>
+<p>由于 THREE.Scene 对象存储的是对象树，所以如果子对象本身还有子对象，traverse() 方法会在所有的子对象上执行，直到遍历完场景树中的所有对象为止。</p>
+<p>比如我们给所有对象添加<code>name</code>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">scene.traverse(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e <span class="keyword">instanceof</span> THREE.Mesh) &#123;</span><br><span class="line">        e.name =<span class="string">'123'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="fog"><a href="#fog" class="headerlink" title="fog"></a>fog</h3><p>使用 fog 属性可以为整个场景添加雾化效果，即场景中的物体离得越远就会变得越模糊。具体样式有如下两种：</p>
+<p>（1）使用 THREE.Fog：该方法雾的浓度是线性增长的，它有三个参数：</p>
+<ul>
+<li><p>第 1 个参数：雾的颜色</p>
+</li>
+<li><p>第 2 个参数：near（近处）属性的值，决定雾化开始的地方。</p>
+</li>
+<li><p>第 3 参数：far（远处）属性的值，决定雾化结束的地方。</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`scene.fog = `</span><span class="string">`new`</span> <span class="string">`THREE.Fog(0xffffff, 0.015, 100);`</span></span><br></pre></td></tr></table></figure>
+<p>（2）使用 THREE.FogExp2：该方法雾的浓度不再是线性增长的，而是随着距离呈指数增长，它有两个参数：</p>
+<ul>
+<li><p>第 1 个参数：雾的颜色</p>
+</li>
+<li><p>第 2 个参数：雾的浓度</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`scene.fog = `</span><span class="string">`new`</span> <span class="string">`THREE.FogExp2( 0xffffff, 0.015 );`</span></span><br></pre></td></tr></table></figure>
+<h3 id="overrideMaterial-属性"><a href="#overrideMaterial-属性" class="headerlink" title="overrideMaterial 属性"></a>overrideMaterial 属性</h3><p>（1）场景设置了 overrideMaterial 属性后，场景中所有的物体都会使用该属性指向的材质，即使物体本身也设置了材质。</p>
+<p>（2）上面的样例中我们使用的材质是 THREE.MeshLambertMaterial，该材质可以创建出不发光但是可以对场景中的光源产生反应的物体。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`scene.overrideMaterial = `</span><span class="string">`new`</span> <span class="string">`THREE.MeshLambertMaterial(&#123;color: 0xffffff&#125;);`</span></span><br></pre></td></tr></table></figure></div><div class="tags"><a href="/tags/THREE/">THREE</a></div><div class="post-nav"><a class="pre" href="/2018/08/20/3JS--各种光源/">各种光源</a><a class="next" href="/2018/07/25/JS框架--模块加载系统/">02--模块加载系统</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS手册/">CSS手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gulp使用参考/">Gulp使用参考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS出深入浅/">JS出深入浅</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript框架/">JavaScript框架</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Swiper3-0手册/">Swiper3.0手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/THREE-js/">THREE.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TX-解决方案/">TX-解决方案</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue使用手册/">Vue使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/canvas攻略/">canvas攻略</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo功能整合/">hexo功能整合</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery使用手册/">jQuery使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/弹性布局/">弹性布局</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/供应商/" style="font-size: 15px;">供应商</a> <a href="/tags/THREE/" style="font-size: 15px;">THREE</a> <a href="/tags/Gulp/" style="font-size: 15px;">Gulp</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/JS框架/" style="font-size: 15px;">JS框架</a> <a href="/tags/Swiper3-0/" style="font-size: 15px;">Swiper3.0</a> <a href="/tags/CSS兼容/" style="font-size: 15px;">CSS兼容</a> <a href="/tags/vue2-0/" style="font-size: 15px;">vue2.0</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/flex/" style="font-size: 15px;">flex</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">YOUQUAN.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
