@@ -1,535 +1,1235 @@
 <!DOCTYPE html>
-<html lang="">
-
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>
-    YOUQUAN
-  </title>
-  <meta name="description" content="">
+  <title>YOUQUAN</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="YOUQUAN">
+    <meta name="author" content="YOUQUAN">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="YOUQUAN" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
   
-  <meta name="author" content="John Doe">
-
-  <meta http-equiv="Cache-Control" content="no-transform"/>
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-
-  <link rel="icon" type="image/x-icon" href="">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   
 
-  
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-<body id="replica-app">
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
 
-<nav class="navbar-wrapper">
-  <div class="navbar">
-    <div class="container clearfix">
-      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+      <!-- ============================ Off-canvas navigation =========================== -->
 
-      <div class="navbar-search float-left desktop-only">
-        <div class="navbar-search-form">
-          <label for="gsc-i-id1">This website</label>
-          <div id="google-search">
-            <gcse:search></gcse:search>
-          </div>
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
         </div>
-      </div>
-
-      <ul class="navbar-nav float-left">
-        
-        <li><a href="/archives">Archives</a></li>
-        
-        
-        <li><a href="/categories">Categories</a></li>
-        
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        
-        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
-        
-      </ul>
-
-      <ul class="navbar-nav user-nav float-right desktop-only">
-        <li class="user-nav-notification">
-          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
-        </li>
-        <li>
-          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li class="user-nav-logo">
-          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
-        </li>
-      </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS手册/" class="animsition-link">CSS手册<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/Vue使用手册/" class="animsition-link">Vue使用手册<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/canvas攻略/" class="animsition-link">canvas攻略<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/jQuery使用手册/" class="animsition-link">jQuery使用手册<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/弹性布局/" class="animsition-link">弹性布局<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
     </div>
-  </div>
-</nav>
-
-<div class="main-container">
-  
-
-<div class="container-lg">
-  
-
-<div class="blog-intro">
-  <div class="blog-intro-user">
-    <img class="avatar" src="https://octodex.github.com/images/baracktocat.jpg">
-    <div class="user-name">
-      <div class="blog-title">YOUQUAN</div>
-      <div class="blog-author">John Doe</div>
-        <ul class="user-detail mobile-only">
     
-    <li>
-      <i class="fa fa-link"></i>
-      <a href="https://github.com/Xinayu">https://github.com/Xinayu</a>
-    </li>
-  </ul>
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">YOUQUAN</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
     </div>
-    <div class="blog-description">
+</section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/21/3JS--材质/">材质</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-21T08:42:53.000Z" itemprop="datePublished">
+          2018-08-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        材质结合几何体可以构成网格。材质就是物体的皮肤，决定结合体外表的样子。常用材质如下：
+
+
+
+名称
+描述
+
+
+
+
+MeshBasicMaterial（网格基础材质）
+基础材质
+
+
+MeshDepthMaterial（网格深度材质）
+根据网格到相机的距离，这种材质决定如何给网格染色
+
+
+MeshNormalMaterial（网格法向材质）
+简单材质，根据物体表面的法向向量计算颜色
+
+
+MeshFaceMaterial（网格面材质）
+这是一个
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/21/3JS--材质/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/20/3JS--各种光源/">各种光源</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-20T08:42:53.000Z" itemprop="datePublished">
+          2018-08-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.js提供了一系列的光源，各有用途：
+
+
+
+光源名称
+描述
+
+
+
+
+AmbientLight（环境光源）
+颜色会直接作用物体的当前颜色上
+
+
+PointLight（点光源）
+一个点向所有方向
+
+
+SpotLight（聚光灯）
+聚光灯效果（范围）例如台灯
+
+
+DirectionalLight（方向光源）
+平行光源 例如太阳光
+
+
+HemisphereLight（半球光）
+创造自然室外光线，模拟反光和光线微弱的天空，太阳升降
+
+
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/20/3JS--各种光源/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/18/3JS--场景对象THREE.Scene/">THREE.Scene常用方法和属性</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-18T08:42:53.000Z" itemprop="datePublished">
+          2018-08-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.Scence 场景是所有对象的容器，所有对象和元素都会被放到场景中才能渲染。
+
+
+
+方法（属性）
+描述
+
+
+
+
+add(object)
+用于向场景中添加对象。使用该方法还可以创建对象组。
+
+
+children
+用于返回一个场景中所有对象的列表，包括摄像机和光源。
+
+
+getObjectByName(name,recursive)
+在创建对象时可以指定唯一的标识 name，使用该方法可以查找特定名字的对象。 当参数 recur
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/18/3JS--场景对象THREE.Scene/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/25/JS框架--模块加载系统/">02--模块加载系统</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-25T09:39:20.000Z" itemprop="datePublished">
+          2018-07-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS框架/'>JS框架</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        JS不像其他语言一样拥有完善的模块化机制，早前只能靠插入一个个script标签来引入脚本，并且容易带来命名冲突的问题。
+JS模块化标准CommonJS与AMD就是为了实现JS的模块化机制，前者运用于node环境，后者在浏览器环境中由Require.js等实现。随着ES6的普及，AMD和CMD都终将成为历史。
+实现一个简单的js加载器并不复杂，主要可以分为解析路径、下载模块、解析模块依赖、解析模块四个步骤。
+模块当构建庞大的程序时，如果不
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/25/JS框架--模块加载系统/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/17/JS框架--种子模块/">01--种子模块</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-17T10:26:12.000Z" itemprop="datePublished">
+          2018-07-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS框架/'>JS框架</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        种子模块就是核心模块，负责框架的初始部分。
+命名空间JS基于对象，其命名空间也是使用对象的属性来扩展的。
+比如下面代码中，通过不同给对象Ten（我们的命名空间）添加属性，从而有条不紊得构建我们的框架。我们只需要通过Ten.xx.xx来调用即可 if(typeof(Ten) === "undefined" )&#123;  Ten = &#123;&#125;;  Ten.Function = &#123;/*略*/ &#125;  Te
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/17/JS框架--种子模块/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX-预加载/">预加载</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        当网页图片比较多的时候，使用预加载动画，可以提高用户体验
+引用  预加载效果使用loder.js实现，前往下载
+&lt;script src="js/loder.js"&gt;&lt;/script&gt;
+添加结构根据设计稿灵活添加结构和样式，比如我要实现一个数字动态增加的预加载效果，给数字一个类名，方便抓取 
+&lt;!-- 参考样式 --&gt;  &lt;div id="loader" class="loader"&gt;   
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX-预加载/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/09/TX-评论组件/">评论组件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-08T16:00:00.000Z" itemprop="datePublished">
+          2018-07-09
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        使用方法引用css和js文件css  &lt;link rel="stylesheet" href="css/comment.css"&gt;
+js   &lt;script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"&gt;&lt;/script&gt;&lt;script src="//ossweb-img.qq.com/images/js/mobile_bundle
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/09/TX-评论组件/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/06/canvas--路径/">02--路径</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-06T08:42:53.000Z" itemprop="datePublished">
+          2018-07-06
+      </time>
+    
+    
+    | 
+    <a href='/tags/canvas/'>canvas</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        路径
+
+
+方法
+描述
+
+
+
+
+fill()
+填充当前绘图（路径）
+
+
+stroke()
+连接当前的绘图（路径）
+
+
+beginPath()
+起始一条路径，或重置当前路径。
+
+
+moveTo()
+移动画笔
+
+
+closePath()
+闭合路径
+
+
+lineTo()
+添加一个新点
+
+
+arc()
+创建弧/曲线（用于创建圆形或部分圆）。
+
+
+arcTo()
+创建两切线之间的弧/曲线。
+
+
+clip()
+从原始画布剪切任意形状和尺寸的区域。
+
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/06/canvas--路径/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/05/canvas--基础使用/">01--基础使用</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-05T08:42:53.000Z" itemprop="datePublished">
+          2018-07-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/canvas/'>canvas</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        &lt;canvas&gt;标签相当于画布，可以通过脚本来绘制图形。一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
+我们不能直接在画布上作图，需要先获取canvas的上下文，然后通过操作上下文去选择性绘制图像。var canvas = document.getElementById('canvas');var cxt = canvas.getContex
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/05/canvas--基础使用/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/05/hexo--添加复制功能/">添加复制功能</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-05T08:42:53.000Z" itemprop="datePublished">
+          2018-07-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/hexo/'>hexo</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        hexo自带的代码段没有复制功能，有时候不是很方便，我们使用clipboard.js完善该功能。
+引入插件每个主题使用的模板语言不一样，这里以.pug为栗子cd你的博客目录，然后打开 theme -&gt; layout -&gt; _partial -&gt;head.pug，加入外链script(type='text/javascript', src='https://cdn.bootcss.com/clipboard.js/1.5
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/05/hexo--添加复制功能/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          
+          <a class="pull-right" href="/page/2/">Older Posts →</a>
+        </nav>
+    </div>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
+
       
-    </div>
-  </div>
+<!-- ============================ Footer =========================== -->
 
-  <ul class="user-detail desktop-only">
-    
-    <li>
-      <i class="fa fa-link"></i>
-      <a href="https://github.com/Xinayu">https://github.com/Xinayu</a>
-    </li>
-  </ul>
-
-  <div class="social-media desktop-only">
-    <h4>Social Media</h4>
-    <ul>
-      
-    </ul>
-  </div>
-</div>
-
-
-  <div class="blog-detail">
-    
-<nav class="blog-detail-nav desktop-only">
-  <ul class="clearfix">
-    <li class="selected">
-      <a href="/">Overview</a></li>
-    <li class="">
-      <a href="/archives">Posts <span class="counter">40</span></a>
-    </li>
-    <li class="">
-      <a href="/categories">Categories <span
-                class="counter">12</span></a></li>
-    <li class="">
-      <a href="/tags">Tags <span class="counter">12</span></a></li>
-  </ul>
-</nav>
-
-    <div class="body-secondary">
-      <p class="right-title">Recent post</p>
-      <ul class="recent-post clearfix">
-        
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2018/08/21/3JS--材质/">材质</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-               材质结合几何体可以构成网格。材质就是物体的皮肤，决定结合体外表的样子。常用材质如下： 
- 
- 
- 
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <a class="category-link" href="/categories/THREE-js/"><i class="fa fa-folder-open"></i> THREE.js</a>
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2018/08/20/3JS--各种光源/">各种光源</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-                THREE.js 提供了一系列的光源，各有用途： 
- 
- 
- 
- 光源名称 
- 描述 
- 
- 
-
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <a class="category-link" href="/categories/THREE-js/"><i class="fa fa-folder-open"></i> THREE.js</a>
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2018/08/18/3JS--场景对象THREE.Scene/">THREE.Scene常用方法和属性</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-               THREE.Scence 场景是所有对象的容器，所有对象和元素都会被放到场景中才能渲染。 
- 
- 
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <a class="category-link" href="/categories/THREE-js/"><i class="fa fa-folder-open"></i> THREE.js</a>
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2018/07/25/JS框架--模块加载系统/">02--模块加载系统</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-               JS不像其他语言一样拥有完善的模块化机制，早前只能靠插入一个个script标签来引入脚本，并且容易
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <a class="category-link" href="/categories/JavaScript框架/"><i class="fa fa-folder-open"></i> JavaScript框架</a>
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2018/07/17/JS框架--种子模块/">01--种子模块</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-               种子模块就是核心模块，负责框架的初始部分。 
-   命名空间  JS基于对象，其命名空间也是使用 
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <a class="category-link" href="/categories/JavaScript框架/"><i class="fa fa-folder-open"></i> JavaScript框架</a>
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
-        <li class="recent-post-item">
-          <div class="clearfix">
-            <h5 class="post-title text-ellipsis">
-              <i class="fa fa-bars"></i>
-              <a href="/2018/07/10/TX-预加载/">预加载</a>
-            </h5>
-            <p class="post-description text-ellipsis desktop-only">
-               当网页图片比较多的时候，使用预加载动画，可以提高用户体验 
-   引用      预加载效果使用 
-            </p>
-            <p class="post-info desktop-only">
-              <span>
-                
-                  <a class="category-link" href="/categories/TX-解决方案/"><i class="fa fa-folder-open"></i> TX-解决方案</a>
-                
-              </span>
-              <span><i class="fa fa-tag"></i> 1 </span>
-            </p>
-          </div>
-        </li>
-        
-      </ul>
-      <div class="calendar-container" id="calendar">
-  <div class="calendar">
-    <h3>
-      {{posts.length}} contributions in the last year
-    </h3>
-    <div class="calendar-graph-container">
-      <div class="calendar-graph">
-        <svg width="676" height="104" @mouseout="mouseoverDate=null">
-          <g transform="translate(16, 20)">
-            <g v-for="week in calendar" :transform="week.transform">
-              <rect v-for="day in week.days"
-                    :x="day.x"
-                    :y="day.y"
-                    :fill="day.fill"
-                    @click="selectedDate=day.date"
-                    @mouseover="mouseoverDate=day.date"
-                    :class="{active:selectedDate===day.date}"
-                    data-count="{{day.posts.length}}"
-                    data-date="{{day.date}}"
-                    class="day" width="10" height="10"
-              ></rect>
-            </g>
-
-            <text v-for="month in monthLabels"
-                  :x="month.x"
-                  y="-5"
-                  class="month">{{month.text}}
-            </text>
-
-
-            <text text-anchor="start" class="wday" dx="-14" dy="8"
-                  style="display: none;">S
-            </text>
-            <text text-anchor="start" class="wday" dx="-14" dy="20">Mon</text>
-            <text text-anchor="start" class="wday" dx="-14" dy="32"
-                  style="display: none;">T
-            </text>
-            <text text-anchor="start" class="wday" dx="-14" dy="44">Wed</text>
-            <text text-anchor="start" class="wday" dx="-14" dy="57"
-                  style="display: none;">T
-            </text>
-            <text text-anchor="start" class="wday" dx="-14" dy="69">Fri</text>
-            <text text-anchor="start" class="wday" dx="-14" dy="81"
-                  style="display: none;">S
-            </text>
-          </g>
-        </svg>
-        <div class="svg-tip svg-tip-one-line"
-             v-bind:style="{ top: svgtip.top, left: svgtip.left, display: svgtip.display}">
-          <strong>{{svgtip.text}}</strong> on
-          {{moment(mouseoverDate).format('MMM DD, YYYY')}}
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By YOUQUAN. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
         </div>
-      </div>
-      <div class="calendar-footer clearfix">
-      <span>
-        <a href="#">Learn how we count contributions.</a>
-      </span>
-        <div class="calendar-legend">
-          <span>Less</span>
-          <ul class="legend">
-            <li style="background-color: #eee"></li>
-            <li style="background-color: #d6e685"></li>
-            <li style="background-color: #8cc665"></li>
-            <li style="background-color: #44a340"></li>
-            <li style="background-color: #1e6823"></li>
-          </ul>
-          <span>More</span>
-        </div>
-      </div>
-    </div>
-  </div>
+</footer>
 
-  <h3>Contribution activity</h3>
-  <div class="contribution-list">
-    <ul>
-      <li v-for="post in posts | filterBy selectedDate in 'date'">
-        <a href="{{post.url}}">{{post.title}}
-        </a>
-        <span>{{post.date}}</span>
-      </li>
-    </ul>
-  </div>
-</div>
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
 
-<script>
-  var posts = [{"date":"2018-03-11","title":"PC端构建","url":"https://github.com/Xinayu/2018/03/11/TX-PC端/"},{"date":"2018-03-11","title":"分享蒙层","url":"https://github.com/Xinayu/2018/03/11/TX-分享蒙层/"},{"date":"2018-03-13","title":"微区构建","url":"https://github.com/Xinayu/2018/03/13/TX-微社区/"},{"date":"2018-03-14","title":"H5端构建","url":"https://github.com/Xinayu/2018/03/14/TX-移动端/"},{"date":"2018-03-15","title":"视频弹窗","url":"https://github.com/Xinayu/2018/03/15/TX-视频插件/"},{"date":"2018-06-05","title":"flex布局","url":"https://github.com/Xinayu/2018/06/05/flex布局/"},{"date":"2018-06-13","title":"兼容措施","url":"https://github.com/Xinayu/2018/06/13/CSS手册--兼容措施/"},{"date":"2018-06-14","title":"弹窗组件","url":"https://github.com/Xinayu/2018/06/14/TX-弹窗组件/"},{"date":"2018-06-29","title":"jQuery常用操作","url":"https://github.com/Xinayu/2018/06/29/jQuery--常用操作/"},{"date":"2018-07-02","title":"Axios+Mock","url":"https://github.com/Xinayu/2018/07/02/Vue--Axios+Mock/"},{"date":"2018-07-02","title":"Vuex参考","url":"https://github.com/Xinayu/2018/07/02/Vue--Vuex/"},{"date":"2018-07-02","title":"Vue搭建项目","url":"https://github.com/Xinayu/2018/07/02/Vue--搭建项目/"},{"date":"2018-07-04","title":"Hexo + Github","url":"https://github.com/Xinayu/2018/07/04/hexo--Hexo+Github/"},{"date":"2018-07-04","title":"添加本地搜索","url":"https://github.com/Xinayu/2018/07/04/hexo--添加本地搜索/"},{"date":"2018-07-05","title":"使用方法","url":"https://github.com/Xinayu/2018/07/05/swiper3-0-使用方法/"},{"date":"2018-07-05","title":"添加复制功能","url":"https://github.com/Xinayu/2018/07/05/hexo--添加复制功能/"},{"date":"2018-07-05","title":"效果样式","url":"https://github.com/Xinayu/2018/07/05/Swiper3-0-效果样式/"},{"date":"2018-07-05","title":"局部组件","url":"https://github.com/Xinayu/2018/07/05/Swiper3-0-局部组件/"},{"date":"2018-07-05","title":"01--基础使用","url":"https://github.com/Xinayu/2018/07/05/canvas--基础使用/"},{"date":"2018-07-06","title":"02--路径","url":"https://github.com/Xinayu/2018/07/06/canvas--路径/"},{"date":"2018-07-09","title":"评论组件","url":"https://github.com/Xinayu/2018/07/09/TX-评论组件/"},{"date":"2018-07-10","title":"预加载","url":"https://github.com/Xinayu/2018/07/10/TX-预加载/"},{"date":"2018-07-17","title":"01--种子模块","url":"https://github.com/Xinayu/2018/07/17/JS框架--种子模块/"},{"date":"2018-07-25","title":"02--模块加载系统","url":"https://github.com/Xinayu/2018/07/25/JS框架--模块加载系统/"},{"date":"2018-08-18","title":"THREE.Scene常用方法和属性","url":"https://github.com/Xinayu/2018/08/18/3JS--场景对象THREE.Scene/"},{"date":"2018-08-20","title":"各种光源","url":"https://github.com/Xinayu/2018/08/20/3JS--各种光源/"},{"date":"2018-08-21","title":"材质","url":"https://github.com/Xinayu/2018/08/21/3JS--材质/"}];
-  var today = moment().format('YYYY-MM-DD');
-  var oneYearAgo = moment(today).subtract(1, 'years');
-  posts = posts.filter(function(post) {
-    return new Date(post.date) > oneYearAgo;
-  });
-  var monthLabels = [];
-  var monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var calendar = getCalendar(posts);
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
 
-  var dateRange = {
-    start: moment(oneYearAgo).format('MMM D, YYYY'),
-    end: moment().format('MMM D, YYYY')
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
   }
 
-  var app = new Vue({
-    el: '#calendar',
-    data: {
-      posts: posts,
-      selectedDate: null,
-      calendar: calendar,
-      dateRange: dateRange,
-      mouseoverDate: null,
-      moment: moment,
-      monthLabels: monthLabels
-    },
-    created: function() {
-      this.selectedDate = 'none';
-    },
-    methods: {},
-    computed: {
-      svgtip: function() {
-        var date = this.mouseoverDate;
-        var display = date ? 'block' : 'none';
-        if (date) {
-          var coordinator = getIndexByDate(date);
-          var x = coordinator[0];
-          var y = coordinator[1];
-          var len = this.calendar[x].days[y].posts.length;
-          var text = len ? len + ' contributions' : 'No contributions';
-          var left = coordinator[0] * 12 - 37 + 'px';
-          coordinator[1] = coordinator[0] ? coordinator[1] : coordinator[1] + oneYearAgo.day();
-          var top = coordinator[1] * 12 + 12 - 32 + 'px';
-        }
-        return {
-          text: text,
-          left: left,
-          top: top,
-          display: display
-        }
-      }
-    }
-  });
-
-  function getCalendar(posts) {
-    // raw calendar
-    var maxCount = 0;
-    var tmr = new Date();
-    tmr.setDate(tmr.getDate() + 1);
-    var tmrStr = tmr.toISOString().slice(0, 10);
-    var date = new Date();
-    date.setYear(date.getFullYear() - 1); // start date is a year ago;
-    var calendar = [];
-    while (date.toISOString().slice(0, 10) !== tmrStr) {
-      var day = date.getDay();
-      if (day === 0 || calendar.length === 0) {
-        var x = calendar.length * 13;
-        calendar.push({
-          transform: 'translate(' + x + ',0)',
-          days: []
-        })
-      }
-
-      calendar[calendar.length - 1].days.push({
-        x: 14 - calendar.length,
-        y: day * 12,
-        date: date.toISOString().slice(0, 10),
-        posts: []
-      });
-
-      if (day === 0 && date.getDate() < 8) {
-        monthLabels.push({
-          x: 14 - calendar.length + x,
-          text: monthName[date.getMonth() - 1]
-        })
-      }
-
-      date.setDate(date.getDate() + 1);
-    }
-
-    // handle post info
-    posts.forEach(function(post) {
-      var x = getIndexByDate(post.date)[0];
-      var y = getIndexByDate(post.date)[1];
-
-      calendar[x].days[y].posts.push({
-        title: post.title,
-        url: post.url
-      });
-
-      var len = calendar[x].days[y].posts.length;
-      maxCount = Math.max(len, maxCount);
-    })
-
-    // handle fill color
-    calendar.forEach(function(week) {
-      week.days.forEach(function(day) {
-        day.fill = getColorByLength(day.posts.length, maxCount);
-      })
-    })
-
-    return calendar;
-  }
-
-  function getIndexByDate(date) {
-    date = moment(date);
-    var firstColumnLen = 7 - oneYearAgo.day();
-    var days = date.diff(oneYearAgo, 'days');
-
-    var x = days > firstColumnLen - 1 ? Math.ceil((days - firstColumnLen + 1) / 7) : 0;
-    var y = days > firstColumnLen - 1 ? date.day() : date.day() - oneYearAgo.day();
-    return [x, y];
-  }
-
-  function getColorByLength(len, max) {
-    var colors = ['#eee', '#d6e685', '#8cc665', '#44a340', '#1e6823'];
-    var colorsLen = colors.length - 1;
-    var color = len ? colors[0] : colors[1];
-    var interval = max / colorsLen;
-    if (max < colorsLen) {
-      color = colors[len];
-    } else {
-      color = colors[Math.ceil(len / interval)];
-    }
-    return color;
-  }
-
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
 
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
     </div>
   </div>
 </div>
 
-</div>
+<script src="/js/ziploader.js"></script>
 
-<div class="footer-wrapper container">
-  <footer class="footer clearfix">
-    <div class="clearfix">
-    <a href="https://github.com/Xinayu" class="footer-logo">
-      <i class="fa fa-github"></i>
-    </a>
-    <ul class="footer-social-link">
-      <li>© 2018 John Doe</li>
-      <li><a href="https://github.com/Xinayu">Home</a></li>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
       
-    </ul>
-    <div class="footer-theme-info">
-      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
-      by <a href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
-    </div>
-    </div>
-    
-  </footer>
-</div>
-
-
-
-
-<script src="/js/main.js"></script>
-
 </body>
 </html>
