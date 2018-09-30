@@ -1,16 +1,523 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>YOUQUAN</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="stylesheet" type="text/css" href="https://oindk07nf.qnssl.com/atom-one-dark.css"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">YOUQUAN</h1><a id="logo" href="/.">YOUQUAN</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/2017/08/22/JS--继承/">继承</a></h1><div class="post-meta">2017-08-22</div><div class="post-content"><h2 id="通过ES5的-Object-create实现"><a href="#通过ES5的-Object-create实现" class="headerlink" title="通过ES5的 Object.create实现"></a>通过ES5的 <code>Object.create</code>实现</h2><h3 id="创建父类"><a href="#创建父类" class="headerlink" title="创建父类"></a>创建父类</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.headCount = <span class="number">1</span>;</span><br><span class="line">Parent.prototype.eat = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'eat'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p class="readmore"><a href="/2017/08/22/JS--继承/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/22/JS-JS的原型继承/">原型继承</a></h1><div class="post-meta">2017-08-22</div><div class="post-content"><h2 id="JS的原型继承"><a href="#JS的原型继承" class="headerlink" title="JS的原型继承"></a>JS的原型继承</h2><p>在js中，要想创建一个对象，不是通过实例化，而是通过<strong>选择一个对象作为原型去克隆它</strong>来达到目的。<br>而且对象只能克隆函数对象里面的<code>prototype</code>属性，既是<code>Function.prototye</code>，由于只有函数才有<code>prototype</code>对象，所以，想要创建一个对象，就必须要用函数才能创建，这个函数通常被称为构造器函数。来看一下普通对象和函数对象的创建：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cat= &#123;&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure></p></div><p class="readmore"><a href="/2017/08/22/JS-JS的原型继承/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/21/JS--arguments/">arguments和重载</a></h1><div class="post-meta">2017-08-21</div><div class="post-content"><p>函数被调用的时候，会接收两个附加参数，<code>this</code>和<code>arguments</code>。</p>
-<p><code>arguments</code>是一个对象。当<code>arguments</code>（实参）和<code>parameters</code>（形参）的个数不匹配时，不会导致错误，多余的实参会被忽略。  <copy></copy></p></div><p class="readmore"><a href="/2017/08/21/JS--arguments/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/15/JS--prototype 和 __proto__/">prototype 和 __proto__</a></h1><div class="post-meta">2017-08-15</div><div class="post-content"><h2 id="关于prototype"><a href="#关于prototype" class="headerlink" title="关于prototype"></a>关于<code>prototype</code></h2><p>当一个新函数被创建时，会被赋予一个 <code>prototype</code>属性，这个属性是用来<strong>存放继承特性</strong>的地方<br><strong>只有函数才有<code>prototype</code></strong>。</p></div><p class="readmore"><a href="/2017/08/15/JS--prototype 和 __proto__/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/15/JS--对象的关联/">对象的关联</a></h1><div class="post-meta">2017-08-15</div><div class="post-content"><p>JS的数据类型有两种：</p>
-<ul>
-<li>原始类型（string、boolean、number、null、undefined）</li>
-<li>对象类型（object）</div><p class="readmore"><a href="/2017/08/15/JS--对象的关联/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/14/JS--关于闭包/">关于闭包</a></h1><div class="post-meta">2017-08-14</div><div class="post-content"><p>维基解释：闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的<strong>函数</strong>。这个被引用的自由变量将和这个函数一同存在，即使离开了创造它的环境也不例外</p>
-<blockquote>
-<p>在Js中，如果一个函数在另外一个函数中定义，那么这个函数会访问到父函数里面定义的成员，形成闭包。<br>​或者说，一个函数能访问它被创建时所处的上下文环境，就是闭包。<br></div><p class="readmore"><a href="/2017/08/14/JS--关于闭包/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/13/JS--JS的解析与执行过程/">JS的解析与执行过程</a></h1><div class="post-meta">2017-08-13</div><div class="post-content"><p>在JS真正执行代码之前，会对代码有个预处理过程</p>
-<h2 id="预处理阶段"><a href="#预处理阶段" class="headerlink" title="预处理阶段"></a>预处理阶段</h2><ul>
-<li><p>首先创建<strong>词法环境（这里是全局）</strong></p></div><p class="readmore"><a href="/2017/08/13/JS--JS的解析与执行过程/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/08/10/JS--this的用法/">this的用法</a></h1><div class="post-meta">2017-08-10</div><div class="post-content"><p>JavaScript的 <code>this</code> 总是指向一个对象，而具体指向哪个对象是在运行时基于函数的执行环境动态绑定的，而非函数被声明时的环境</p>
-<p>除去不常用的<code>with</code> 和<code>eval</code> 的情况，具体到实际应用中， this 的指向大致可以分为以下 4种<br></div><p class="readmore"><a href="/2017/08/10/JS--this的用法/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/06/12/Gulp--入门指南/">Gulp入门指南</a></h1><div class="post-meta">2017-06-12</div><div class="post-content"><p>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率<br></div><p class="readmore"><a href="/2017/06/12/Gulp--入门指南/">&gt;</a></p></div><div class="post"><h1 class="post-title"><a href="/2017/06/12/Gulp--简单操作/">Gulp的实例参考</a></h1><div class="post-meta">2017-06-12</div><div class="post-content"><h2 id="基本插件的安装"><a href="#基本插件的安装" class="headerlink" title="基本插件的安装"></a>基本插件的安装</h2><p>GulpJs的安装依赖nodejs，所以先安装nodejs</p></div><p class="readmore"><a href="/2017/06/12/Gulp--简单操作/">&gt;</a></p></div><nav class="page-navigator"><a class="extend prev" rel="prev" href="/page/3/">Vorheriger</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span></nav></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS手册/">CSS手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gulp使用参考/">Gulp使用参考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS出深入浅/">JS出深入浅</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript框架/">JavaScript框架</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Swiper3-0手册/">Swiper3.0手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/THREE-js/">THREE.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TX-解决方案/">TX-解决方案</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue使用手册/">Vue使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/canvas攻略/">canvas攻略</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo功能整合/">hexo功能整合</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery使用手册/">jQuery使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/弹性布局/">弹性布局</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/供应商/" style="font-size: 15px;">供应商</a> <a href="/tags/THREE/" style="font-size: 15px;">THREE</a> <a href="/tags/Gulp/" style="font-size: 15px;">Gulp</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/JS框架/" style="font-size: 15px;">JS框架</a> <a href="/tags/Swiper3-0/" style="font-size: 15px;">Swiper3.0</a> <a href="/tags/CSS兼容/" style="font-size: 15px;">CSS兼容</a> <a href="/tags/vue2-0/" style="font-size: 15px;">vue2.0</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/flex/" style="font-size: 15px;">flex</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">YOUQUAN.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
-if (search_path.length == 0) {
-   search_path = 'search.xml';
-}
-var path = '/' + search_path;
-searchFunc(path, 'local-search-input', 'local-search-result');
-</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<!DOCTYPE html>
+<html lang="">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    YOUQUAN
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+</head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  
+
+<div class="container-lg">
+  
+
+<div class="blog-intro">
+  <div class="blog-intro-user">
+    <img class="avatar" src="https://octodex.github.com/images/baracktocat.jpg">
+    <div class="user-name">
+      <div class="blog-title">YOUQUAN</div>
+      <div class="blog-author">John Doe</div>
+        <ul class="user-detail mobile-only">
+    
+    <li>
+      <i class="fa fa-link"></i>
+      <a href="https://github.com/Xinayu">https://github.com/Xinayu</a>
+    </li>
+  </ul>
+    </div>
+    <div class="blog-description">
+      
+    </div>
+  </div>
+
+  <ul class="user-detail desktop-only">
+    
+    <li>
+      <i class="fa fa-link"></i>
+      <a href="https://github.com/Xinayu">https://github.com/Xinayu</a>
+    </li>
+  </ul>
+
+  <div class="social-media desktop-only">
+    <h4>Social Media</h4>
+    <ul>
+      
+    </ul>
+  </div>
+</div>
+
+
+  <div class="blog-detail">
+    
+<nav class="blog-detail-nav desktop-only">
+  <ul class="clearfix">
+    <li class="selected">
+      <a href="/">Overview</a></li>
+    <li class="">
+      <a href="/archives">Posts <span class="counter">40</span></a>
+    </li>
+    <li class="">
+      <a href="/categories">Categories <span
+                class="counter">12</span></a></li>
+    <li class="">
+      <a href="/tags">Tags <span class="counter">12</span></a></li>
+  </ul>
+</nav>
+
+    <div class="body-secondary">
+      <p class="right-title">Recent post</p>
+      <ul class="recent-post clearfix">
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2017/08/22/JS-JS的原型继承/">原型继承</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+                 JS的原型继承  在js中，要想创建一个对象，不是通过实例化，而是通过 选择一个对象作为原型去
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/JS出深入浅/"><i class="fa fa-folder-open"></i> JS出深入浅</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2017/08/22/JS--继承/">继承</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+                 通过ES5的  Object.create 实现    创建父类         functi
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/JS出深入浅/"><i class="fa fa-folder-open"></i> JS出深入浅</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2017/08/21/JS--arguments/">arguments和重载</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+               函数被调用的时候，会接收两个附加参数， this 和 arguments 。 
+  argumen
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/JS出深入浅/"><i class="fa fa-folder-open"></i> JS出深入浅</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2017/08/15/JS--对象的关联/">对象的关联</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+               JS的数据类型有两种： 
+ 
+ 原始类型（string、boolean、number、null、u
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/JS出深入浅/"><i class="fa fa-folder-open"></i> JS出深入浅</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2017/08/15/JS--prototype 和 __proto__/">prototype 和 __proto__</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+                 关于 prototype   当一个新函数被创建时，会被赋予一个  prototype 属性，
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/JS出深入浅/"><i class="fa fa-folder-open"></i> JS出深入浅</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
+        
+        <li class="recent-post-item">
+          <div class="clearfix">
+            <h5 class="post-title text-ellipsis">
+              <i class="fa fa-bars"></i>
+              <a href="/2017/08/14/JS--关于闭包/">关于闭包</a>
+            </h5>
+            <p class="post-description text-ellipsis desktop-only">
+               维基解释：闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变
+            </p>
+            <p class="post-info desktop-only">
+              <span>
+                
+                  <a class="category-link" href="/categories/JS出深入浅/"><i class="fa fa-folder-open"></i> JS出深入浅</a>
+                
+              </span>
+              <span><i class="fa fa-tag"></i> 1 </span>
+            </p>
+          </div>
+        </li>
+        
+      </ul>
+      <div class="calendar-container" id="calendar">
+  <div class="calendar">
+    <h3>
+      {{posts.length}} contributions in the last year
+    </h3>
+    <div class="calendar-graph-container">
+      <div class="calendar-graph">
+        <svg width="676" height="104" @mouseout="mouseoverDate=null">
+          <g transform="translate(16, 20)">
+            <g v-for="week in calendar" :transform="week.transform">
+              <rect v-for="day in week.days"
+                    :x="day.x"
+                    :y="day.y"
+                    :fill="day.fill"
+                    @click="selectedDate=day.date"
+                    @mouseover="mouseoverDate=day.date"
+                    :class="{active:selectedDate===day.date}"
+                    data-count="{{day.posts.length}}"
+                    data-date="{{day.date}}"
+                    class="day" width="10" height="10"
+              ></rect>
+            </g>
+
+            <text v-for="month in monthLabels"
+                  :x="month.x"
+                  y="-5"
+                  class="month">{{month.text}}
+            </text>
+
+
+            <text text-anchor="start" class="wday" dx="-14" dy="8"
+                  style="display: none;">S
+            </text>
+            <text text-anchor="start" class="wday" dx="-14" dy="20">Mon</text>
+            <text text-anchor="start" class="wday" dx="-14" dy="32"
+                  style="display: none;">T
+            </text>
+            <text text-anchor="start" class="wday" dx="-14" dy="44">Wed</text>
+            <text text-anchor="start" class="wday" dx="-14" dy="57"
+                  style="display: none;">T
+            </text>
+            <text text-anchor="start" class="wday" dx="-14" dy="69">Fri</text>
+            <text text-anchor="start" class="wday" dx="-14" dy="81"
+                  style="display: none;">S
+            </text>
+          </g>
+        </svg>
+        <div class="svg-tip svg-tip-one-line"
+             v-bind:style="{ top: svgtip.top, left: svgtip.left, display: svgtip.display}">
+          <strong>{{svgtip.text}}</strong> on
+          {{moment(mouseoverDate).format('MMM DD, YYYY')}}
+        </div>
+      </div>
+      <div class="calendar-footer clearfix">
+      <span>
+        <a href="#">Learn how we count contributions.</a>
+      </span>
+        <div class="calendar-legend">
+          <span>Less</span>
+          <ul class="legend">
+            <li style="background-color: #eee"></li>
+            <li style="background-color: #d6e685"></li>
+            <li style="background-color: #8cc665"></li>
+            <li style="background-color: #44a340"></li>
+            <li style="background-color: #1e6823"></li>
+          </ul>
+          <span>More</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Contribution activity</h3>
+  <div class="contribution-list">
+    <ul>
+      <li v-for="post in posts | filterBy selectedDate in 'date'">
+        <a href="{{post.url}}">{{post.title}}
+        </a>
+        <span>{{post.date}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+  var posts = [{"date":"2018-03-11","title":"PC端构建","url":"https://github.com/Xinayu/2018/03/11/TX-PC端/"},{"date":"2018-03-11","title":"分享蒙层","url":"https://github.com/Xinayu/2018/03/11/TX-分享蒙层/"},{"date":"2018-03-13","title":"微区构建","url":"https://github.com/Xinayu/2018/03/13/TX-微社区/"},{"date":"2018-03-14","title":"H5端构建","url":"https://github.com/Xinayu/2018/03/14/TX-移动端/"},{"date":"2018-03-15","title":"视频弹窗","url":"https://github.com/Xinayu/2018/03/15/TX-视频插件/"},{"date":"2018-06-05","title":"flex布局","url":"https://github.com/Xinayu/2018/06/05/flex布局/"},{"date":"2018-06-13","title":"兼容措施","url":"https://github.com/Xinayu/2018/06/13/CSS手册--兼容措施/"},{"date":"2018-06-14","title":"弹窗组件","url":"https://github.com/Xinayu/2018/06/14/TX-弹窗组件/"},{"date":"2018-06-29","title":"jQuery常用操作","url":"https://github.com/Xinayu/2018/06/29/jQuery--常用操作/"},{"date":"2018-07-02","title":"Axios+Mock","url":"https://github.com/Xinayu/2018/07/02/Vue--Axios+Mock/"},{"date":"2018-07-02","title":"Vuex参考","url":"https://github.com/Xinayu/2018/07/02/Vue--Vuex/"},{"date":"2018-07-02","title":"Vue搭建项目","url":"https://github.com/Xinayu/2018/07/02/Vue--搭建项目/"},{"date":"2018-07-04","title":"Hexo + Github","url":"https://github.com/Xinayu/2018/07/04/hexo--Hexo+Github/"},{"date":"2018-07-04","title":"添加本地搜索","url":"https://github.com/Xinayu/2018/07/04/hexo--添加本地搜索/"},{"date":"2018-07-05","title":"使用方法","url":"https://github.com/Xinayu/2018/07/05/swiper3-0-使用方法/"},{"date":"2018-07-05","title":"添加复制功能","url":"https://github.com/Xinayu/2018/07/05/hexo--添加复制功能/"},{"date":"2018-07-05","title":"效果样式","url":"https://github.com/Xinayu/2018/07/05/Swiper3-0-效果样式/"},{"date":"2018-07-05","title":"局部组件","url":"https://github.com/Xinayu/2018/07/05/Swiper3-0-局部组件/"},{"date":"2018-07-05","title":"01--基础使用","url":"https://github.com/Xinayu/2018/07/05/canvas--基础使用/"},{"date":"2018-07-06","title":"02--路径","url":"https://github.com/Xinayu/2018/07/06/canvas--路径/"},{"date":"2018-07-09","title":"评论组件","url":"https://github.com/Xinayu/2018/07/09/TX-评论组件/"},{"date":"2018-07-10","title":"预加载","url":"https://github.com/Xinayu/2018/07/10/TX-预加载/"},{"date":"2018-07-17","title":"01--种子模块","url":"https://github.com/Xinayu/2018/07/17/JS框架--种子模块/"},{"date":"2018-07-25","title":"02--模块加载系统","url":"https://github.com/Xinayu/2018/07/25/JS框架--模块加载系统/"},{"date":"2018-08-18","title":"THREE.Scene常用方法和属性","url":"https://github.com/Xinayu/2018/08/18/3JS--场景对象THREE.Scene/"},{"date":"2018-08-20","title":"各种光源","url":"https://github.com/Xinayu/2018/08/20/3JS--各种光源/"},{"date":"2018-08-21","title":"材质","url":"https://github.com/Xinayu/2018/08/21/3JS--材质/"}];
+  var today = moment().format('YYYY-MM-DD');
+  var oneYearAgo = moment(today).subtract(1, 'years');
+  posts = posts.filter(function(post) {
+    return new Date(post.date) > oneYearAgo;
+  });
+  var monthLabels = [];
+  var monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var calendar = getCalendar(posts);
+
+  var dateRange = {
+    start: moment(oneYearAgo).format('MMM D, YYYY'),
+    end: moment().format('MMM D, YYYY')
+  }
+
+  var app = new Vue({
+    el: '#calendar',
+    data: {
+      posts: posts,
+      selectedDate: null,
+      calendar: calendar,
+      dateRange: dateRange,
+      mouseoverDate: null,
+      moment: moment,
+      monthLabels: monthLabels
+    },
+    created: function() {
+      this.selectedDate = 'none';
+    },
+    methods: {},
+    computed: {
+      svgtip: function() {
+        var date = this.mouseoverDate;
+        var display = date ? 'block' : 'none';
+        if (date) {
+          var coordinator = getIndexByDate(date);
+          var x = coordinator[0];
+          var y = coordinator[1];
+          var len = this.calendar[x].days[y].posts.length;
+          var text = len ? len + ' contributions' : 'No contributions';
+          var left = coordinator[0] * 12 - 37 + 'px';
+          coordinator[1] = coordinator[0] ? coordinator[1] : coordinator[1] + oneYearAgo.day();
+          var top = coordinator[1] * 12 + 12 - 32 + 'px';
+        }
+        return {
+          text: text,
+          left: left,
+          top: top,
+          display: display
+        }
+      }
+    }
+  });
+
+  function getCalendar(posts) {
+    // raw calendar
+    var maxCount = 0;
+    var tmr = new Date();
+    tmr.setDate(tmr.getDate() + 1);
+    var tmrStr = tmr.toISOString().slice(0, 10);
+    var date = new Date();
+    date.setYear(date.getFullYear() - 1); // start date is a year ago;
+    var calendar = [];
+    while (date.toISOString().slice(0, 10) !== tmrStr) {
+      var day = date.getDay();
+      if (day === 0 || calendar.length === 0) {
+        var x = calendar.length * 13;
+        calendar.push({
+          transform: 'translate(' + x + ',0)',
+          days: []
+        })
+      }
+
+      calendar[calendar.length - 1].days.push({
+        x: 14 - calendar.length,
+        y: day * 12,
+        date: date.toISOString().slice(0, 10),
+        posts: []
+      });
+
+      if (day === 0 && date.getDate() < 8) {
+        monthLabels.push({
+          x: 14 - calendar.length + x,
+          text: monthName[date.getMonth() - 1]
+        })
+      }
+
+      date.setDate(date.getDate() + 1);
+    }
+
+    // handle post info
+    posts.forEach(function(post) {
+      var x = getIndexByDate(post.date)[0];
+      var y = getIndexByDate(post.date)[1];
+
+      calendar[x].days[y].posts.push({
+        title: post.title,
+        url: post.url
+      });
+
+      var len = calendar[x].days[y].posts.length;
+      maxCount = Math.max(len, maxCount);
+    })
+
+    // handle fill color
+    calendar.forEach(function(week) {
+      week.days.forEach(function(day) {
+        day.fill = getColorByLength(day.posts.length, maxCount);
+      })
+    })
+
+    return calendar;
+  }
+
+  function getIndexByDate(date) {
+    date = moment(date);
+    var firstColumnLen = 7 - oneYearAgo.day();
+    var days = date.diff(oneYearAgo, 'days');
+
+    var x = days > firstColumnLen - 1 ? Math.ceil((days - firstColumnLen + 1) / 7) : 0;
+    var y = days > firstColumnLen - 1 ? date.day() : date.day() - oneYearAgo.day();
+    return [x, y];
+  }
+
+  function getColorByLength(len, max) {
+    var colors = ['#eee', '#d6e685', '#8cc665', '#44a340', '#1e6823'];
+    var colorsLen = colors.length - 1;
+    var color = len ? colors[0] : colors[1];
+    var interval = max / colorsLen;
+    if (max < colorsLen) {
+      color = colors[len];
+    } else {
+      color = colors[Math.ceil(len / interval)];
+    }
+    return color;
+  }
+
+</script>
+
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://github.com/Xinayu" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2018 John Doe</li>
+      <li><a href="https://github.com/Xinayu">Home</a></li>
+      
+    </ul>
+    <div class="footer-theme-info">
+      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
+    
+  </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -1,4 +1,141 @@
-<!DOCTYPE html><html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Vuex参考 | YOUQUAN</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="stylesheet" type="text/css" href="https://oindk07nf.qnssl.com/atom-one-dark.css"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Vuex参考</h1><a id="logo" href="/.">YOUQUAN</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Start</i></a><a href="/archives/"><i class="fa fa-archive"> Archiv</i></a><a href="/about/"><i class="fa fa-user"> Über</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Vuex参考</h1><div class="post-meta">Jul 2, 2018<span> | </span><span class="category"><a href="/categories/Vue使用手册/">Vue使用手册</a></span></div><div class="post-content"><p>vuex是数据仓库，同时也是状态管理器</p>
+<!DOCTYPE html>
+<html lang="">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    Vuex参考 | YOUQUAN
+  </title>
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="
+  vue2.0
+  ">
+  
+  <meta name="author" content="John Doe">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+</head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archives"
+           class="header-toolbar-right"> 40 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 12 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 12 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">YOUQUAN</a>
+      
+      
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    John Doe
+
+    <span class="post-date float-right" title="{{moment(1530508946000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      <i class="fa fa-pencil-square-o"></i>
+      {{moment(1530508946000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>Vuex参考</h1>
+    <p>vuex是数据仓库，同时也是状态管理器</p>
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>新建js文件<br><img src="https://miao.su/images/2018/07/04/vuex1684a3.png" alt=""><br>写入store.js   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引入依赖</span></span><br><span class="line"><span class="keyword">import</span>  Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span>  Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state =&#123;  <span class="comment">//state是状态</span></span><br><span class="line">  count:<span class="number">1</span>       <span class="comment">//count是公用的数据，放在状态里面</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//暴露出去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></copy></p>
 <p>在组件中使用（<strong>app.vue</strong>）   <copy><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用$.store.state获取状态 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>这是数据仓库的值：&#123;&#123;$.store.state.count&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br></pre></td></tr></table></figure></copy></p>
 <p><strong>①</strong>使用<code>computed</code>简化指令（<strong>app.vue</strong>）  <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">computed:&#123;   <span class="comment">//computer用于临时计算，返回一个对象</span></span><br><span class="line">  count()&#123;   <span class="comment">//这里把count的值指向为  this.$store.state.count</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></copy></p>
@@ -7,10 +144,42 @@
 <h2 id="改变数据的值"><a href="#改变数据的值" class="headerlink" title="改变数据的值"></a>改变数据的值</h2><p>通过mutations来改变state里面的值(<strong>store / vuex.js</strong>)   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  add(state,n)&#123;    <span class="comment">//第一个是状态参数，第二个是自定义参数</span></span><br><span class="line">    state.count+=n;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//把状态和方法都暴露出去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state,mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></copy></p>
 <p>在组件里接收数据（<strong>app.vue</strong>）   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span>  <span class="string">'@/vuex/store'</span>;  <span class="comment">//接收数据</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState,mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        message:<span class="string">'hello world'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    store,  <span class="comment">//接收数据</span></span><br><span class="line">    methods:mapMutations([</span><br><span class="line">        <span class="string">'add'</span>,<span class="string">'reduce'</span></span><br><span class="line">    ]),</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></copy></p>
 <p>使用数据（<strong>app.vue</strong>）   <copy><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit('add',10)"</span>&gt;</span>增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--只能通过 $store.commit（）调用方法--</span></span><br></pre></td></tr></table></figure></copy></p>
-</div><div class="tags"><a href="/tags/vue2-0/">vue2.0</a></div><div class="post-nav"><a class="pre" href="/2018/07/02/Vue--搭建项目/">Vue搭建项目</a><a class="next" href="/2018/06/29/jQuery--常用操作/">jQuery常用操作</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS手册/">CSS手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Gulp使用参考/">Gulp使用参考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS出深入浅/">JS出深入浅</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript框架/">JavaScript框架</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Swiper3-0手册/">Swiper3.0手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/THREE-js/">THREE.js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TX-解决方案/">TX-解决方案</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue使用手册/">Vue使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/canvas攻略/">canvas攻略</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo功能整合/">hexo功能整合</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery使用手册/">jQuery使用手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/弹性布局/">弹性布局</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/供应商/" style="font-size: 15px;">供应商</a> <a href="/tags/THREE/" style="font-size: 15px;">THREE</a> <a href="/tags/Gulp/" style="font-size: 15px;">Gulp</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/JS框架/" style="font-size: 15px;">JS框架</a> <a href="/tags/Swiper3-0/" style="font-size: 15px;">Swiper3.0</a> <a href="/tags/CSS兼容/" style="font-size: 15px;">CSS兼容</a> <a href="/tags/vue2-0/" style="font-size: 15px;">vue2.0</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/flex/" style="font-size: 15px;">flex</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">YOUQUAN.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
-if (search_path.length == 0) {
-   search_path = 'search.xml';
-}
-var path = '/' + search_path;
-searchFunc(path, 'local-search-input', 'local-search-result');
-</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://github.com/Xinayu" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2018 John Doe</li>
+      <li><a href="https://github.com/Xinayu">Home</a></li>
+      
+    </ul>
+    <div class="footer-theme-info">
+      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
+    
+  </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>
