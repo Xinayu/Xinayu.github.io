@@ -3563,9 +3563,13 @@ pre .deletion {
 [class*="col-"] {
     padding-bottom: 0;
 }
-.col-md-8 {
-    padding-left: 0;
+
+@media only screen and (min-width : 992px) {
+    .col-md-8 {
+        padding-left: 0;
+    }
 }
+
 h3 {
     border-bottom: 1px solid #37c8ff;
     color: #37c8ff;
@@ -3579,9 +3583,10 @@ h2 {
     margin-top: 30px;
 }
 h1 {
-    color: #37c8ff;
+    color: #219bca;
     font-weight: 400;
     margin-top: 7px;
+    text-transform: uppercase;
 }
 .readMore a{
     border-color: #37c8ff;
@@ -3633,8 +3638,7 @@ time:after{
 
 figure.highlight{
     margin: 5px 0 25px;
-    border-radius: 6px
-;
+    border-radius: 6px;
 
 }
 
@@ -3651,7 +3655,7 @@ span.comment {
 }
 figure.highlight{
     background-color: #000000!important;
-
+    border-top-right-radius: 0;
 }
 figure.highlight .code{
     border: none;
@@ -3659,4 +3663,52 @@ figure.highlight .code{
 span.comment {
     color: #8e8e8e!important;
     font-style: normal;
+}
+
+figure::-webkit-scrollbar {
+    height: 11px;
+}
+figure::-webkit-scrollbar-thumb{
+    background-color: #4cb7de;
+}
+figure::-webkit-scrollbar-track{
+    background-color: #b4dfea;
+
+}
+figure table{
+    margin: 0;
+}
+
+.sb-menu li a{
+    color: #dcdcdc;
+}
+.sb-slidebar a:hover {
+    color: #70f1d3;
+}
+.sb-close img:hover{
+    color: #70f1d3;
+}
+.sb-slidebar {
+    background-color: rgba(21, 21, 21, 0.88);
+}
+
+/*复制按钮*/
+figure .copy{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #faff27;
+    color: #262626;
+    padding: 0.24em 0.8em;
+    border-bottom-left-radius: 1em;
+    font-size: 0.7em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+figure .copy.on{
+    background: #1ec241;
+    color:white;
 }

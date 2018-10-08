@@ -43,7 +43,7 @@
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
     <script src="/js/jquery-1.11.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
+    <script src="https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js"></script>
     <!-- Load these in the <head> for quicker IE8+ load times -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -75,17 +75,6 @@
             <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
             <!-- Dropdown Menu -->
 			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
             
         	<li>
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
@@ -203,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -238,41 +227,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/22/JS--继承/">继承</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
-          2017-08-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <h2 id="通过ES5的-Object-create实现"><a href="#通过ES5的-Object-create实现" class="headerlink" title="通过ES5的 Object.create实现"></a>通过ES5的 <code>Object.create</code>实现</h2><h3 id="创建父类"><a href="#创建父类" class="headerlink" title="创建父类"></a>创建父类</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.headCount = <span class="number">1</span>;</span><br><span class="line">Parent.prototype.eat = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'eat'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/22/JS--继承/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2017/08/22/JS-JS的原型继承/">原型继承</a></h3>
                     <span>
                         <span class="post-meta">
@@ -297,6 +251,41 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2017/08/22/JS-JS的原型继承/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/22/JS--继承/">继承</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
+          2017-08-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <h2 id="通过ES5的-Object-create实现"><a href="#通过ES5的-Object-create实现" class="headerlink" title="通过ES5的 Object.create实现"></a>通过ES5的 <code>Object.create</code>实现</h2><h3 id="创建父类"><a href="#创建父类" class="headerlink" title="创建父类"></a>创建父类</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.headCount = <span class="number">1</span>;</span><br><span class="line">Parent.prototype.eat = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'eat'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/22/JS--继承/">详情...</a>
                     </p>
                     
                 </div>
