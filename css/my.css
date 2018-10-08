@@ -154,3 +154,6 @@ figure .copy.on{
     background: #1ec241;
     color:white;
 }
+.navbar-inner {
+    background-color: rgba(243, 243, 243, 0.23);
+}
