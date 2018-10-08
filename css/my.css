@@ -1,0 +1,104 @@
+/* new style  */
+#hero h2{
+    border:none;
+}
+[class*="col-"] {
+    padding-bottom: 0;
+}
+.col-md-8 {
+    padding-left: 0;
+}
+h3 {
+    border-bottom: 1px solid #37c8ff;
+    color: #37c8ff;
+    font-size: 21px;
+    margin-top: 30px;
+}
+h2 {
+    border-bottom: 1px solid #37c8ff;
+    color: #37c8ff;
+    font-size: 21px;
+    margin-top: 30px;
+}
+h1 {
+    color: #37c8ff;
+    font-weight: 400;
+    margin-top: 7px;
+}
+.readMore a{
+    border-color: #37c8ff;
+}
+#intro .col-md-8.col-md-offset-2 p a {
+    color: #37c8ff;
+}
+.m-pagination a{
+    border-color: #37c8ff;
+    color: #37c8ff;
+}
+.readMore a:hover {
+    background-color: #37c8ff;
+    color: #fff!important;
+}
+.m-pagination a:hover{
+    background-color: #37c8ff;
+    color: #fff!important;
+}
+thead {
+    background: #e6e6e6;
+    font-weight: bold;
+}
+td, th {
+    padding: 0.6em 0.8em;
+    border: 1px solid #cccccc;
+    line-height: 1.3em;
+}
+figure td,figure th{
+    border: none;
+}
+table {
+    margin: 0.5em 0 1em;
+}
+time {
+    position: relative;
+    padding-left: 27px;
+}
+time:after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(../img/cal.png) no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+figure.highlight{
+    margin: 5px 0 25px;
+    border-radius: 6px
+;
+
+}
+
+pre {
+    line-height: 1.62857143;
+    color: #f5f5f5;
+    background-color: #000000;
+    border: none!important;
+    letter-spacing: 0.06em;
+}
+span.comment {
+    color: #8e8e8e!important;
+    font-style: normal;
+}
+figure.highlight{
+    background-color: #000000!important;
+
+}
+figure.highlight .code{
+    border: none;
+}
+span.comment {
+    color: #8e8e8e!important;
+    font-style: normal;
+}
