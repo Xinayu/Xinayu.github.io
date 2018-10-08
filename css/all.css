@@ -3571,14 +3571,14 @@ pre .deletion {
 }
 
 h3 {
-    border-bottom: 1px solid #37c8ff;
-    color: #37c8ff;
+    border-bottom: 1px solid #31b0e0;
+    color: #31b0e0;
     font-size: 21px;
     margin-top: 30px;
 }
 h2 {
-    border-bottom: 1px solid #37c8ff;
-    color: #37c8ff;
+    border-bottom: 1px solid #31b0e0;
+    color: #31b0e0;
     font-size: 21px;
     margin-top: 30px;
 }
@@ -3666,7 +3666,7 @@ span.comment {
 }
 
 figure::-webkit-scrollbar {
-    height: 11px;
+    height: 7px;
 }
 figure::-webkit-scrollbar-thumb{
     background-color: #4cb7de;
@@ -3714,4 +3714,30 @@ figure .copy.on{
 }
 .navbar-inner {
     background-color: rgba(243, 243, 243, 0.23);
+}
+figure span::selection {
+    background: #95fff1;
+}
+figure span::-moz-selection{
+    background: #95fff1;
+}
+blockquote:after {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    content: "√";
+    background-color: #f66;
+}
+blockquote {
+    border-left: 3px solid #f66;
+    position: relative;
 }

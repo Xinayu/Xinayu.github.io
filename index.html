@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
 				    
 				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
 				    
@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -223,6 +223,82 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/01/3JS--TWEEN补间动画/">TWEEN补间动画</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-01T08:42:53.000Z" itemprop="datePublished">
+          2018-10-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        使用方法首先要用一个对象将需要进行补间动画的值包含进来
+var changeSrc = &#123;positionZ:1180&#125;
+然后在tween中注册使用该对象并且设置相关参数 
+var tween = new TWEEN.Tween(posSrc)     //注册.to(&#123;pos:640&#125;,3000)						//补间结束值 3000是持续时间.easing(TWEEN.Easing.Sinuso
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/01/3JS--TWEEN补间动画/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/09/30/3JS--dat.gui 使用/">dat.gui使用</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-09-30T08:42:53.000Z" itemprop="datePublished">
+          2018-09-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        dat.GUI 是一个轻量级的图形用户界面库（GUI 组件），使用这个库可以很容易地创建出能够改变代码变量的界面组件。
+基本使用方法引用路径&lt;script src="https://cdn.bootcss.com/dat-gui/0.7.2/dat.gui.min.js"&gt;&lt;/script&gt;
+创建对象该对象用于存储需要动态改变的值。
+//创建一个对象存储需要动态改变的值var controls = &#123; 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/09/30/3JS--dat.gui 使用/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -622,78 +698,6 @@ clip()
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/06/canvas--路径/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/05/canvas--基础使用/">01--基础使用</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-05T08:42:53.000Z" itemprop="datePublished">
-          2018-07-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/canvas/'>canvas</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        &lt;canvas&gt;标签相当于画布，可以通过脚本来绘制图形。一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。
-我们不能直接在画布上作图，需要先获取canvas的上下文，然后通过操作上下文去选择性绘制图像。var canvas = document.getElementById('canvas');var cxt = canvas.getContex
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/05/canvas--基础使用/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/05/hexo--添加复制功能/">添加复制功能</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-05T08:42:53.000Z" itemprop="datePublished">
-          2018-07-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        hexo自带的代码段没有复制功能，有时候不是很方便，我们使用clipboard.js完善该功能。
-引入插件每个主题使用的模板语言不一样，这里以.pug为栗子cd你的博客目录，然后打开 theme -&gt; layout -&gt; _partial -&gt;head.pug，加入外链script(type='text/javascript', src='https://cdn.bootcss.com/clipboard.js/1.5
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/05/hexo--添加复制功能/">详情...</a>
                     </p>
                     
                 </div>

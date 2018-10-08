@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
 				    
 				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
 				    
@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,11 +227,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/22/JS-JS的原型继承/">原型继承</a></h3>
+                    <h3><a href="/2017/09/22/JS--call 和 apply/">call和apply</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
-          2017-08-22
+      <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
+          2017-09-22
       </time>
     
     
@@ -245,12 +245,52 @@
                 <div class="col-md-8">
                     <p>
                       
-                        JS的原型继承在js中，要想创建一个对象，不是通过实例化，而是通过选择一个对象作为原型去克隆它来达到目的。而且对象只能克隆函数对象里面的prototype属性，既是Function.prototye，由于只有函数才有prototype对象，所以，想要创建一个对象，就必须要用函数才能创建，这个函数通常被称为构造器函数。来看一下普通对象和函数对象的创建：var cat= &#123;&#125;;function demo()&#123;&
+                        <p>每个函数都有<code>call</code>和<code>apply</code>方法，可以用来改变this的指向，或者说，用<code>call</code>和<code>apply</code>来帮助对象，去调用某个函数的方法</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>比如某个对象想用它本身没有的方法，但是又不想重写，就可以使用<code>call</code>和<code>apply</code>去调用其他函数的方法 <copy></copy></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>)</span><br></pre></td></tr></table></figure>
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/08/22/JS-JS的原型继承/">详情...</a>
+                        <a href="/2017/09/22/JS--call 和 apply/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/23/JS--常见的封装/">常见的封装</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-22T16:00:00.000Z" itemprop="datePublished">
+          2017-08-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <h2 id="命名空间（用对象的方式模拟）"><a href="#命名空间（用对象的方式模拟）" class="headerlink" title="命名空间（用对象的方式模拟）"></a>命名空间（用对象的方式模拟）</h2><p>首先用对象字面量的方式创建一个命名空间</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Game = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>添加模块，可以将相同功能或者属性的归类</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Game.module1 = &#123;<span class="attr">name</span>:<span class="string">'p'</span>,<span class="attr">m</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;&#125;;</span><br></pre></td></tr></table></figure>
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/23/JS--常见的封装/">详情...</a>
                     </p>
                     
                 </div>
@@ -286,6 +326,41 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2017/08/22/JS--继承/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/22/JS-JS的原型继承/">原型继承</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
+          2017-08-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        JS的原型继承在js中，要想创建一个对象，不是通过实例化，而是通过选择一个对象作为原型去克隆它来达到目的。而且对象只能克隆函数对象里面的prototype属性，既是Function.prototye，由于只有函数才有prototype对象，所以，想要创建一个对象，就必须要用函数才能创建，这个函数通常被称为构造器函数。来看一下普通对象和函数对象的创建：var cat= &#123;&#125;;function demo()&#123;&
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/22/JS-JS的原型继承/">详情...</a>
                     </p>
                     
                 </div>
@@ -334,6 +409,44 @@ function cat(a,b) &#123;    console.log(cat.length); 		//函数的形参个数  
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2017/08/15/JS--对象的关联/">对象的关联</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-14T16:00:00.000Z" itemprop="datePublished">
+          2017-08-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <p>JS的数据类型有两种：</p>
+<ul>
+<li>原始类型（string、boolean、number、null、undefined）</li>
+<li>对象类型（object）
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/15/JS--对象的关联/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2017/08/15/JS--prototype 和 __proto__/">prototype 和 __proto__</a></h3>
                     <span>
                         <span class="post-meta">
@@ -363,44 +476,6 @@ var Demo = function () &#123;&#125;console.log(Demo.prototype)  // &#123;constru
                     
                     <p class="pull-right readMore">
                         <a href="/2017/08/15/JS--prototype 和 __proto__/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/08/15/JS--对象的关联/">对象的关联</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-14T16:00:00.000Z" itemprop="datePublished">
-          2017-08-15
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <p>JS的数据类型有两种：</p>
-<ul>
-<li>原始类型（string、boolean、number、null、undefined）</li>
-<li>对象类型（object）
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/15/JS--对象的关联/">详情...</a>
                     </p>
                     
                 </div>
@@ -522,87 +597,9 @@ var Demo = function () &#123;&#125;console.log(Demo.prototype)  // &#123;constru
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/06/12/Gulp--简单操作/">Gulp的实例参考</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-06-11T16:00:00.000Z" itemprop="datePublished">
-          2017-06-12
-      </time>
-    
-    
-    | 
-    <a href='/tags/Gulp/'>Gulp</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        基本插件的安装GulpJs的安装依赖nodejs，所以先安装nodejs
-打开nodejs里面的cmd文件，安装gulp全局变量
-npm install -g gulp
-安装项目开发所需要的依赖项
-npm install --save-dev gulp
-安装用来压缩js文件的插件
-npm install --save-dev gulp-uglify
-安装用来压缩css文件的插件
-npm install --save-dev gulp-m
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/06/12/Gulp--简单操作/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/06/12/Gulp--入门指南/">Gulp入门指南</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-06-11T16:00:00.000Z" itemprop="datePublished">
-          2017-06-12
-      </time>
-    
-    
-    | 
-    <a href='/tags/Gulp/'>Gulp</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <p>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率<br>
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/06/12/Gulp--入门指南/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
           <a class="pull-left" href="/page/3/">← Newer Posts</a>
-          
+          <a class="pull-right" href="/page/5/">Older Posts →</a>
         </nav>
     </div>
 </section>

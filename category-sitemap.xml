@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/JS%E5%87%BA%E6%B7%B1%E5%85%A5%E6%B5%85/</loc>
-        <lastmod>2018-07-05T06:14:02.569Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/Xinayu/categories/Swiper3-0%E6%89%8B%E5%86%8C/</loc>
         <lastmod>2018-07-05T06:15:32.913Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -78,14 +71,21 @@
 
     <url>
         <loc>https://github.com/Xinayu/categories/THREE-js/</loc>
-        <lastmod>2018-09-03T07:53:34.111Z</lastmod>
+        <lastmod>2018-10-08T05:39:05.824Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://github.com/Xinayu/categories/CSS%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-10-08T04:00:21.575Z</lastmod>
+        <lastmod>2018-10-08T05:45:55.110Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/JS%E5%87%BA%E6%B7%B1%E5%85%A5%E6%B5%85/</loc>
+        <lastmod>2018-10-08T06:20:30.169Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
