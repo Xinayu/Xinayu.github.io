@@ -3556,7 +3556,7 @@ pre .clojure .title {
 pre .deletion {
   color: #dc322f;
 }
-/* new style  */
+﻿/* new style  */
 #hero h2{
     border:none;
 }
@@ -3741,3 +3741,4 @@ blockquote {
     border-left: 3px solid #f66;
     position: relative;
 }
+

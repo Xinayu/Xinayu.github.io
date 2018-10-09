@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,7 +227,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/09/22/JS--call 和 apply/">call和apply</a></h3>
+                    <h3><a href="/2017/09/22/JS--数组型对象的实现/">数组型对象的实现</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
@@ -245,14 +245,12 @@
                 <div class="col-md-8">
                     <p>
                       
-                        <p>每个函数都有<code>call</code>和<code>apply</code>方法，可以用来改变this的指向，或者说，用<code>call</code>和<code>apply</code>来帮助对象，去调用某个函数的方法</p>
-<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>比如某个对象想用它本身没有的方法，但是又不想重写，就可以使用<code>call</code>和<code>apply</code>去调用其他函数的方法 <copy></copy></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>)</span><br></pre></td></tr></table></figure>
+                        在jQuery中，如果调用$函数访问一个元素，例如console.log($(&#39;div&#39;));，则会返回一个数组型对象。可以借助循环添加的方式实现 var o = &#123;&#125;;array = ['p','a']for(i=0;i&lt;array.length;i++)&#123;  o[i] = arry[i];&#125;o.length = array.length;console.log(o);		
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/09/22/JS--call 和 apply/">详情...</a>
+                        <a href="/2017/09/22/JS--数组型对象的实现/">详情...</a>
                     </p>
                     
                 </div>
@@ -409,44 +407,6 @@ function cat(a,b) &#123;    console.log(cat.length); 		//函数的形参个数  
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/15/JS--对象的关联/">对象的关联</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-14T16:00:00.000Z" itemprop="datePublished">
-          2017-08-15
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <p>JS的数据类型有两种：</p>
-<ul>
-<li>原始类型（string、boolean、number、null、undefined）</li>
-<li>对象类型（object）
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/15/JS--对象的关联/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2017/08/15/JS--prototype 和 __proto__/">prototype 和 __proto__</a></h3>
                     <span>
                         <span class="post-meta">
@@ -487,6 +447,44 @@ var Demo = function () &#123;&#125;console.log(Demo.prototype)  // &#123;constru
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2017/08/15/JS--对象的关联/">对象的关联</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-14T16:00:00.000Z" itemprop="datePublished">
+          2017-08-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <p>JS的数据类型有两种：</p>
+<ul>
+<li>原始类型（string、boolean、number、null、undefined）</li>
+<li>对象类型（object）
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/15/JS--对象的关联/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2017/08/14/JS--关于闭包/">关于闭包</a></h3>
                     <span>
                         <span class="post-meta">
@@ -505,7 +503,7 @@ var Demo = function () &#123;&#125;console.log(Demo.prototype)  // &#123;constru
                 <div class="col-md-8">
                     <p>
                       
-                        <p>维基解释：闭包（Closure）是词法闭包（Lexical Closure）的简称，是引用了自由变量的<strong>函数</strong>。这个被引用的自由变量将和这个函数一同存在，即使离开了创造它的环境也不例外</p>
+                        <p>闭包就是能够读取其他函数内部变量的函数。</p>
 <blockquote>
 <p>在Js中，如果一个函数在另外一个函数中定义，那么这个函数会访问到父函数里面定义的成员，形成闭包。<br>​或者说，一个函数能访问它被创建时所处的上下文环境，就是闭包。<br>
                       
