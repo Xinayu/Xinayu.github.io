@@ -1,7 +1,5 @@
 /* new style  */
-#hero h2{
-    border:none;
-}
+
 [class*="col-"] {
     padding-bottom: 0;
 }
@@ -182,4 +180,7 @@ blockquote:after {
 blockquote {
     border-left: 3px solid #f66;
     position: relative;
+}
+#hero h2{
+    border:none;
 }
