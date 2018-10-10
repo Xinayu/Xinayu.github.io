@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,7 +227,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/09/22/JS--数组型对象的实现/">数组型对象的实现</a></h3>
+                    <h3><a href="/2017/09/22/JS--call 和 apply/">call和apply</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
@@ -245,12 +245,14 @@
                 <div class="col-md-8">
                     <p>
                       
-                        在jQuery中，如果调用$函数访问一个元素，例如console.log($(&#39;div&#39;));，则会返回一个数组型对象。可以借助循环添加的方式实现 var o = &#123;&#125;;array = ['p','a']for(i=0;i&lt;array.length;i++)&#123;  o[i] = arry[i];&#125;o.length = array.length;console.log(o);		
+                        <p>每个函数都有<code>call</code>和<code>apply</code>方法，可以用来改变this的指向，或者说，用<code>call</code>和<code>apply</code>来帮助对象，去调用某个函数的方法</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>比如某个对象想用它本身没有的方法，但是又不想重写，就可以使用<code>call</code>和<code>apply</code>去调用其他函数的方法 <copy></copy></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>)</span><br></pre></td></tr></table></figure>
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/09/22/JS--数组型对象的实现/">详情...</a>
+                        <a href="/2017/09/22/JS--call 和 apply/">详情...</a>
                     </p>
                     
                 </div>
@@ -300,41 +302,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/22/JS--继承/">继承</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
-          2017-08-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <h2 id="通过ES5的-Object-create实现"><a href="#通过ES5的-Object-create实现" class="headerlink" title="通过ES5的 Object.create实现"></a>通过ES5的 <code>Object.create</code>实现</h2><h3 id="创建父类"><a href="#创建父类" class="headerlink" title="创建父类"></a>创建父类</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.headCount = <span class="number">1</span>;</span><br><span class="line">Parent.prototype.eat = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'eat'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/22/JS--继承/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2017/08/22/JS-JS的原型继承/">原型继承</a></h3>
                     <span>
                         <span class="post-meta">
@@ -359,6 +326,41 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2017/08/22/JS-JS的原型继承/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/22/JS--继承/">继承</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
+          2017-08-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <h2 id="通过ES5的-Object-create实现"><a href="#通过ES5的-Object-create实现" class="headerlink" title="通过ES5的 Object.create实现"></a>通过ES5的 <code>Object.create</code>实现</h2><h3 id="创建父类"><a href="#创建父类" class="headerlink" title="创建父类"></a>创建父类</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.headCount = <span class="number">1</span>;</span><br><span class="line">Parent.prototype.eat = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'eat'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/22/JS--继承/">详情...</a>
                     </p>
                     
                 </div>
