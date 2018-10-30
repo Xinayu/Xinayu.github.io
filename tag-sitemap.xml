@@ -80,7 +80,14 @@
 
     <url>
         <loc>https://github.com/Xinayu/tags/JavaScript/</loc>
-        <lastmod>2018-10-09T03:37:48.164Z</lastmod>
+        <lastmod>2018-10-26T02:49:37.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/tags/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+        <lastmod>2018-10-30T09:00:17.120Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

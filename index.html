@@ -84,7 +84,9 @@
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(11)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(3)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -192,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -223,6 +225,113 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/30/设计模式--外观模式/">外观模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-30T08:37:16.000Z" itemprop="datePublished">
+          2018-10-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        外观模式就是为一组复杂的子系统接口提供一个更高级的统一接口，通过这个接口可以使子系统接口更加容易访问比如我们在使用点击事件时，有多种方法，可以直接通过document绑定，可以通过监听事件进行绑定，然而并不是每个方法都实用，因为要考虑到浏览器的兼容性问题。我们可以使用外观模式对点击事件进行优化：//外观模式 dom元素，type类型，fn回掉function addEvent(dom,type,fn)&#123;    //处理支持 a
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/30/设计模式--外观模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/30/设计模式--原型模式/">原型模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-30T07:33:32.000Z" itemprop="datePublished">
+          2018-10-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        原型模式使用原型对象指向创建对象的类，用于创建新的对象的类共享原型对象的属性以及方法。
+要点是将可复用的、可共享的、耗时大的从基类中提出来然后放在其原型中。然后子类通过组合继承或者寄生组合继承而将方法和属性继承下来。对于子类中那些需要重写的方法进行重写，这样子类创建的对象既有子类的属性和方法也共享了基类的原型方法。来看一段代码：// 例如创建一个 Person 的构造函数, 让人有名字, 可以说话function Person ( na
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/30/设计模式--原型模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/30/设计模式--工厂模式/">工厂模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-30T04:13:43.000Z" itemprop="datePublished">
+          2018-10-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        与创建型模式类似，工厂模式创建对象（视为工厂里的产品）时无需指定创建对象的具体类。
+工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。var productManager = &#123;&#125;;//不同的类型productManager.createProductA = function () &#123;    console.log('ProductA');&#125;productManager.cre
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/30/设计模式--工厂模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -544,160 +653,6 @@ JS模块化标准CommonJS与AMD就是为了实现JS的模块化机制，前者�
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/17/JS框架--种子模块/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX-预加载/">预加载</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
-          2018-07-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        当网页图片比较多的时候，使用预加载动画，可以提高用户体验
-引用  预加载效果使用loder.js实现，前往下载
-&lt;script src="js/loder.js"&gt;&lt;/script&gt;
-添加结构根据设计稿灵活添加结构和样式，比如我要实现一个数字动态增加的预加载效果，给数字一个类名，方便抓取 
-&lt;!-- 参考样式 --&gt;  &lt;div id="loader" class="loader"&gt;   
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX-预加载/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/09/TX-评论组件/">评论组件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-08T16:00:00.000Z" itemprop="datePublished">
-          2018-07-09
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        使用方法引用css和js文件css  &lt;link rel="stylesheet" href="css/comment.css"&gt;
-js   &lt;script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"&gt;&lt;/script&gt;&lt;script src="//ossweb-img.qq.com/images/js/mobile_bundle
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/09/TX-评论组件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/06/canvas--路径/">02--路径</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-06T08:42:53.000Z" itemprop="datePublished">
-          2018-07-06
-      </time>
-    
-    
-    | 
-    <a href='/tags/canvas/'>canvas</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        路径
-
-
-方法
-描述
-
-
-
-
-fill()
-填充当前绘图（路径）
-
-
-stroke()
-连接当前的绘图（路径）
-
-
-beginPath()
-起始一条路径，或重置当前路径。
-
-
-moveTo()
-移动画笔
-
-
-closePath()
-闭合路径
-
-
-lineTo()
-添加一个新点
-
-
-arc()
-创建弧/曲线（用于创建圆形或部分圆）。
-
-
-arcTo()
-创建两切线之间的弧/曲线。
-
-
-clip()
-从原始画布剪切任意形状和尺寸的区域。
-
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/06/canvas--路径/">详情...</a>
                     </p>
                     
                 </div>

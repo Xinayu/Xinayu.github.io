@@ -87,7 +87,7 @@ pre {
     color: #f5f5f5;
     background-color: #000000;
     border: none!important;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.12em;
 }
 span.comment {
     color: #8e8e8e!important;
@@ -184,3 +184,7 @@ blockquote {
 #hero h2{
     border:none;
 }
+b, strong {
+    color: #30bb9b;
+}
+p{font-size: 15px}
