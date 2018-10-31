@@ -83,7 +83,7 @@ figure.highlight{
 }
 
 pre {
-    line-height: 1.62857143;
+    line-height: 1.4;
     color: #f5f5f5;
     background-color: #000000;
     border: none!important;
@@ -180,6 +180,7 @@ blockquote:after {
 blockquote {
     border-left: 3px solid #f66;
     position: relative;
+    background: #efefef;
 }
 #hero h2{
     border:none;
@@ -188,3 +189,5 @@ b, strong {
     color: #30bb9b;
 }
 p{font-size: 15px}
+h4{
+    color: #209bc9;}

@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: hexo | YOUQUAN</title>
+  <title>观察者模式 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,87 +191,109 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img7.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/07/05/hexo--添加复制功能/">添加复制功能</a></h4>
-                            
-                            <p><time datetime="2018-07-05T08:42:53.000Z"><a href="/2018/07/05/hexo--添加复制功能/">2018-07-05</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/07/04/hexo--添加本地搜索/">添加本地搜索</a></h4>
-                            
-                            <p><time datetime="2018-07-04T05:56:08.000Z"><a href="/2018/07/04/hexo--添加本地搜索/">2018-07-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/07/04/hexo--Hexo+Github/">Hexo + Github</a></h4>
-                            
-                            <p><time datetime="2018-07-04T04:47:50.000Z"><a href="/2018/07/04/hexo--Hexo+Github/">2018-07-04</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-</section> 
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1>观察者模式</h1>
+                <span class="post-meta">
+      <time datetime="2018-10-31T02:18:05.000Z" itemprop="datePublished">
+          2018-10-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            </div>
         </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>观察者模式又被称为发布-订阅者模式或者消息机制。主要作用是定义了一种依赖关系，解决了主体对象与观察者之间的耦合。<br>我们需要一个观察者对象，里面至少要包含一个消息容器和三个方法：订阅消息，取消订阅，发送订阅。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//将观察者放入闭包中，页面加载立即执行</span></span><br><span class="line"><span class="keyword">var</span> Observer = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 消息容器，所有订阅的消息会放在这里</span></span><br><span class="line">    <span class="keyword">var</span> _message = &#123;&#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="comment">//添加订阅</span></span><br><span class="line">        regist:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">        <span class="comment">// 删除订阅</span></span><br><span class="line">        remove:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">        <span class="comment">// 发布订阅</span></span><br><span class="line">        fire:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h4 id="添加订阅"><a href="#添加订阅" class="headerlink" title="添加订阅"></a>添加订阅</h4><p>添加订阅就是将订阅者需要<strong>订阅的消息推入到订阅队列里面</strong>。</p>
+<p>就像在论坛关注了某个用户，当用户有最新的动态时，会自动通知关注者，而不会通知没有关注的人。<br>因此我们需要接受两个参数：<strong>订阅的类型</strong>以及相对应的<strong>处理动作</strong>。</p>
+<p>如果添加的订阅<strong>不存在</strong>，则<strong>创建该订阅</strong>并且推入订阅列表，如果存在则应该将订阅执行动作推入订阅队列中，保证多个模块添加同一订阅能顺利执行。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加订阅</span></span><br><span class="line">regist:<span class="function"><span class="keyword">function</span> (<span class="params">type,fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//如果订阅不存在就创建一个新的订阅</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> _message [type] === <span class="string">'undefined'</span>) &#123;</span><br><span class="line">        <span class="comment">//添加订阅</span></span><br><span class="line">        _message[type] = [fn]</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//增加订阅</span></span><br><span class="line">        _message[type].push(fn);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="删除订阅"><a href="#删除订阅" class="headerlink" title="删除订阅"></a>删除订阅</h4><p>和添加订阅相反，注销不需要的订阅。同样需要两个参数：<strong>订阅类型</strong>和<strong>订阅执行方法</strong>。<br>防止误删，要校验订阅列表中<strong>是否存在订阅</strong>。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 删除订阅</span></span><br><span class="line">remove:<span class="function"><span class="keyword">function</span> (<span class="params">type,fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//如果订阅执行方法列队存在</span></span><br><span class="line">    <span class="keyword">if</span> (_message[type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</span><br><span class="line">        <span class="comment">//遍历所有订阅执行方法，找到要取消的动作后删除</span></span><br><span class="line">        <span class="keyword">var</span> i = _message[typr].length <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; i &gt;=<span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="comment">//如果存在该动作则移除</span></span><br><span class="line">            _message[type][i] === fn &amp;&amp; _message[type].splice(i,<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="发布订阅"><a href="#发布订阅" class="headerlink" title="发布订阅"></a>发布订阅</h4><p>观察者发布一个订阅时，所有关注了该订阅的用户都会收到推送，即是将所有订阅者的订阅一次执行。<br>接收两个参数，<strong>订阅类型</strong>以及动作执行时需要<strong>传递的参数</strong>。<br>在执行订阅动作队列之前校验订阅的存在很有必要。然后便利订阅执行方法队列并且依次执行，然后将订阅类别以及传递的参数打包后一次传入订阅执行方法中。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 发布订阅</span></span><br><span class="line">fire:<span class="function"><span class="keyword">function</span> (<span class="params">type,args</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//如果不存在该订阅，则返回</span></span><br><span class="line">    <span class="keyword">if</span> (!_message[type])</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    <span class="comment">//定义订阅信息</span></span><br><span class="line">    <span class="keyword">var</span> events = &#123;</span><br><span class="line">        type:type,                 <span class="comment">//订阅类型</span></span><br><span class="line">        args:args || &#123;&#125;            <span class="comment">// 订阅执行动作的参数</span></span><br><span class="line">    &#125;,</span><br><span class="line">    i = <span class="number">0</span>;</span><br><span class="line">    len = _message[type].length;   <span class="comment">//订阅执行动作的长度</span></span><br><span class="line">    <span class="comment">//遍历订阅动作</span></span><br><span class="line">    <span class="keyword">for</span> (; i &lt; len; i++)</span><br><span class="line">        <span class="comment">//依次执行订阅对应的动作</span></span><br><span class="line">        _message[type][i].call(<span class="keyword">this</span>,events);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Observer.regist(<span class="string">'test'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,e.args.mes);</span><br><span class="line">&#125;)</span><br><span class="line">Observer.fire(<span class="string">'test'</span>,&#123;<span class="attr">mes</span>:<span class="string">'订阅发布了'</span>&#125;)   <span class="comment">//test 订阅发布了</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>观察者模式主要用于解决类或对象之间的耦合，<strong>解耦</strong>两个互相依赖的对象，使其依赖于观察者的订阅机制</p>
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/10/31/设计模式--状态模式/" style="float: left;">
+        ← 设计模式--状态模式
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/10/30/设计模式--外观模式/">
+        外观模式 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

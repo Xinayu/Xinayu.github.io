@@ -86,7 +86,7 @@
 				    
 				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(3)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(5)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img8.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -229,6 +229,80 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2018/07/04/hexo--添加本地搜索/">添加本地搜索</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-04T05:56:08.000Z" itemprop="datePublished">
+          2018-07-04
+      </time>
+    
+    
+    | 
+    <a href='/tags/hexo/'>hexo</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        随着文章数量的不断增加，目录和标签已经不能满足我们的需求，添加本地搜索有助于我们对所需资源进行快捷定位
+安装搜索插件cd你的博客目录，鼠标右键选择Git Bash Here  $ npm install hexo-generator-searchdb --save
+修改站点配置文件在_config.yml添加搜索支持 search：    path: search.xml    field: post    format: html  
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/04/hexo--添加本地搜索/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/04/hexo--Hexo+Github/">Hexo + Github</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-04T04:47:50.000Z" itemprop="datePublished">
+          2018-07-04
+      </time>
+    
+    
+    | 
+    <a href='/tags/hexo/'>hexo</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        利用Hexo+Github搭建个人博客
+安装Git + nodejsGit: https://www.git-scm.com/download/Node.js: https://nodejs.org/zh-cn/
+安装hexo$ npm install hexo-cli -g                   //全局安装hexo$ hexo init blog		            //创建blog文件并且初始化$ cd blo
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/04/hexo--Hexo+Github/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2018/07/02/Vue--Vuex/">Vuex参考</a></h3>
                     <span>
                         <span class="post-meta">
@@ -254,42 +328,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/02/Vue--Vuex/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--Axios+Mock/">Axios+Mock</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
-          2018-07-02
-      </time>
-    
-    
-    | 
-    <a href='/tags/vue2-0/'>vue2.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        目录结构Axios用于前后端通信，mock.js用于模拟随机数据，搭配使用旨在脱离后端进行开发测试。
-|-- data                            // 目录示例     |-- api.js                     // 统一管理axios所有的请求     |-- index.js            	    // 拦截请求     |-- mock-data.js           
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--Axios+Mock/">详情...</a>
                     </p>
                     
                 </div>
@@ -334,6 +372,42 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/02/Vue--搭建项目/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/02/Vue--Axios+Mock/">Axios+Mock</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
+          2018-07-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/vue2-0/'>vue2.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        目录结构Axios用于前后端通信，mock.js用于模拟随机数据，搭配使用旨在脱离后端进行开发测试。
+|-- data                            // 目录示例     |-- api.js                     // 统一管理axios所有的请求     |-- index.js            	    // 拦截请求     |-- mock-data.js           
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/02/Vue--Axios+Mock/">详情...</a>
                     </p>
                     
                 </div>
@@ -516,80 +590,6 @@ PC视频引用视频组件   &lt;script src="//ossweb-img.qq.com/images/js/comm/
                     
                     <p class="pull-right readMore">
                         <a href="/2018/03/15/TX-视频插件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/03/14/TX-移动端/">H5端构建</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-03-13T16:00:00.000Z" itemprop="datePublished">
-          2018-03-14
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        结构样式为了增强团队的协作和高效开发，提升代码质量 ，综合整理解决方案。
-html  &lt;div class="part part1"&gt;&lt;/div&gt;&lt;div class="part part2"&gt;&lt;/div&gt;
-css  .part1&#123;height: 3rem;background: url() no-repeat center;&#125;.part2&#123;height: 3
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/03/14/TX-移动端/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/03/13/TX-微社区/">微区构建</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-03-12T16:00:00.000Z" itemprop="datePublished">
-          2018-03-13
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        结构样式为了增强团队的协作和高效开发，提升代码质量 ，综合整理解决方案。
-html  &lt;div class="wrapper"&gt;    &lt;div class="part part1"&gt;&lt;/div&gt;    &lt;div class="part part2"&gt;&lt;/div&gt;&lt;/div&gt;
-css  .wrapper,.part&#123;position:relative;ma
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/03/13/TX-微社区/">详情...</a>
                     </p>
                     
                 </div>

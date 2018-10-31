@@ -86,7 +86,7 @@
 				    
 				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(3)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(5)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -225,6 +225,77 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/31/设计模式--状态模式/">设计模式--状态模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-31T06:16:03.000Z" itemprop="datePublished">
+          2018-10-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        当一个对象的内部状态发生改变时，会导致其行为的改变。状态模式用于解决分支判断语句的臃肿。将不同的判断结果封装在状态对象内，然后改状态对象返回一个可以被调用的接口方法。//结果状态对象var ResultState = (    function()&#123;        //判断结构保存在内部状态中        var States = &#123;            //每种状态作为一种独立方法保存            s
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/31/设计模式--状态模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/31/设计模式--观察者模式/">观察者模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-31T02:18:05.000Z" itemprop="datePublished">
+          2018-10-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        观察者模式又被称为发布-订阅者模式或者消息机制。主要作用是定义了一种依赖关系，解决了主体对象与观察者之间的耦合。我们需要一个观察者对象，里面至少要包含一个消息容器和三个方法：订阅消息，取消订阅，发送订阅。
+//将观察者放入闭包中，页面加载立即执行var Observer = (function () &#123;    // 消息容器，所有订阅的消息会放在这里    var _message = &#123;&#125;    retu
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/31/设计模式--观察者模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -578,81 +649,6 @@ getObjectByName(name,recursive)
                     
                     <p class="pull-right readMore">
                         <a href="/2018/08/18/3JS--场景对象THREE.Scene/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/25/JS框架--模块加载系统/">02--模块加载系统</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-25T09:39:20.000Z" itemprop="datePublished">
-          2018-07-25
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS框架/'>JS框架</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        JS不像其他语言一样拥有完善的模块化机制，早前只能靠插入一个个script标签来引入脚本，并且容易带来命名冲突的问题。
-JS模块化标准CommonJS与AMD就是为了实现JS的模块化机制，前者运用于node环境，后者在浏览器环境中由Require.js等实现。随着ES6的普及，AMD和CMD都终将成为历史。
-实现一个简单的js加载器并不复杂，主要可以分为解析路径、下载模块、解析模块依赖、解析模块四个步骤。
-模块当构建庞大的程序时，如果不
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/25/JS框架--模块加载系统/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/17/JS框架--种子模块/">01--种子模块</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-17T10:26:12.000Z" itemprop="datePublished">
-          2018-07-17
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS框架/'>JS框架</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        种子模块就是核心模块，负责框架的初始部分。
-命名空间JS基于对象，其命名空间也是使用对象的属性来扩展的。
-比如下面代码中，通过不同给对象Ten（我们的命名空间）添加属性，从而有条不紊得构建我们的框架。我们只需要通过Ten.xx.xx来调用即可 if(typeof(Ten) === "undefined" )&#123;  Ten = &#123;&#125;;  Ten.Function = &#123;/*略*/ &#125;  Te
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/17/JS框架--种子模块/">详情...</a>
                     </p>
                     
                 </div>
