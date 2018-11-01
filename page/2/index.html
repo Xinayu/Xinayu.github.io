@@ -86,7 +86,7 @@
 				    
 				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(5)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(7)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img4.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -225,6 +225,125 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/20/3JS--各种光源/">各种光源</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-20T08:42:53.000Z" itemprop="datePublished">
+          2018-08-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.js提供了一系列的光源，各有用途：
+
+
+
+光源名称
+描述
+
+
+
+
+AmbientLight（环境光源）
+颜色会直接作用物体的当前颜色上
+
+
+PointLight（点光源）
+一个点向所有方向
+
+
+SpotLight（聚光灯）
+聚光灯效果（范围）例如台灯
+
+
+DirectionalLight（方向光源）
+平行光源 例如太阳光
+
+
+HemisphereLight（半球光）
+创造自然室外光线，模拟反光和光线微弱的天空，太阳升降
+
+
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/20/3JS--各种光源/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/18/3JS--场景对象THREE.Scene/">THREE.Scene常用方法和属性</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-18T08:42:53.000Z" itemprop="datePublished">
+          2018-08-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.Scence 场景是所有对象的容器，所有对象和元素都会被放到场景中才能渲染。
+
+
+
+方法（属性）
+描述
+
+
+
+
+add(object)
+用于向场景中添加对象。使用该方法还可以创建对象组。
+
+
+children
+用于返回一个场景中所有对象的列表，包括摄像机和光源。
+
+
+getObjectByName(name,recursive)
+在创建对象时可以指定唯一的标识 name，使用该方法可以查找特定名字的对象。 当参数 recur
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/18/3JS--场景对象THREE.Scene/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -555,77 +674,6 @@ clip()
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/05/Swiper3-0-效果样式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/05/Swiper3-0-局部组件/">局部组件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-05T02:19:23.000Z" itemprop="datePublished">
-          2018-07-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最好不要直接直接引用完整的swiper的css文件要根据页面中是否包括滑动块（slides）、分页器(pagination)、前进按钮和动画等进行精简
-前进后退按钮 /* Arrows */.swiper-button-prev,.swiper-button-next &#123;position: absolute;top: 50%;width: 27px;height: 44px;margin-top: -22px;z-index:
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/05/Swiper3-0-局部组件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/05/swiper3-0-使用方法/">使用方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-05T02:07:04.000Z" itemprop="datePublished">
-          2018-07-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        基本结构Swiper: 整个滑动对象，有时特指滑块释放后仍然正向移动直到贴合边缘的过程(过渡)container: Swiper的容器，包括滑块（slides）、封套（wrapper)、分页器(pagination)、前进按钮等wrapper: 触控的对象，可触摸区域，移动的块的集合，过渡时会随slide切换产生位移slider: 切换的滑块，可以包含文字、图片、html元素或另外一个Swiperpagination: 分页器，指示sl
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/05/swiper3-0-使用方法/">详情...</a>
                     </p>
                     
                 </div>

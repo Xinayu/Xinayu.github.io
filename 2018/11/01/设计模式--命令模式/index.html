@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>dat.gui使用 | YOUQUAN</title>
+  <title>命令模式 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -196,15 +196,15 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>dat.gui使用</h1>
+                <h1>命令模式</h1>
                 <span class="post-meta">
-      <time datetime="2018-09-30T08:42:53.000Z" itemprop="datePublished">
-          2018-09-30
+      <time datetime="2018-11-01T08:13:33.000Z" itemprop="datePublished">
+          2018-11-01
       </time>
     
     
     | 
-    <a href='/tags/THREE/'>THREE</a>
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
     
     
 </span>
@@ -212,61 +212,16 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>dat.GUI 是一个轻量级的<strong>图形用户界面库（GUI 组件）</strong>，使用这个库可以很容易地创建出能够改变代码变量的界面组件。</p>
-<h3 id="基本使用方法"><a href="#基本使用方法" class="headerlink" title="基本使用方法"></a>基本使用方法</h3><h4 id="引用路径"><a href="#引用路径" class="headerlink" title="引用路径"></a>引用路径</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/dat-gui/0.7.2/dat.gui.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><p>该对象用于存储需要动态改变的值。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建一个对象存储需要动态改变的值</span></span><br><span class="line"><span class="keyword">var</span> controls = &#123;</span><br><span class="line">    cameraPositionX:<span class="number">30</span>,</span><br><span class="line">    cameraPositionY:<span class="number">30</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//初始化和注册插件</span></span><br><span class="line"><span class="keyword">var</span> gui = <span class="keyword">new</span> dat.GUI();           <span class="comment">//初始化插件</span></span><br><span class="line">gui.add(controls, <span class="string">'cpx'</span>, <span class="number">0</span>, <span class="number">30</span>);  <span class="comment">//添加值 gui.add(controls, 'cameraPositionX', 0, 30);</span></span><br></pre></td></tr></table></figure>
-<h4 id="动态更新"><a href="#动态更新" class="headerlink" title="动态更新"></a>动态更新</h4><ul>
-<li><p>放在渲染函数中</p>
-<p>  当你改变值的时候，renderer重新渲染</p>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//渲染函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//使用dat.gui里面可以动态改变的值,，比如上面创建的controls.cameraPositionX</span></span><br><span class="line">    camera.position.x = controls.cameraPositionX;</span><br><span class="line">    cube.rotation.x +=<span class="number">0.02</span>;</span><br><span class="line">    cube.rotation.y +=<span class="number">0.02</span>;</span><br><span class="line">    cube.rotation.z +=<span class="number">0.02</span>;</span><br><span class="line">    <span class="comment">//重复调用</span></span><br><span class="line">    renderer.render(scene,camera);</span><br><span class="line">    requestAnimationFrame(run);</span><br><span class="line">&#125;</span><br><span class="line">run();</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p><strong>监听值（推荐）</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">gui.add(controls, <span class="string">'cameraPositionZ'</span>, <span class="number">0</span>, <span class="number">80</span>).onChange(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    camera.position.z = e</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="各种类型的控件"><a href="#各种类型的控件" class="headerlink" title="各种类型的控件"></a>各种类型的控件</h3><p>dat.gui会根据对象值自动识别和转化控件类型。</p>
-<h5 id="数字类型（Number）"><a href="#数字类型（Number）" class="headerlink" title="数字类型（Number）"></a>数字类型（Number）</h5><ul>
-<li><p>没有设置任何条件，则是一个输入框</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">gui.add(controls, <span class="string">'cpx'</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以设置大小范围（变成slide滑动组件），或者单独设置最大最小（还是input输入框）</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">gui.add(controls, <span class="string">'cpx'</span>, <span class="number">0</span>, <span class="number">30</span>);    <span class="comment">//0--30</span></span><br><span class="line">gui.add(controls, <span class="string">'cpx'</span>, nim(<span class="number">0</span>));   <span class="comment">//最小0</span></span><br><span class="line">gui.add(controls, <span class="string">'cpx'</span>, min(<span class="number">30</span>));  <span class="comment">//最大30</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以配置step限制步长</p>
- <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">gui.add(controls, <span class="string">'cpx'</span>, <span class="number">0</span>, <span class="number">30</span>).step(<span class="number">0.5</span>);  <span class="comment">//限制一步增加0.5</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以固定只为几个值（变成下拉框）</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">gui.add(controls, <span class="string">'cpx'</span>, &#123;<span class="attr">Stopped</span>: <span class="number">0</span>, <span class="attr">Slow</span>: <span class="number">0.02</span>, <span class="attr">Fast</span>: <span class="number">5</span>&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="字符串（String）"><a href="#字符串（String）" class="headerlink" title="字符串（String）"></a>字符串（String）</h5><ul>
-<li>默认情况一个输入框</li>
-<li>可以固定为几个值</li>
-</ul>
-<h4 id="布尔类型（Boolean）"><a href="#布尔类型（Boolean）" class="headerlink" title="布尔类型（Boolean）"></a>布尔类型（Boolean）</h4><p>会自动变为复选框的形式</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> controls = &#123;</span><br><span class="line">    isHide:<span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> gui = <span class="keyword">new</span> dat.GUI();</span><br><span class="line">gui.add(controls, <span class="string">'isHide'</span>);</span><br></pre></td></tr></table></figure>
-<h5 id="函数（Function）"><a href="#函数（Function）" class="headerlink" title="函数（Function）"></a>函数（Function）</h5><p>会自动变成按钮触发</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> controls = &#123;</span><br><span class="line">    hello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">'hello'</span>)&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> gui = <span class="keyword">new</span> dat.GUI();</span><br><span class="line">gui.add(controls, <span class="string">'hello'</span>);</span><br></pre></td></tr></table></figure>
-<h5 id="颜色值"><a href="#颜色值" class="headerlink" title="颜色值"></a>颜色值</h5><p>一共有四种类型css、rgb、rgba、hue，使用 addColor 方法添加控件。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> controls = &#123;</span><br><span class="line">    color0 = <span class="string">"#ffae23"</span>; <span class="comment">// CSS string</span></span><br><span class="line">    color1 = [<span class="number">0</span>, <span class="number">128</span>, <span class="number">255</span>]; <span class="comment">// RGB array</span></span><br><span class="line">    color2 = [<span class="number">0</span>, <span class="number">128</span>, <span class="number">255</span>, <span class="number">0.3</span>]; <span class="comment">// RGB with alpha</span></span><br><span class="line">    color3 = &#123;<span class="attr">h</span>: <span class="number">350</span>, <span class="attr">s</span>: <span class="number">0.9</span>, <span class="attr">v</span>: <span class="number">0.3</span>&#125;; <span class="comment">// Hue, saturation, value</span></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> gui = <span class="keyword">new</span> dat.GUI();</span><br><span class="line">gui.addColor(controls, <span class="string">'color0'</span>);</span><br><span class="line">gui.addColor(controls, <span class="string">'color1'</span>);</span><br><span class="line">gui.addColor(controls, <span class="string">'color2'</span>);</span><br><span class="line">gui.addColor(controls, <span class="string">'color3'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h3><p>对于面板中的每一个控制项，我们都可以设置<code>onChange</code> 和 <code>onFinishChange</code>监听事件。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> controls =  &#123;</span><br><span class="line">    speed = <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> gui = <span class="keyword">new</span> dat.GUI();</span><br><span class="line"><span class="keyword">var</span> speedController = gui.add(controls, <span class="string">'speed'</span>, <span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">//对应控制项值改变时响应（比如拖动滑块过程中）</span></span><br><span class="line">speedController.onChange(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"onChange:"</span> + value);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//对应控制项值修改完毕响应</span></span><br><span class="line">speedController.onFinishChange(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"onFinishChange"</span> + value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+      		<p>将<strong>请求和实现解耦</strong>并封装成<strong>独立的对象</strong>，从而使得不同的请求对客户端的实现参数化。   </p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/10/01/3JS--TWEEN补间动画/" style="float: left;">
-        ← TWEEN补间动画
-    </a>
     
-    
-    <a class="pull-right" href="/2018/08/21/3JS--材质/">
-        材质 →
+    <a class="pull-right" href="/2018/11/01/设计模式--策略模式/">
+        策略模式 →
     </a>
     
 </nav>
