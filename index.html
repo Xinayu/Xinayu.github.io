@@ -86,7 +86,7 @@
 				    
 				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(7)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(8)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img8.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -229,7 +229,42 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/01/设计模式--命令模式/">命令模式 ①（视图模板）</a></h3>
+                    <h3><a href="/2018/11/06/设计模式--命令模式（绘图命令）/">命令模式（绘图命令）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-06T03:21:14.000Z" itemprop="datePublished">
+          2018-11-06
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        命令模式也可以用于解耦，比如使用canvas会经常调用一下内置方法，需要不停使用canvas元素的上下文引用，在多人项目开发中耦合度高，如果有人不小心改动了canvas的上下文，后果将无法估计。命令对象的内部，如果有人想要绘图，直接通过命令对象书写命令调用内部封装的方法完成即可。使用命令模式将canvas上下文引用对象安全封装在一个命令对象的内部。//创建一个命令var CanvasCommand = (function () &#12
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/06/设计模式--命令模式（绘图命令）/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/01/设计模式--命令模式（视图模板）/">命令模式（视图模板）</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-11-01T08:13:33.000Z" itemprop="datePublished">
@@ -252,7 +287,7 @@
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/11/01/设计模式--命令模式/">详情...</a>
+                        <a href="/2018/11/01/设计模式--命令模式（视图模板）/">详情...</a>
                     </p>
                     
                 </div>
@@ -542,64 +577,6 @@ var tween = new TWEEN.Tween(posSrc)     //注册.to(&#123;pos:640&#125;,3000)			
                     
                     <p class="pull-right readMore">
                         <a href="/2018/09/30/3JS--dat.gui 使用/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/08/21/3JS--材质/">材质</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-08-21T08:42:53.000Z" itemprop="datePublished">
-          2018-08-21
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        材质结合几何体可以构成网格。材质就是物体的皮肤，决定结合体外表的样子。常用材质如下：
-
-
-
-名称
-描述
-
-
-
-
-MeshBasicMaterial（网格基础材质）
-基础材质
-
-
-MeshDepthMaterial（网格深度材质）
-根据网格到相机的距离，这种材质决定如何给网格染色
-
-
-MeshNormalMaterial（网格法向材质）
-简单材质，根据物体表面的法向向量计算颜色
-
-
-MeshFaceMaterial（网格面材质）
-这是一个
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/08/21/3JS--材质/">详情...</a>
                     </p>
                     
                 </div>

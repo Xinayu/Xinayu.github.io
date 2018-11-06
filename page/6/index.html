@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>JS的解析与执行过程 | YOUQUAN</title>
+  <title>YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,125 +191,98 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
+    </div>
+</section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
 <section id="intro">
     <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-                <h1>JS的解析与执行过程</h1>
-                <span class="post-meta">
-      <time datetime="2017-08-12T16:00:00.000Z" itemprop="datePublished">
-          2017-08-13
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/06/12/Gulp--简单操作/">Gulp的实例参考</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-06-11T16:00:00.000Z" itemprop="datePublished">
+          2017-06-12
       </time>
     
     
     | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
+    <a href='/tags/Gulp/'>Gulp</a>
     
     
 </span>
-
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        基本插件的安装GulpJs的安装依赖nodejs，所以先安装nodejs
+打开nodejs里面的cmd文件，安装gulp全局变量
+npm install -g gulp
+安装项目开发所需要的依赖项
+npm install --save-dev gulp
+安装用来压缩js文件的插件
+npm install --save-dev gulp-uglify
+安装用来压缩css文件的插件
+npm install --save-dev gulp-m
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/06/12/Gulp--简单操作/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
             </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<p>在JS真正执行代码之前，会对代码有个预处理过程</p>
-<h2 id="预处理阶段"><a href="#预处理阶段" class="headerlink" title="预处理阶段"></a>预处理阶段</h2><ul>
-<li><p>首先创建<strong>词法环境（这里是全局）</strong></p>
-</li>
-<li><p>把用<strong>声明的方式</strong>创建的函数和用<strong>var定义的变量</strong>扫描出来，把这些函数和变量的<strong>名字</strong>加到词法环境中（这里是全局）</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// LexcialEnvironment (词法环境)</span></span><br><span class="line">&#123;</span><br><span class="line">    a:<span class="literal">undefined</span>,   <span class="comment">//a是变量的名字，右边是值</span></span><br><span class="line">    f:对函数的引用,  <span class="comment">//f是函数的名字，右边引用(函数声明的方式)</span></span><br><span class="line">    g:<span class="literal">undefined</span>     <span class="comment">//g是函数的名字，右边引用(函数表达式创建的函数)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>声明函数 <code>function xx(){}</code>区别于函数表达式<code>var xx = function xx(){}</code></p>
-<p>用函数表达式创建的函数，在预处理阶段，函数名字也会被<strong>加到词法环境</strong>中，但是后面的值不会解析，返回<code>undefined</code></p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><p>处理<strong>函数声明</strong>有冲突，会<strong>覆盖</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//function a() &#123;console.log(3);&#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="number">2</span>);&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="number">3</span>);&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>处理<strong>变量声明</strong>有冲突，会<strong>忽略</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">//function a() &#123;console.log(3);&#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="number">2</span>);&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="number">3</span>);&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;   <span class="comment">//因为处理变量a有冲突，规则是忽略</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//可以把函数表达式也当作变量声明 var xx = function()&#123;&#125;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① <strong>用var开头的变量或者函数都会被提升，加入到词法环境，值都是<code>undefined</code></strong><br>​② <strong><code>function a (){}</code>的形式，a被提升同时值是该函数引用</strong><br>​③ <strong>var 声明冲突会被忽略，function声明会覆盖</strong></p>
-</blockquote>
-<p>​</p>
-</li>
-</ul>
-<h2 id="执行阶段"><a href="#执行阶段" class="headerlink" title="执行阶段"></a>执行阶段</h2><ul>
-<li>在执行阶段就会真正赋值（无论原来值是变量还是函数，都会被覆盖）</li>
-<li>如果碰到在词法环境中找不到的名字，则会报错</li>
-</ul>
-
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    <a class="pull-left" href="/2017/08/14/JS--关于闭包/" style="float: left;">
-        ← 关于闭包
-    </a>
-    
-    
-    <a class="pull-right" href="/2017/08/10/JS--this的用法/">
-        this的用法 →
-    </a>
-    
-</nav>
-
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
-
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
-
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
-
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
-
-</script>
-</div>
+        
+        <nav class="pagination" role="pagination">
+          <a class="pull-left" href="/page/5/">← Newer Posts</a>
+          
+        </nav>
     </div>
 </section>
-
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p></p>
+        </div>
+    </div>
+</section>
+<!-- ============================ END Content =========================== -->
 
       
 <!-- ============================ Footer =========================== -->
