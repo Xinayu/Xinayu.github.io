@@ -86,7 +86,7 @@
 				    
 				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(9)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(10)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img7.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -225,6 +225,41 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/07/设计模式--节流模式/">节流模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-07T08:56:31.000Z" itemprop="datePublished">
+          2018-11-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        节流模式用于性能优化，比如js中的resize，mousemove等是会不间断触发的，我们就可以这么优化：//简单的节流模式//method ：方法//context ：上下文function throttle(method,context)&#123;    //清除定时器    clearTimeout(method.tId);    //300ms时间间隔后执行函数    method.tId=setTimeout(functio
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/07/设计模式--节流模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -537,44 +572,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/10/30/设计模式--工厂模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/01/3JS--TWEEN补间动画/">TWEEN补间动画</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-01T08:42:53.000Z" itemprop="datePublished">
-          2018-10-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        使用方法首先要用一个对象将需要进行补间动画的值包含进来
-var changeSrc = &#123;positionZ:1180&#125;
-然后在tween中注册使用该对象并且设置相关参数 
-var tween = new TWEEN.Tween(posSrc)     //注册.to(&#123;pos:640&#125;,3000)						//补间结束值 3000是持续时间.easing(TWEEN.Easing.Sinuso
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/01/3JS--TWEEN补间动画/">详情...</a>
                     </p>
                     
                 </div>
