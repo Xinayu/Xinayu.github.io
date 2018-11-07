@@ -77,13 +77,6 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/CSS%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-10-08T05:45:55.110Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/Xinayu/categories/JS%E5%87%BA%E6%B7%B1%E5%85%A5%E6%B5%85/</loc>
         <lastmod>2018-10-26T02:49:37.029Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -92,7 +85,14 @@
 
     <url>
         <loc>https://github.com/Xinayu/categories/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-        <lastmod>2018-11-06T04:28:30.853Z</lastmod>
+        <lastmod>2018-11-07T07:39:35.070Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/CSS%E6%89%8B%E5%86%8C/</loc>
+        <lastmod>2018-11-07T07:55:10.832Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
