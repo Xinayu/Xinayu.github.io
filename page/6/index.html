@@ -86,7 +86,7 @@
 				    
 				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(10)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(11)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -229,6 +229,46 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2017/08/13/JS--JS的解析与执行过程/">JS的解析与执行过程</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-12T16:00:00.000Z" itemprop="datePublished">
+          2017-08-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在JS真正执行代码之前，会对代码有个预处理过程
+预处理阶段
+首先创建词法环境（这里是全局）
+
+把用声明的方式创建的函数和用var定义的变量扫描出来，把这些函数和变量的名字加到词法环境中（这里是全局）
+// LexcialEnvironment (词法环境)&#123;    a:undefined,   //a是变量的名字，右边是值    f:对函数的引用,  //f是函数的名字，右边引用(函数声明的方式)    g:undefined
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/13/JS--JS的解析与执行过程/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2017/08/10/JS--this的用法/">this的用法</a></h3>
                     <span>
                         <span class="post-meta">
@@ -254,41 +294,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2017/08/10/JS--this的用法/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/06/12/Gulp--入门指南/">Gulp入门指南</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-06-11T16:00:00.000Z" itemprop="datePublished">
-          2017-06-12
-      </time>
-    
-    
-    | 
-    <a href='/tags/Gulp/'>Gulp</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        <p>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率<br>
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/06/12/Gulp--入门指南/">详情...</a>
                     </p>
                     
                 </div>
@@ -332,6 +337,41 @@ npm install --save-dev gulp-m
                     
                     <p class="pull-right readMore">
                         <a href="/2017/06/12/Gulp--简单操作/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/06/12/Gulp--入门指南/">Gulp入门指南</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-06-11T16:00:00.000Z" itemprop="datePublished">
+          2017-06-12
+      </time>
+    
+    
+    | 
+    <a href='/tags/Gulp/'>Gulp</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <p>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；她不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用她，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率<br>
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/06/12/Gulp--入门指南/">详情...</a>
                     </p>
                     
                 </div>

@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Category: jQuery使用手册 | YOUQUAN</title>
+  <title>惰性模式 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,69 +191,99 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/06/29/jQuery--常用操作/">jQuery常用操作</a></h4>
-                            
-                            <p><time datetime="2018-06-29T04:07:21.000Z"><a href="/2018/06/29/jQuery--常用操作/">2018-06-29</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-</section> 
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1>惰性模式</h1>
+                <span class="post-meta">
+      <time datetime="2018-11-14T05:03:38.000Z" itemprop="datePublished">
+          2018-11-14
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            </div>
         </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>用于减少每次代码执行时的<strong>重复性的分支判断</strong>，通过对对象重定义来屏蔽原对象中分支判断。<br>比如我们在判断浏览器兼容性时，会有多个分支，每次执行时如果都重新进行判断，无疑是对资源的浪费，这就可以通过惰性模式来优化。<br>有<strong>两种</strong>实现方法：立即执行和惰性执行</p>
+<h3 id="立即执行"><a href="#立即执行" class="headerlink" title="立即执行"></a>立即执行</h3><p>当对象初始化的时候就立即执行，重写对象的方法<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加绑定事件方法on</span></span><br><span class="line">A.on = <span class="function"><span class="keyword">function</span>(<span class="params">dom, type, fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//如果支持addEventListener方法</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">document</span>.addEventListener) &#123;</span><br><span class="line">        <span class="comment">//返回新定义方法</span></span><br><span class="line">        A.on = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            dom.addEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">        <span class="comment">//如果支持attachEvent方法</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">document</span>.attachEvent) &#123;</span><br><span class="line">        <span class="comment">//返回新定义的方法</span></span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">dom, type, fn</span>) </span>&#123;</span><br><span class="line">            dom.attachEvent(<span class="string">'on'</span> + type, fn);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//返回新的方法</span></span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">dom, type, fn</span>) </span>&#123;</span><br><span class="line">            dom[<span class="string">'on'</span> + type] = fn;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>页面执行的时候进行判断然后重新对象，不过在初始化的时候会消耗一些资源</p>
+<h3 id="惰性执行"><a href="#惰性执行" class="headerlink" title="惰性执行"></a>惰性执行</h3><p>在有需要的时候才对对象进行重写。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加绑定事件方法on</span></span><br><span class="line">A.on = <span class="function"><span class="keyword">function</span>(<span class="params">dom, type, fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//如果支持addEventListener方法</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">document</span>.addEventListener) &#123;</span><br><span class="line">        <span class="comment">//返回新定义方法</span></span><br><span class="line">        A.on =  <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            dom.addEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果支持attachEvent方法</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">document</span>.attachEvent) &#123;</span><br><span class="line">        <span class="comment">//返回新定义的方法</span></span><br><span class="line">        A.on =  <span class="function"><span class="keyword">function</span>(<span class="params">dom, type, fn</span>) </span>&#123;</span><br><span class="line">            dom.attachEvent(<span class="string">'on'</span> + type, fn);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//返回新的方法</span></span><br><span class="line">        A.on =  <span class="function"><span class="keyword">function</span>(<span class="params">dom, type, fn</span>) </span>&#123;</span><br><span class="line">            dom[<span class="string">'on'</span> + type] = fn;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//执行重新定义的on方法</span></span><br><span class="line">    A.on(dom,type,fn);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>文档加载后on方法还没有重新定义，当为某一个元素使用on方法时候对on方法进行<strong>重写</strong>，同时末尾<strong>执行重写后的on方法</strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/11/07/设计模式--节流模式/">
+        节流模式 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
