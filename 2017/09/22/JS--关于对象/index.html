@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: JS设计模式 | YOUQUAN</title>
+  <title>关于对象 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,78 +191,110 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/30/设计模式--原型模式/">原型模式</a></h4>
-                            
-                            <p><time datetime="2018-10-30T07:33:32.000Z"><a href="/2018/10/30/设计模式--原型模式/">2018-10-30</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/30/设计模式--工厂模式/">工厂模式</a></h4>
-                            
-                            <p><time datetime="2018-10-30T04:13:43.000Z"><a href="/2018/10/30/设计模式--工厂模式/">2018-10-30</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-</section> 
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1>关于对象</h1>
+                <span class="post-meta">
+      <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
+          2017-09-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            </div>
         </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>js中有普通对象和函数对象。</p>
+<h5 id="普通对象"><a href="#普通对象" class="headerlink" title="普通对象"></a>普通对象</h5><p>都是 <code>created by Object</code>，继承了<code>Object.prototype</code>对象，所以普通对象从创建开始就有了对象（<code>Object.prototype</code>）的方法。</p>
+<p>那普通的对象的父类<code>Object</code>函数，它是<code>Function</code>函数创造的，即是 <code>created by Function</code>，所以他继承了<code>Function.prototype</code>对象。</p>
+<p>所以，普通的对象的父对象<code>Object</code>有自己的属性（来源于<code>Function.prototype</code>，不可以继承），和可以继承的属性（<code>Object.prototype</code>）</p>
+<blockquote>
+<p>他<code>Object.prototype</code>对象，继承了空对象 <code>null</code></p>
+</blockquote>
+<h5 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h5><p>函数对象都来源于<code>Function</code>，继承了<code>Function.prototype</code>，而<code>Function.prototype</code>又反过来继承了<code>Object.prototype</code>，所以函数对象就同时有了 <code>Function.prototype</code>和<code>Object.prototype</code>里面的属性和方法</p>
+<h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p>当我们在一个对象上查找是否具有某个属性或者方法时，会先在<strong>对象自身属性上查找</strong>（这里包括了自己定义的和继承的属性），如果没有查找到，那么就会沿着该对象<code>__proto__</code>是否有继承其他对象的<code>prototype</code>属性里面去查找，直到尽头<code>Object.prototype</code></p>
+<blockquote>
+<p>关键点在于，一个函数对象的prototype，也可以改变和重新指定</p>
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2017/09/22/JS--数组型对象的实现/" style="float: left;">
+        ← 数组型对象的实现
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/09/22/JS--call 和 apply/">
+        call和apply →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

@@ -84,9 +84,9 @@
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(11)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -194,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -225,6 +225,81 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/JS--回掉函数，同步异步/">回掉函数，同步异步</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T05:58:35.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        回掉函数函数和普通对象一样可以当作参数传递。当函数用于传参时，该函数就是回掉函数。
+
+A callback is a function that is passed as an argument to another function and is executed after its parent function has completed.
+
+同步和异步js是单线程执行的，所以如果遇到阻塞操作，他并不会傻傻等待阻塞操作执行完，而是
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/JS--回掉函数，同步异步/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/设计模式--参与者模式/">参与者模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在特定的作用域中执行给定的函数，并将参数原封不动地传递。
+我们在写兼容浏览器的绑定函数时，没有考虑参数的传递//事件绑定方法var A = &#123;&#125;;A.event.on = function (dom,type,fn) &#123;    // w3c标准事件    if(dom.addEventListener)&#123;        dom.addEventListener(type,fn,false);   
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/设计模式--参与者模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -501,77 +576,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/10/31/设计模式--观察者模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/30/设计模式--外观模式/">外观模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-30T08:37:16.000Z" itemprop="datePublished">
-          2018-10-30
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        外观模式就是为一组复杂的子系统接口提供一个更高级的统一接口，通过这个接口可以使子系统接口更加容易访问比如我们在使用点击事件时，有多种方法，可以直接通过document绑定，可以通过监听事件进行绑定，然而并不是每个方法都实用，因为要考虑到浏览器的兼容性问题。我们可以使用外观模式对点击事件进行优化：//外观模式 dom元素，type类型，fn回掉function addEvent(dom,type,fn)&#123;    //处理支持 a
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/30/设计模式--外观模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/30/设计模式--原型模式/">原型模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-30T07:33:32.000Z" itemprop="datePublished">
-          2018-10-30
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        原型模式使用原型对象指向创建对象的类，用于创建新的对象的类共享原型对象的属性以及方法。
-要点是将可复用的、可共享的、耗时大的从基类中提出来然后放在其原型中。然后子类通过组合继承或者寄生组合继承而将方法和属性继承下来。对于子类中那些需要重写的方法进行重写，这样子类创建的对象既有子类的属性和方法也共享了基类的原型方法。来看一段代码：// 例如创建一个 Person 的构造函数, 让人有名字, 可以说话function Person ( na
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/30/设计模式--原型模式/">详情...</a>
                     </p>
                     
                 </div>

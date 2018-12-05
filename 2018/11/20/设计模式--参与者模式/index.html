@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>关于对象 | YOUQUAN</title>
+  <title>参与者模式 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,9 +84,9 @@
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(12)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
 				    
-				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(11)</small></a></li>
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
 				    
@@ -196,15 +196,15 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>关于对象</h1>
+                <h1>参与者模式</h1>
                 <span class="post-meta">
-      <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
-          2017-09-22
+      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
+          2018-11-20
       </time>
     
     
     | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
     
     
 </span>
@@ -212,31 +212,24 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>js中有普通对象和函数对象。</p>
-<h5 id="普通对象"><a href="#普通对象" class="headerlink" title="普通对象"></a>普通对象</h5><p>都是 <code>created by Object</code>，继承了<code>Object.prototype</code>对象，所以普通对象从创建开始就有了对象（<code>Object.prototype</code>）的方法。</p>
-<p>那普通的对象的父类<code>Object</code>函数，它是<code>Function</code>函数创造的，即是 <code>created by Function</code>，所以他继承了<code>Function.prototype</code>对象。</p>
-<p>所以，普通的对象的父对象<code>Object</code>有自己的属性（来源于<code>Function.prototype</code>，不可以继承），和可以继承的属性（<code>Object.prototype</code>）</p>
-<blockquote>
-<p>他<code>Object.prototype</code>对象，继承了空对象 <code>null</code></p>
-</blockquote>
-<h5 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h5><p>函数对象都来源于<code>Function</code>，继承了<code>Function.prototype</code>，而<code>Function.prototype</code>又反过来继承了<code>Object.prototype</code>，所以函数对象就同时有了 <code>Function.prototype</code>和<code>Object.prototype</code>里面的属性和方法</p>
-<h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p>当我们在一个对象上查找是否具有某个属性或者方法时，会先在<strong>对象自身属性上查找</strong>（这里包括了自己定义的和继承的属性），如果没有查找到，那么就会沿着该对象<code>__proto__</code>是否有继承其他对象的<code>prototype</code>属性里面去查找，直到尽头<code>Object.prototype</code></p>
-<blockquote>
-<p>关键点在于，一个函数对象的prototype，也可以改变和重新指定</p>
-</blockquote>
+      		<p>在特定的<strong>作用域</strong>中执行给定的函数，并将<strong>参数</strong>原封不动地传递。</p>
+<p>我们在写兼容浏览器的绑定函数时，没有考虑参数的传递<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//事件绑定方法</span></span><br><span class="line"><span class="keyword">var</span> A = &#123;&#125;;</span><br><span class="line">A.event.on = <span class="function"><span class="keyword">function</span> (<span class="params">dom,type,fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// w3c标准事件</span></span><br><span class="line">    <span class="keyword">if</span>(dom.addEventListener)&#123;</span><br><span class="line">        dom.addEventListener(type,fn,<span class="literal">false</span>);</span><br><span class="line">        <span class="comment">//ie浏览器</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (dom.attachEvent) &#123;</span><br><span class="line">        dom.attachEvent(<span class="string">'on'</span>+type,fn);</span><br><span class="line">        <span class="comment">//DOM级事件绑定</span></span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        dom[<span class="string">'on'</span> + type,fn];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>因为addEventListener不能传递参数，所以可以在<strong>回掉函数</strong>中做文章<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//事件绑定方法</span></span><br><span class="line"><span class="keyword">var</span> A = &#123;&#125;;</span><br><span class="line">A.event.on = <span class="function"><span class="keyword">function</span> (<span class="params">dom,type,fn,data</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// w3c标准事件</span></span><br><span class="line">    <span class="keyword">if</span>(dom.addEventListener)&#123;</span><br><span class="line">        dom.addEventListener(type,<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">                fn.call(dom,e,data)</span><br><span class="line">        &#125;,<span class="literal">false</span>);</span><br><span class="line">        <span class="comment">//ie浏览器</span></span><br><span class="line">    &#125;</span><br><span class="line">    ...                                      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="柯里化"><a href="#柯里化" class="headerlink" title="柯里化"></a>柯里化</h3><p>把一个多参数的函数，转化为单参数的函数<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//柯里化之前</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 柯里化之后</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addX</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//输入第一个参数，返回一个函数</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">      <span class="comment">//输入第二个参数，返回x+y</span></span><br><span class="line">      <span class="comment">//改匿名函数是闭包，引用了父函数的y</span></span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(addX(<span class="number">1</span>)); <span class="comment">//ƒ (x) &#123;return x + y;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(addX(<span class="number">1</span>)(<span class="number">2</span>)); <span class="comment">//3</span></span><br></pre></td></tr></table></figure></p>
+<p>使用柯里化的思想，完善bind方法<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Function</span>.prototype.bind == <span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span> (<span class="params">context</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//缓存数组</span></span><br><span class="line">        <span class="keyword">var</span> Slice = [].slice,</span><br><span class="line">            <span class="comment">// 参数数组化</span></span><br><span class="line">            args = Slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>),</span><br><span class="line">            <span class="comment">//保存当前函数引用</span></span><br><span class="line">            that = <span class="keyword">this</span>;</span><br><span class="line">        <span class="comment">//返回新函数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">              <span class="comment">// 参数数组化</span></span><br><span class="line">              <span class="keyword">var</span> addArgs = Slice.call(<span class="built_in">arguments</span>),</span><br><span class="line">                  <span class="comment">// 拼接参数，传入的参数放入了后面</span></span><br><span class="line">                  allArgs = args.concat(addArgs),</span><br><span class="line">              <span class="comment">//对当前函数装饰并返回</span></span><br><span class="line">              <span class="keyword">return</span> that.apply(context,allArgs);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/03/11/TX-分享蒙层/" style="float: left;">
-        ← 分享蒙层
+    <a class="pull-left" href="/2018/11/20/JS--回掉函数，同步异步/" style="float: left;">
+        ← 回掉函数，同步异步
     </a>
     
     
-    <a class="pull-right" href="/2017/09/22/JS--数组型对象的实现/">
-        数组型对象的实现 →
+    <a class="pull-right" href="/2018/11/14/设计模式--惰性模式/">
+        惰性模式 →
     </a>
     
 </nav>

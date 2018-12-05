@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: JS设计模式 | YOUQUAN</title>
+  <title>回掉函数，同步异步 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,78 +191,106 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/30/设计模式--原型模式/">原型模式</a></h4>
-                            
-                            <p><time datetime="2018-10-30T07:33:32.000Z"><a href="/2018/10/30/设计模式--原型模式/">2018-10-30</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/10/30/设计模式--工厂模式/">工厂模式</a></h4>
-                            
-                            <p><time datetime="2018-10-30T04:13:43.000Z"><a href="/2018/10/30/设计模式--工厂模式/">2018-10-30</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
-        </div>
-    </div>
-</section> 
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1>回掉函数，同步异步</h1>
+                <span class="post-meta">
+      <time datetime="2018-11-20T05:58:35.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+            </div>
         </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="回掉函数"><a href="#回掉函数" class="headerlink" title="回掉函数"></a>回掉函数</h3><p>函数和普通对象一样可以当作参数传递。当函数用于<strong>传参</strong>时，该函数就是回掉函数。</p>
+<blockquote>
+<p>A callback is a function that is passed as an argument to another function and is executed after its parent function has completed.</p>
+</blockquote>
+<h3 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h3><p>js是<strong>单线程</strong>执行的，所以如果遇到阻塞操作，他并不会傻傻等待阻塞操作执行完，而是把这个操作放到循环队列中，等线程有空闲再执行。<br>浏览器是<strong>多线程</strong>的，除了处理js之外还需要处理图形等。</p>
+<h4 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h4><p>并不是所有的回掉函数都是异步的，看一下一个例子：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数a</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数是参数</span></span><br><span class="line">    fn();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数b</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="number">2</span>);&#125;</span><br><span class="line">a(b);  <span class="comment">//2 ,1</span></span><br></pre></td></tr></table></figure></p>
+<p>b函数并非在a执行后执行，因为b函数的执行并不是<strong>阻塞</strong>的，所以他会在js的主线程直接运行下去。</p>
+<h4 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h4><p>所以，如果b函数是阻塞操作，则不会在js主线程运行:<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// 函数a</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数是参数</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        fn();</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数b</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="number">2</span>);&#125;</span><br><span class="line">a(b);  <span class="comment">//1 ,2</span></span><br></pre></td></tr></table></figure></p>
+<p>可以看到，尽管b函数在前，但是由于计时器是<strong>阻塞操作</strong>，所以在js主线程结束后才会执行b函数</p>
+<h4 id="JS常见的异步操作（阻塞操作）："><a href="#JS常见的异步操作（阻塞操作）：" class="headerlink" title="JS常见的异步操作（阻塞操作）："></a>JS常见的异步操作（阻塞操作）：</h4><blockquote>
+<p>回调函数<br>事件监听<br>发布/订阅<br>promise<br>generator（ES6）<br>async/await(ES7)</p>
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/11/20/设计模式--参与者模式/">
+        参与者模式 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
