@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>关于闭包 | YOUQUAN</title>
+  <title>基本包装类型 | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -196,10 +196,10 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>关于闭包</h1>
+                <h1>基本包装类型</h1>
                 <span class="post-meta">
-      <time datetime="2017-08-13T16:00:00.000Z" itemprop="datePublished">
-          2017-08-14
+      <time datetime="2018-08-13T16:00:00.000Z" itemprop="datePublished">
+          2018-08-14
       </time>
     
     
@@ -212,45 +212,33 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>闭包就是能够读取其他函数内部变量的函数。</p>
-<blockquote>
-<p>在Js中，如果一个函数在另外一个函数中定义，那么这个函数会访问到父函数里面定义的成员，形成闭包。<br>​或者说，一个函数能访问它被创建时所处的上下文环境，就是闭包。<br><a id="more"></a></p>
-</blockquote>
-<p>主要有三点：</p>
-<ul>
-<li>他是<strong>函数中的函数</strong>（无论嵌套多少层）</li>
-<li>无论他是在父函数<strong>内部调用</strong>还是被<code>return</code>出去<strong>外部接收后调用</strong>，都能记住原来父函数的词法环境</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//函数在内部被调用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)  <span class="comment">//2</span></span><br><span class="line">  &#125;</span><br><span class="line">  f2();   <span class="comment">//内部执行，严格来说不算闭包，是词法作用域的查找方式，从内到外</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//函数在外部被调用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)  <span class="comment">//</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> x = f1();   <span class="comment">//此时x等于return出来的f2</span></span><br><span class="line">x();    <span class="comment">//2   这就是闭包，函数在外部被调用，但是函数还能记住创建他的词法环境</span></span><br></pre></td></tr></table></figure>
-<h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><h5 id="减少全局变量，延续生命周期"><a href="#减少全局变量，延续生命周期" class="headerlink" title="减少全局变量，延续生命周期"></a>减少全局变量，延续生命周期</h5>  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//函数在外部被调用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a =<span class="number">1</span>;  			<span class="comment">//a在函数作用域里面，不会污染全局变量</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(a++)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> result = f1();</span><br><span class="line">result();</span><br></pre></td></tr></table></figure>
-<h5 id="减少传递给函数的参数数量"><a href="#减少传递给函数的参数数量" class="headerlink" title="减少传递给函数的参数数量"></a>减少传递给函数的参数数量</h5><h5 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h5><h3 id="使用闭包的注意点"><a href="#使用闭包的注意点" class="headerlink" title="使用闭包的注意点"></a>使用闭包的注意点</h3><h5 id="对捕获的变量只是个引用，不是复制"><a href="#对捕获的变量只是个引用，不是复制" class="headerlink" title="对捕获的变量只是个引用，不是复制"></a>对捕获的变量只是个引用，不是复制</h5>  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(num)  <span class="comment">//引用了num而不是复制</span></span><br><span class="line">    &#125;</span><br><span class="line">    num++;</span><br><span class="line">    f2()</span><br><span class="line">&#125;</span><br><span class="line">f1()   <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
-<h5 id="父函数每调用一次，会产生不同的闭包"><a href="#父函数每调用一次，会产生不同的闭包" class="headerlink" title="父函数每调用一次，会产生不同的闭包"></a>父函数每调用一次，会产生不同的闭包</h5>  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        num++;</span><br><span class="line">        <span class="built_in">console</span>.log(num)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> result1 = f1(); </span><br><span class="line">result1();  <span class="comment">//2</span></span><br><span class="line">result1();  <span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result2 = f1();<span class="comment">//result和result2虽然都是调用了f1,但是词法作用域是不相同的，不会互相影响</span></span><br><span class="line">result2();  <span class="comment">//2</span></span><br><span class="line">result2();  <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-<h3 id="循环中问题"><a href="#循环中问题" class="headerlink" title="循环中问题"></a>循环中问题</h3>  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">1</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i); <span class="comment">//1,2      //能实时打印i</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;   <span class="comment">//回调函数</span></span><br><span class="line">        <span class="built_in">console</span>.log(i); <span class="comment">//3,3  //程序加载完才执行，所以是3</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解决方案，利用立即执行函数和闭包将参数传递进去</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">1</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">  (<span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(id)</span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">  &#125;)(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  假设有一个需求，有三个按钮，以此点击发出ajax请求</p>
-  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"1"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"2"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"3"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">1</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(i);</span><br><span class="line">    btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(i);  <span class="comment">//回调函数不会马上执行  //4</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  我们期望依次弹出1，2，3，但是结果全是三个4</p>
-<p>  因为for没有快作用域，i暴露在全局之中，回调函数执行时，循环已经结束，此时i=4；</p>
-<p>  解决方案，使用闭包，或者用let代替var</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">1</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(i);</span><br><span class="line">    btn.onclick = (<span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;   <span class="comment">//这是父函数，</span></span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;   <span class="comment">//闭包函数</span></span><br><span class="line">            alert(id);  <span class="comment">//函数持续引用父函数里面传递的参数，形成闭包</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其实解决思路就是，在回调函数没有执行之前，把想要的参数传递进去，这就可以使用闭包，让回调函数里面的函数，用return函数的方式，引用外部父函数传递的形参</p>
-<p>为什么要使用立即执行函数？是因为i参数改变时，立即执行函数才能把实时参数传递进去</p>
-<p>每次循环的时候，父函数带着想要传递的参数立即执行，因为有闭包的存在，子函数依赖与父函数传递的参数，所以子函数就能正确引用每次循环不同的i值</p>
-</blockquote>
+      		<p>js数据类型分为两种，<strong>基本数据类型</strong>和<strong>引用类型</strong>。</p>
+<p>引用类型能拥有属性和方法，但是基本数据类型不能。然而有些时候，我们却能够对基本数据类型调用相关方法，其实，在基本数据类型中又包括有<strong>基本包装类型</strong>：<strong>字符串，数字和布尔值</strong>。他们对应的构造函数是<strong>String，Number和Boolean</strong>。</p>
+<p>来看一道题：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'string'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.length)</span><br></pre></td></tr></table></figure>
+<p>理论上，基本数据类型没有属性和方法，但是我们在控制台可以打印出6，为什么呢？</p>
+<p>实际上，对于基本包装类型，在调用改类型方法或者属性时，会自动创建一个<strong>包装类型的对象</strong>，然后调用<strong>改对象的方法和属性</strong>。听起来有点拗口，比如上面的代码流程如下：</p>
+<ol>
+<li>创建String类型的一个实例</li>
+<li>在实例上调用指定的方法</li>
+<li>销毁这个实例</li>
+</ol>
+<p>所以，实际的执行代码就可以更改为：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'string'</span>;</span><br><span class="line"><span class="keyword">var</span> len = str.length;</span><br><span class="line"><span class="built_in">console</span>.log(len); <span class="comment">// 6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'string'</span>;</span><br><span class="line"><span class="keyword">var</span> _str = <span class="keyword">new</span> <span class="built_in">String</span>(str);  <span class="comment">//为基本包装类型创建一个对象（_str）</span></span><br><span class="line"><span class="keyword">var</span> len = _str.length;		 <span class="comment">//调用改对象上的方法和属性</span></span><br><span class="line">_str = <span class="literal">null</span>;				 <span class="comment">//摧毁改对象（_str）</span></span><br><span class="line"><span class="built_in">console</span>.log(len); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<p>所以我们在创建基本数据类型的时候，就能调用对应包装类型的方法，这样也会方便很多。</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2017/08/15/JS--对象的关联/" style="float: left;">
-        ← 对象的关联
+    <a class="pull-left" href="/2018/08/18/3JS--场景对象THREE.Scene/" style="float: left;">
+        ← THREE.Scene常用方法和属性
     </a>
     
     
-    <a class="pull-right" href="/2017/08/13/JS--JS的解析与执行过程/">
-        JS的解析与执行过程 →
+    <a class="pull-right" href="/2018/07/25/JS框架--模块加载系统/">
+        02--模块加载系统 →
     </a>
     
 </nav>
