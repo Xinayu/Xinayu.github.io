@@ -80,31 +80,27 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS手册/" class="animsition-link">CSS手册<small>(1)</small></a></li>
+				    <li><a href="/categories/Bom解析/" class="animsition-link">Bom解析<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Dom编程艺术/" class="animsition-link">Dom编程艺术<small>(11)</small></a></li>
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
+				    <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">Nodejs疯狂试探<small>(4)</small></a></li>
 				    
-				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(10)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(15)</small></a></li>
 				    
-				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
+				    <li><a href="/categories/Vue开发/" class="animsition-link">Vue开发<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/Vue使用手册/" class="animsition-link">Vue使用手册<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/canvas攻略/" class="animsition-link">canvas攻略<small>(2)</small></a></li>
+				    <li><a href="/categories/css世界/" class="animsition-link">css世界<small>(3)</small></a></li>
 				    
 				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/jQuery使用手册/" class="animsition-link">jQuery使用手册<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/弹性布局/" class="animsition-link">弹性布局<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -212,7 +208,7 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="命名空间（用对象的方式模拟）"><a href="#命名空间（用对象的方式模拟）" class="headerlink" title="命名空间（用对象的方式模拟）"></a>命名空间（用对象的方式模拟）</h2><p>首先用对象字面量的方式创建一个命名空间</p>
+      		<h4 id="命名空间（用对象的方式模拟）"><a href="#命名空间（用对象的方式模拟）" class="headerlink" title="命名空间（用对象的方式模拟）"></a>命名空间（用对象的方式模拟）</h4><p>首先用对象字面量的方式创建一个命名空间</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Game = &#123;&#125;;</span><br></pre></td></tr></table></figure>
 <p>添加模块，可以将相同功能或者属性的归类</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Game.module1 = &#123;<span class="attr">name</span>:<span class="string">'p'</span>,<span class="attr">m</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;&#125;;</span><br></pre></td></tr></table></figure>
@@ -220,14 +216,14 @@
 <p>然后调用这个模块</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Game.module1.m();</span><br></pre></td></tr></table></figure>
 <p>可以用立即执行函数把这个命名空间包裹起来，这样可以减少变量冲突</p>
-<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>js没有块作用域，有函数作用域，把方法和属性卸载函数里面，可以减少变量冲突</p>
+<h4 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h4><p>js没有块作用域，有函数作用域，把方法和属性卸载函数里面，可以减少变量冲突</p>
 <p>对于构造器函数，包含实例化属性，自身属性，继承属性 <copy></copy></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;  			  <span class="comment">//实例化属性</span></span><br><span class="line">    <span class="keyword">this</span>.public = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    <span class="comment">//实例化属性</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'this指向实例化的对象'</span>)  </span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">private</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'这是私有的方法'</span>)  <span class="comment">//自身属性</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype = &#123;     <span class="comment">//继承属性</span></span><br><span class="line">  my:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'这是可以继承方法'</span>)   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>然后通过<code>new</code>实现继承 <copy></copy></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person(<span class="string">'PETER'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(man.name);   		<span class="comment">//PETER</span></span><br><span class="line"><span class="built_in">console</span>.log(man.public());  	<span class="comment">//this指向实例化的对象</span></span><br><span class="line"><span class="built_in">console</span>.log(man.my());          <span class="comment">//这是可以继承方法</span></span><br><span class="line"><span class="built_in">console</span>.log(man.private());     <span class="comment">//Uncaught TypeError</span></span><br></pre></td></tr></table></figure>
 <p>实际案例中，会用私有方法调用共有方法或者共有方法调用私有方法 <copy></copy></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">pm</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)  <span class="comment">//输出实例化对象的name</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.text = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'public method'</span>);</span><br><span class="line">        pm.call(<span class="keyword">this</span>);  <span class="comment">//绑定到是实例化的对象</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">this</span>.name = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> man= <span class="keyword">new</span> Person(<span class="string">'peter'</span>);</span><br><span class="line">man.text();   <span class="comment">//peter</span></span><br></pre></td></tr></table></figure>
-<h2 id="采用对象工厂的方式"><a href="#采用对象工厂的方式" class="headerlink" title="采用对象工厂的方式"></a>采用对象工厂的方式</h2><p>核心思路：定义一个人对象，函数返回一个对象 <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">pm</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(self.name) 	<span class="comment">//------→</span></span><br><span class="line">    &#125;                           <span class="comment">//      |</span></span><br><span class="line">    <span class="keyword">var</span> self =&#123;                 <span class="comment">//  ←---|</span></span><br><span class="line">        name:name,</span><br><span class="line">        text:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'publick method'</span>);</span><br><span class="line">            pm();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> self;   <span class="comment">//这个函数会返回一个对象，也就是实例化的对象继承了这个对象里面的属性</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person(<span class="string">'oe'</span>);</span><br><span class="line">man.text();</span><br></pre></td></tr></table></figure></copy></p>
+<h4 id="采用对象工厂的方式"><a href="#采用对象工厂的方式" class="headerlink" title="采用对象工厂的方式"></a>采用对象工厂的方式</h4><p>核心思路：定义一个人对象，函数返回一个对象 <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">pm</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(self.name) 	<span class="comment">//------→</span></span><br><span class="line">    &#125;                           <span class="comment">//      |</span></span><br><span class="line">    <span class="keyword">var</span> self =&#123;                 <span class="comment">//  ←---|</span></span><br><span class="line">        name:name,</span><br><span class="line">        text:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'publick method'</span>);</span><br><span class="line">            pm();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> self;   <span class="comment">//这个函数会返回一个对象，也就是实例化的对象继承了这个对象里面的属性</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person(<span class="string">'oe'</span>);</span><br><span class="line">man.text();</span><br></pre></td></tr></table></figure></copy></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
@@ -239,8 +235,8 @@
     </a>
     
     
-    <a class="pull-right" href="/2017/08/22/JS-JS的原型继承/">
-        原型继承 →
+    <a class="pull-right" href="/2017/08/22/JS--继承/">
+        继承 →
     </a>
     
 </nav>

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Node接口 | YOUQUAN</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="YOUQUAN">
+    <meta name="author" content="YOUQUAN">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="YOUQUAN" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/monokai_sublime.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js"></script>
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/Bom解析/" class="animsition-link">Bom解析<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Dom编程艺术/" class="animsition-link">Dom编程艺术<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
+				    
+				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">Nodejs疯狂试探<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(15)</small></a></li>
+				    
+				    <li><a href="/categories/Vue开发/" class="animsition-link">Vue开发<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/css世界/" class="animsition-link">css世界<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">YOUQUAN</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+                <h1>Node接口</h1>
+                <span class="post-meta">
+      <time datetime="2018-11-21T03:06:12.000Z" itemprop="datePublished">
+          2018-11-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    
+    
+</span>
+
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p><code>Node</code>是<code>DOM</code>的最小单位，所有的<code>DOM</code>节点都继承了<code>Node</code>接口的属性和方法。</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li><p>Node.prototype.nodeType</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.nodeType</span><br></pre></td></tr></table></figure>
+<p>返回节点类型，常用的属性：</p>
+<ul>
+<li>元素节点（element）：1，对应常量<code>Node.ELEMENT_NODE</code></li>
+<li>属性节点（attr）：2，对应常量<code>Node.ATTRIBUTE_NODE</code></li>
+<li>文本节点（text）：3，对应常量<code>Node.TEXT_NODE</code></li>
+</ul>
+</li>
+<li><p>Node.prototype.nodeName</p>
+<p>返回属性节点的名称，不同节点的<code>nodeName</code>属性值如下：</p>
+<ul>
+<li><p>文档节点（document）：<code>#document</code></p>
+</li>
+<li><p>元素节点（element）：大写的标签名</p>
+</li>
+<li><p>属性节点（attr）：属性的名称</p>
+</li>
+<li><p>文本节点（text）：<code>#text</code></p>
+</li>
+<li><p>文档片断节点（DocumentFragment）：<code>#document-fragment</code></p>
+</li>
+<li><p>文档类型节点（DocumentType）：文档的类型</p>
+</li>
+<li><p>注释节点（Comment）：<code>#comment</code></p>
+</li>
+</ul>
+</li>
+<li><p>Node.prototype.nodeValue</p>
+<p>返回一个字符串，便是当前节点本身的文本值。只有<strong>文本节点（text）、注释节点（comment）和属性节点（attr）</strong>有文本值，因此这三类节点的<code>nodeValue</code>可以返回结果，其他类型的节点一律返回<code>null</code>。同样的，也只有这三类节点可以设置<code>nodeValue</code>属性的值，其他类型的节点设置无效。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;div id="d1"&gt;hello world&lt;/div&gt;</span></span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'d1'</span>);</span><br><span class="line">div.nodeValue <span class="comment">// null  div是元素节点，返回null</span></span><br><span class="line">div.firstChild.nodeValue <span class="comment">// "hello world"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node.prototype.textContent</p>
+<p>属性返回当前节点和它的所有后代节点的文本内容，可读写。就像jq里面的text。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text&lt;/div&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'divA'</span>).textContent</span><br><span class="line"><span class="comment">// This is some text</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果要读取整个文档的内容，可以使用<code>document.documentElement.textContent</code></p>
+</blockquote>
+</li>
+<li><p>Node.prototype.baseURI</p>
+<p>返回一个字符串，表示当前网页的绝对路径</p>
+</li>
+<li><p>Node.prototype.ownerDocument</p>
+<p>返回当前节点所在的顶层文档对象，即<code>document</code>对象</p>
+</li>
+<li><p>Node.prototype.nextSibling</p>
+<p>返回紧跟在当前节点后面的第一个同级节点。如果当前节点后面没有同级节点，则返回<code>null</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;div id="d1"&gt;hello&lt;/div&gt;&lt;div id="d2"&gt;world&lt;/div&gt;</span></span><br><span class="line"><span class="keyword">var</span> d1 = <span class="built_in">document</span>.getElementById(<span class="string">'d1'</span>);</span><br><span class="line"><span class="keyword">var</span> d2 = <span class="built_in">document</span>.getElementById(<span class="string">'d2'</span>);</span><br><span class="line"></span><br><span class="line">d1.nextSibling === d2 <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p><code>nextSibling</code>属性可以用来遍历所有子节点。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>).firstChild;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (el !== <span class="literal">null</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(el.nodeName);</span><br><span class="line">  el = el.nextSibling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node.prototype.previousSibling</p>
+<p>返回当前节点前面的、距离最近的一个同级节点。如果当前节点前面没有同级节点，则返回<code>null</code></p>
+</li>
+<li><p>Node.prototype.parentNode</p>
+<p>返回当前节点的父节点</p>
+</li>
+<li><p>Node..prototype.parentElement </p>
+<p>返回当前节点的父元素节点。如果当前节点没有父节点，或者父节点类型不是元素节点，则返回<code>null</code></p>
+</li>
+<li><p>Node..prototype.firstChild和Node..prototype.lastChild</p>
+<p><code>firstChild</code>属性返回当前节点的第一个子节点，如果当前节点没有子节点，则返回<code>null</code>，</p>
+<p><code>lastChild</code>属性返回当前节点的最后一个子节点，如果当前节点没有子节点，则返回<code>null</code></p>
+</li>
+<li><p><strong>Node.prototype.childNodes</strong></p>
+<p>返回一个类似数组的对象（<code>NodeList</code>集合），成员包括当前节点的所有子节点</p>
+<blockquote>
+<p>通过<code>node.childNodes</code>获得节点只是下一级的节点，比如里面有<code>&lt;p&gt; &lt;span&gt;1&lt;/span&gt; &lt;/p&gt;</code></p>
+<p>换行符的也是文本节点</p>
+</blockquote>
+</li>
+<li><p>Node.prototype.isConnected</p>
+<p>属性返回一个布尔值，表示当前节点是否在文档之中</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line">test.isConnected <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(test);</span><br><span class="line">test.isConnected <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><ul>
+<li><p>Node.prototype.appendChild()</p>
+<p>接受一个节点对象作为参数，将其作为最后一个子节点，插入当前节点。该方法的返回值就是插入文档的子节点。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(p);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果参数节点是 DOM 已经存在的节点，<code>appendChild</code>方法会将其从原来的位置，移动到新位置</p>
+</blockquote>
+</li>
+<li><p>Node.prototype.hasChildNodes()</p>
+<p>返回一个布尔值，表示当前节点是否有子节点</p>
+<p>判断一个节点有没有子节点，有许多种方法，下面是其中的三种。</p>
+<ul>
+<li><code>node.hasChildNodes()</code></li>
+<li><code>node.firstChild !== null</code></li>
+<li><code>node.childNodes &amp;&amp; node.childNodes.length &gt; 0</code></li>
+</ul>
+</li>
+<li><p>Node.prototype.cloneNode()</p>
+<p>克隆一个节点。它接受一个布尔值作为参数，表示是否同时克隆子节点。它的返回值是一个克隆出来的新节点</p>
+<blockquote>
+<p>克隆的节点只有属性，会丧失<code>addEventListener</code>方法和<code>on-</code>属性（即<code>node.onclick = fn</code>），添加在这个节点上的事件回调函数</p>
+</blockquote>
+</li>
+<li><p>Node.prototype.insertBefore(newNode, referenceNode)</p>
+<p>将某个节点插入父节点内部的指定位置。第一个参数是所要插入的节点<code>newNode</code>，第二个参数是父节点<code>parentNode</code>内部的一个子节点<code>referenceNode</code>。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span><br><span class="line"><span class="built_in">document</span>.body.insertBefore(p, <span class="built_in">document</span>.body.firstChild);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>newNode</code>将插在<code>referenceNode</code>这个子节点的前面</p>
+</blockquote>
+</li>
+<li><p>Node.prototype.removeChild()</p>
+<p>接受一个子节点作为参数，用于从当前节点移除该子节点，返回移除的节点</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> divA = <span class="built_in">document</span>.getElementById(<span class="string">'A'</span>);</span><br><span class="line">divA.parentNode.removeChild(divA);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>必须在父节点上调用</p>
+</blockquote>
+</li>
+<li><p>Node.prototype.replaceChild(newChild, oldChild)</p>
+<p>将一个新的节点，替换当前节点的某一个子节点</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> divA = <span class="built_in">document</span>.getElementById(<span class="string">'divA'</span>);</span><br><span class="line"><span class="keyword">var</span> newSpan = <span class="built_in">document</span>.createElement(<span class="string">'span'</span>);</span><br><span class="line">newSpan.textContent = <span class="string">'Hello World!'</span>;</span><br><span class="line">divA.parentNode.replaceChild(newSpan, divA);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node.prototype.contains()</p>
+<p>返回一个参数，是否满足下面三个条件之一</p>
+<ul>
+<li>参数节点为当前节点。</li>
+<li>参数节点为当前节点的子节点。</li>
+<li>参数节点为当前节点的后代节点</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.contains(node)   <span class="comment">//检查node是否包含在当前文档之中</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node.prototype.compareDocumentPosition()</p>
+<p>返回一个七个比特位的二进制值，表示参数节点与当前节点的关系。</p>
+<p>| 二进制值 | 十进制值 | 含义                                               |<br>| ——– | ——– | ————————————————– |<br>| 000000   | 0        | 两个节点相同                                       |<br>| 000001   | 1        | 两个节点不在同一个文档（即有一个节点不在当前文档） |<br>| 000010   | 2        | 参数节点在当前节点的前面                           |<br>| 000100   | 4        | 参数节点在当前节点的后面                           |<br>| 001000   | 8        | 参数节点包含当前节点                               |<br>| 010000   | 16       | 当前节点包含参数节点                               |<br>| 100000   | 32       | 浏览器内部使用                                     |</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;div id="mydiv"&gt;</span></span><br><span class="line"><span class="comment">//   &lt;form&gt;&lt;input id="test" /&gt;&lt;/form&gt;</span></span><br><span class="line"><span class="comment">// &lt;/div&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'mydiv'</span>);</span><br><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>);</span><br><span class="line"></span><br><span class="line">div.compareDocumentPosition(input) <span class="comment">// 20</span></span><br><span class="line">input.compareDocumentPosition(div) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node.prototype.isEqualNode()和Node.prototype.isSameNode()</p>
+<p><code>isEqualNode</code>方法返回一个布尔值，用于检查两个节点是否相等。所谓相等的节点，指的是两个节点的类型相同、属性相同、子节点相同。</p>
+<p><code>isSameNode</code>方法返回一个布尔值，表示两个节点是否为同一个节点。</p>
+</li>
+<li><p>Node.prototype.normalize()</p>
+<p>清理当前节点内部的所有文本节点（text）。它会去除空的文本节点，并且将毗邻的文本节点合并成一个，也就是说不存在空的文本节点，以及毗邻的文本节点</p>
+</li>
+<li><p>Node.prototype.getRootNode()</p>
+<p>返回当前节点所在文档的根节点，与<code>ownerDocument</code>属性的作用相同</p>
+</li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/11/22/Dom--Node关系接口/" style="float: left;">
+        ← Node关系接口
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/11/20/JS--回掉函数，同步异步/">
+        回掉函数，同步异步 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By YOUQUAN. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>

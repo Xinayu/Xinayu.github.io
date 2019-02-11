@@ -80,31 +80,27 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS手册/" class="animsition-link">CSS手册<small>(1)</small></a></li>
+				    <li><a href="/categories/Bom解析/" class="animsition-link">Bom解析<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Dom编程艺术/" class="animsition-link">Dom编程艺术<small>(11)</small></a></li>
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
+				    <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">Nodejs疯狂试探<small>(4)</small></a></li>
 				    
-				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(10)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(15)</small></a></li>
 				    
-				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
+				    <li><a href="/categories/Vue开发/" class="animsition-link">Vue开发<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/Vue使用手册/" class="animsition-link">Vue使用手册<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/canvas攻略/" class="animsition-link">canvas攻略<small>(2)</small></a></li>
+				    <li><a href="/categories/css世界/" class="animsition-link">css世界<small>(3)</small></a></li>
 				    
 				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/jQuery使用手册/" class="animsition-link">jQuery使用手册<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/弹性布局/" class="animsition-link">弹性布局<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -213,9 +209,9 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p>hexo自带的代码段没有复制功能，有时候不是很方便，我们使用<code>clipboard.js</code>完善该功能。</p>
-<h2 id="引入插件"><a href="#引入插件" class="headerlink" title="引入插件"></a>引入插件</h2><p>每个主题使用的模板语言不一样，这里以<code>.pug</code>为栗子<br><code>cd</code>你的博客目录，然后打开 <code>theme -&gt; layout -&gt; _partial -&gt;head.pug</code>，加入外链<br><figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">script(type=<span class="string">'text/javascript'</span>, src=<span class="string">'https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js'</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="添加按钮样式"><a href="#添加按钮样式" class="headerlink" title="添加按钮样式"></a>添加按钮样式</h2><p>按钮采用动态append实现，先添加一些<strong>CSS样式</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">figure</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    .copy&#123;</span><br><span class="line">        <span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line">        <span class="selector-tag">top</span>: 0;</span><br><span class="line">        <span class="selector-tag">right</span>: 0;</span><br><span class="line">        <span class="selector-tag">background</span>: <span class="selector-id">#faff27</span>;</span><br><span class="line">        <span class="selector-tag">color</span>: <span class="selector-id">#262626</span>;</span><br><span class="line">        <span class="selector-tag">padding</span>: 0<span class="selector-class">.24em</span> 0<span class="selector-class">.8em</span>;</span><br><span class="line">        <span class="selector-tag">border-bottom-left-radius</span>: 1<span class="selector-tag">em</span>;</span><br><span class="line">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.7em</span>;</span><br><span class="line">        <span class="selector-tag">cursor</span>: <span class="selector-tag">pointer</span>;</span><br><span class="line">        <span class="selector-tag">-webkit-user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        <span class="selector-tag">-moz-user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        <span class="selector-tag">-ms-user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        <span class="selector-tag">user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        &amp;<span class="selector-class">.on</span>&#123;</span><br><span class="line">           <span class="attribute">background</span>: <span class="number">#1ec241</span>;</span><br><span class="line">            <span class="attribute">color</span>:white;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="动态实现"><a href="#动态实现" class="headerlink" title="动态实现"></a>动态实现</h2><p>只要找到能实现全局使用的js即可<br><code>cd</code>你的博客目录，然后打开 <code>theme -&gt; source -&gt; js -&gt;xx.js</code> ，添加功能<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//动态append复制按钮，添加映射</span></span><br><span class="line">$(<span class="string">'figure'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).attr(<span class="string">"id"</span>,<span class="string">"figure"</span>+(index+<span class="number">1</span>)).append(<span class="string">' &lt;span class="copy"&gt;复制&lt;/span&gt;'</span>)</span><br><span class="line">        .find(<span class="string">'.copy'</span>).attr(&#123;<span class="string">'data-clipboard-target'</span>:<span class="string">"#figure"</span>+(index+<span class="number">1</span>),<span class="string">'title'</span>:<span class="string">'点击复制'</span>&#125;)</span><br><span class="line">        .click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;$(<span class="keyword">this</span>).addClass(<span class="string">'on'</span>).text(<span class="string">'完成'</span>);&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> clipboard = <span class="keyword">new</span> Clipboard(<span class="string">'.copy'</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="引入插件"><a href="#引入插件" class="headerlink" title="引入插件"></a>引入插件</h4><p>每个主题使用的模板语言不一样，这里以<code>.pug</code>为栗子<br><code>cd</code>你的博客目录，然后打开 <code>theme -&gt; layout -&gt; _partial -&gt;head.pug</code>，加入外链<br><figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">script(type=<span class="string">'text/javascript'</span>, src=<span class="string">'https://cdn.bootcss.com/clipboard.js/1.5.16/clipboard.min.js'</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="添加按钮样式"><a href="#添加按钮样式" class="headerlink" title="添加按钮样式"></a>添加按钮样式</h4><p>按钮采用动态append实现，先添加一些<strong>CSS样式</strong><br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">figure</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    .copy&#123;</span><br><span class="line">        <span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line">        <span class="selector-tag">top</span>: 0;</span><br><span class="line">        <span class="selector-tag">right</span>: 0;</span><br><span class="line">        <span class="selector-tag">background</span>: <span class="selector-id">#faff27</span>;</span><br><span class="line">        <span class="selector-tag">color</span>: <span class="selector-id">#262626</span>;</span><br><span class="line">        <span class="selector-tag">padding</span>: 0<span class="selector-class">.24em</span> 0<span class="selector-class">.8em</span>;</span><br><span class="line">        <span class="selector-tag">border-bottom-left-radius</span>: 1<span class="selector-tag">em</span>;</span><br><span class="line">        <span class="selector-tag">font-size</span>: 0<span class="selector-class">.7em</span>;</span><br><span class="line">        <span class="selector-tag">cursor</span>: <span class="selector-tag">pointer</span>;</span><br><span class="line">        <span class="selector-tag">-webkit-user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        <span class="selector-tag">-moz-user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        <span class="selector-tag">-ms-user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        <span class="selector-tag">user-select</span>: <span class="selector-tag">none</span>;</span><br><span class="line">        &amp;<span class="selector-class">.on</span>&#123;</span><br><span class="line">           <span class="attribute">background</span>: <span class="number">#1ec241</span>;</span><br><span class="line">            <span class="attribute">color</span>:white;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="动态实现"><a href="#动态实现" class="headerlink" title="动态实现"></a>动态实现</h4><p>只要找到能实现全局使用的js即可<br><code>cd</code>你的博客目录，然后打开 <code>theme -&gt; source -&gt; js -&gt;xx.js</code> ，添加功能<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//动态append复制按钮，添加映射</span></span><br><span class="line">$(<span class="string">'figure'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).attr(<span class="string">"id"</span>,<span class="string">"figure"</span>+(index+<span class="number">1</span>)).append(<span class="string">' &lt;span class="copy"&gt;复制&lt;/span&gt;'</span>)</span><br><span class="line">        .find(<span class="string">'.copy'</span>).attr(&#123;<span class="string">'data-clipboard-target'</span>:<span class="string">"#figure"</span>+(index+<span class="number">1</span>),<span class="string">'title'</span>:<span class="string">'点击复制'</span>&#125;)</span><br><span class="line">        .click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;$(<span class="keyword">this</span>).addClass(<span class="string">'on'</span>).text(<span class="string">'完成'</span>);&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> clipboard = <span class="keyword">new</span> Clipboard(<span class="string">'.copy'</span>);</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>因每一个主题的渲染方式存在差异，具体的元素选择也应入乡随俗<br>  <strong>核心是一个复制按钮映射一个代码段</strong></p>
 </blockquote>
@@ -225,13 +221,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/07/06/canvas--路径/" style="float: left;">
-        ← 02--路径
+    <a class="pull-left" href="/2018/07/09/TX--评论组件/" style="float: left;">
+        ← 评论组件
     </a>
     
     
-    <a class="pull-right" href="/2018/07/05/canvas--基础使用/">
-        01--基础使用 →
+    <a class="pull-right" href="/2018/07/04/hexo--添加本地搜索/">
+        添加本地搜索 →
     </a>
     
 </nav>

@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Vuex参考 | YOUQUAN</title>
+  <title>Vuex | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -80,31 +80,27 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS手册/" class="animsition-link">CSS手册<small>(1)</small></a></li>
+				    <li><a href="/categories/Bom解析/" class="animsition-link">Bom解析<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Dom编程艺术/" class="animsition-link">Dom编程艺术<small>(11)</small></a></li>
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
+				    <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">Nodejs疯狂试探<small>(4)</small></a></li>
 				    
-				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(10)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(15)</small></a></li>
 				    
-				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
+				    <li><a href="/categories/Vue开发/" class="animsition-link">Vue开发<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/Vue使用手册/" class="animsition-link">Vue使用手册<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/canvas攻略/" class="animsition-link">canvas攻略<small>(2)</small></a></li>
+				    <li><a href="/categories/css世界/" class="animsition-link">css世界<small>(3)</small></a></li>
 				    
 				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/jQuery使用手册/" class="animsition-link">jQuery使用手册<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/弹性布局/" class="animsition-link">弹性布局<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -196,7 +192,7 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>Vuex参考</h1>
+                <h1>Vuex</h1>
                 <span class="post-meta">
       <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
           2018-07-02
@@ -213,12 +209,12 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p>vuex是数据仓库，同时也是状态管理器</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>新建js文件<br><img src="https://miao.su/images/2018/07/04/vuex1684a3.png" alt=""><br>写入store.js   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引入依赖</span></span><br><span class="line"><span class="keyword">import</span>  Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span>  Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state =&#123;  <span class="comment">//state是状态</span></span><br><span class="line">  count:<span class="number">1</span>       <span class="comment">//count是公用的数据，放在状态里面</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//暴露出去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></copy></p>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>新建js文件<br><img src="https://miao.su/images/2018/07/04/vuex1684a3.png" alt=""><br>写入store.js   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引入依赖</span></span><br><span class="line"><span class="keyword">import</span>  Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span>  Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> state =&#123;  <span class="comment">//state是状态</span></span><br><span class="line">  count:<span class="number">1</span>       <span class="comment">//count是公用的数据，放在状态里面</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//暴露出去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></copy></p>
 <p>在组件中使用（<strong>app.vue</strong>）   <copy><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用$.store.state获取状态 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>这是数据仓库的值：&#123;&#123;$.store.state.count&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br></pre></td></tr></table></figure></copy></p>
 <p><strong>①</strong>使用<code>computed</code>简化指令（<strong>app.vue</strong>）  <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">computed:&#123;   <span class="comment">//computer用于临时计算，返回一个对象</span></span><br><span class="line">  count()&#123;   <span class="comment">//这里把count的值指向为  this.$store.state.count</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></copy></p>
 <p>现在，<code>count</code>的值就有了，而且指向为<code>this.$store.state.count</code><br>这个时候就可以这么写   <copy><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>这是数据仓库的值：&#123;&#123;$store.state.count&#125;&#125;--&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br></pre></td></tr></table></figure></copy></p>
 <p><strong>②</strong>使用<code>mapState</code>简化指令（<strong>app.vue</strong>）<br>引入和添加（<strong>app.vue</strong>）   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引入mapState</span></span><br><span class="line"><span class="keyword">import</span> &#123;mapState&#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"><span class="comment">//添加方式</span></span><br><span class="line">computed:mapState([<span class="string">'count'</span>])</span><br></pre></td></tr></table></figure></copy></p>
-<h2 id="改变数据的值"><a href="#改变数据的值" class="headerlink" title="改变数据的值"></a>改变数据的值</h2><p>通过mutations来改变state里面的值(<strong>store / vuex.js</strong>)   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  add(state,n)&#123;    <span class="comment">//第一个是状态参数，第二个是自定义参数</span></span><br><span class="line">    state.count+=n;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//把状态和方法都暴露出去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state,mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></copy></p>
+<h4 id="改变数据的值"><a href="#改变数据的值" class="headerlink" title="改变数据的值"></a>改变数据的值</h4><p>通过mutations来改变state里面的值(<strong>store / vuex.js</strong>)   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">  add(state,n)&#123;    <span class="comment">//第一个是状态参数，第二个是自定义参数</span></span><br><span class="line">    state.count+=n;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//把状态和方法都暴露出去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state,mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></copy></p>
 <p>在组件里接收数据（<strong>app.vue</strong>）   <copy><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span>  <span class="string">'@/vuex/store'</span>;  <span class="comment">//接收数据</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState,mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        message:<span class="string">'hello world'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    store,  <span class="comment">//接收数据</span></span><br><span class="line">    methods:mapMutations([</span><br><span class="line">        <span class="string">'add'</span>,<span class="string">'reduce'</span></span><br><span class="line">    ]),</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></copy></p>
 <p>使用数据（<strong>app.vue</strong>）   <copy><br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit('add',10)"</span>&gt;</span>增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--只能通过 $store.commit（）调用方法--</span></span><br></pre></td></tr></table></figure></copy></p>
 
@@ -227,13 +223,13 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/07/02/Vue--Axios+Mock/" style="float: left;">
-        ← Axios+Mock
+    <a class="pull-left" href="/2018/07/04/hexo--Hexo+Github/" style="float: left;">
+        ← Hexo + Github
     </a>
     
     
-    <a class="pull-right" href="/2018/06/29/JS--关于闭包/">
-         →
+    <a class="pull-right" href="/2018/07/02/Vue--搭建项目/">
+        搭建项目 →
     </a>
     
 </nav>

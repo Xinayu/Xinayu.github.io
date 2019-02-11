@@ -80,31 +80,27 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS手册/" class="animsition-link">CSS手册<small>(1)</small></a></li>
+				    <li><a href="/categories/Bom解析/" class="animsition-link">Bom解析<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Dom编程艺术/" class="animsition-link">Dom编程艺术<small>(11)</small></a></li>
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
+				    <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">Nodejs疯狂试探<small>(4)</small></a></li>
 				    
-				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(10)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(15)</small></a></li>
 				    
-				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
+				    <li><a href="/categories/Vue开发/" class="animsition-link">Vue开发<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/Vue使用手册/" class="animsition-link">Vue使用手册<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/canvas攻略/" class="animsition-link">canvas攻略<small>(2)</small></a></li>
+				    <li><a href="/categories/css世界/" class="animsition-link">css世界<small>(3)</small></a></li>
 				    
 				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/jQuery使用手册/" class="animsition-link">jQuery使用手册<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/弹性布局/" class="animsition-link">弹性布局<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -252,9 +248,9 @@
 </tbody>
 </table>
  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> scene = <span class="keyword">new</span> THREE.Scene();  <span class="comment">//初始化</span></span><br></pre></td></tr></table></figure>
-<h3 id="add（object）"><a href="#add（object）" class="headerlink" title="add（object）"></a>add（object）</h3><p>场景有了之后，我们需要在场景中放置我们的演员（对象），这里包括物体，相机和光源。</p>
+<h4 id="add（object）"><a href="#add（object）" class="headerlink" title="add（object）"></a>add（object）</h4><p>场景有了之后，我们需要在场景中放置我们的演员（对象），这里包括物体，相机和光源。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">   <span class="comment">//绘制一个物体</span></span><br><span class="line">   <span class="keyword">var</span> cubeShape = <span class="keyword">new</span> THREE.BoxGeometry(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>);</span><br><span class="line">   <span class="keyword">var</span> cubeMaterial = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;<span class="attr">color</span>: <span class="number">0xff0000</span>, <span class="attr">wireframe</span>: <span class="literal">true</span>&#125;);</span><br><span class="line">   <span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(cubeShape, cubeMaterial);</span><br><span class="line"><span class="comment">//把物体放置进场景中</span></span><br><span class="line">   scene.add(cube);</span><br></pre></td></tr></table></figure>
-<h3 id="children"><a href="#children" class="headerlink" title="children"></a>children</h3><p>该属性用于返回<code>scene</code>中所有的对象，在控制台打印<code>scene</code></p>
+<h4 id="children"><a href="#children" class="headerlink" title="children"></a>children</h4><p>该属性用于返回<code>scene</code>中所有的对象，在控制台打印<code>scene</code></p>
 <p><img src="https://miao.su/images/2018/08/21/sceneb6363.png" alt="sceneb6363.png"></p>
 <p>可以可到<code>scene</code>中定义的各种属性。当我们往<code>scene</code>中添加对象，这些元素都会存储到<code>scene</code>中的<code>children</code>数组里面。</p>
 <p>所以移除场景中对象，就是除<code>children</code>数组中的值</p>
@@ -263,7 +259,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//绘制一个立方体</span></span><br><span class="line"><span class="keyword">var</span> cubeShape = <span class="keyword">new</span> THREE.BoxGeometry(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>);</span><br><span class="line"><span class="keyword">var</span> cubeMaterial = <span class="keyword">new</span> THREE.MeshLambertMaterial(&#123;<span class="attr">color</span>: <span class="number">0xff0000</span>, <span class="attr">wireframe</span>: <span class="literal">true</span>&#125;);</span><br><span class="line"><span class="keyword">var</span> cube = <span class="keyword">new</span> THREE.Mesh(cubeShape, cubeMaterial);</span><br><span class="line"><span class="comment">// position the cube</span></span><br><span class="line">cube.name = <span class="string">'立方体'</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://miao.su/images/2018/08/21/children3aefd.png" alt="children3aefd.png"></p>
 <p>可以看到<code>name</code>属性成功添加到元素中，后续方便我们查找。</p>
-<h3 id="getObjectByName-name-recursive"><a href="#getObjectByName-name-recursive" class="headerlink" title="getObjectByName(name,recursive)"></a>getObjectByName(name,recursive)</h3><p>上面，<code>cube.name = &#39;立方体&#39;</code>，这个<code>name</code>也是该对象的标识符，通过<code>getObjectByName</code>可以找到该对象</p>
+<h4 id="getObjectByName-name-recursive"><a href="#getObjectByName-name-recursive" class="headerlink" title="getObjectByName(name,recursive)"></a>getObjectByName(name,recursive)</h4><p>上面，<code>cube.name = &#39;立方体&#39;</code>，这个<code>name</code>也是该对象的标识符，通过<code>getObjectByName</code>可以找到该对象</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(scene.getObjectByName(<span class="string">'立方体'</span>));</span><br><span class="line"><span class="comment">//THREE.Mesh &#123;uuid: "B9454ABD-01EF-4333-A6DD-21FA30F8F843", name: "立方体", type: "Mesh", parent: T…E.Scene, children: Array(0), …&#125;</span></span><br><span class="line"><span class="comment">//如果 recursive 为 true，则开启后代查询</span></span><br></pre></td></tr></table></figure>
 <h3 id="remove（object）"><a href="#remove（object）" class="headerlink" title="remove（object）"></a>remove（object）</h3><p>查找到有标识符的对象，就可以对其进行操作，比如删除该对象:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> target = scene.getObjectByName(<span class="string">'立方体'</span>);</span><br><span class="line"><span class="keyword">if</span> (target <span class="keyword">instanceof</span> THREE.Mesh) &#123;</span><br><span class="line">    scene.remove(target);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -271,11 +267,11 @@
 <blockquote>
 <p>移除前我们还要检查下该对象是不是 THREE.Mesh 对象，这样做是为了<strong>避免移除摄像机和光源</strong>。</p>
 </blockquote>
-<h3 id="traverse（function）"><a href="#traverse（function）" class="headerlink" title="traverse（function）"></a>traverse（function）</h3><p>我们可以将一个方法作为参数传递给 <code>traverse()</code>方法，这个传递过来的方法会在<strong>每一个子对象上执行</strong>。</p>
+<h4 id="traverse（function）"><a href="#traverse（function）" class="headerlink" title="traverse（function）"></a>traverse（function）</h4><p>我们可以将一个方法作为参数传递给 <code>traverse()</code>方法，这个传递过来的方法会在<strong>每一个子对象上执行</strong>。</p>
 <p>由于 THREE.Scene 对象存储的是对象树，所以如果子对象本身还有子对象，traverse() 方法会在所有的子对象上执行，直到遍历完场景树中的所有对象为止。</p>
 <p>比如我们给所有对象添加<code>name</code>：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">scene.traverse(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (e <span class="keyword">instanceof</span> THREE.Mesh) &#123;</span><br><span class="line">        e.name =<span class="string">'123'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="fog"><a href="#fog" class="headerlink" title="fog"></a>fog</h3><p>使用 fog 属性可以为整个场景添加雾化效果，即场景中的物体离得越远就会变得越模糊。具体样式有如下两种：</p>
+<h4 id="fog"><a href="#fog" class="headerlink" title="fog"></a>fog</h4><p>使用 fog 属性可以为整个场景添加雾化效果，即场景中的物体离得越远就会变得越模糊。具体样式有如下两种：</p>
 <p>（1）使用 THREE.Fog：该方法雾的浓度是线性增长的，它有三个参数：</p>
 <ul>
 <li><p>第 1 个参数：雾的颜色</p>
@@ -294,7 +290,7 @@
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`scene.fog = `</span><span class="string">`new`</span> <span class="string">`THREE.FogExp2( 0xffffff, 0.015 );`</span></span><br></pre></td></tr></table></figure>
-<h3 id="overrideMaterial-属性"><a href="#overrideMaterial-属性" class="headerlink" title="overrideMaterial 属性"></a>overrideMaterial 属性</h3><p>（1）场景设置了 overrideMaterial 属性后，场景中所有的物体都会使用该属性指向的材质，即使物体本身也设置了材质。</p>
+<h4 id="overrideMaterial-属性"><a href="#overrideMaterial-属性" class="headerlink" title="overrideMaterial 属性"></a>overrideMaterial 属性</h4><p>（1）场景设置了 overrideMaterial 属性后，场景中所有的物体都会使用该属性指向的材质，即使物体本身也设置了材质。</p>
 <p>（2）上面的样例中我们使用的材质是 THREE.MeshLambertMaterial，该材质可以创建出不发光但是可以对场景中的光源产生反应的物体。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`scene.overrideMaterial = `</span><span class="string">`new`</span> <span class="string">`THREE.MeshLambertMaterial(&#123;color: 0xffffff&#125;);`</span></span><br></pre></td></tr></table></figure>
             <div class="clearfix"></div>
@@ -302,8 +298,8 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/08/20/3JS--各种光源/" style="float: left;">
-        ← 各种光源
+    <a class="pull-left" href="/2018/08/20/3JS--规范参考/" style="float: left;">
+        ← THREE 规范参考
     </a>
     
     

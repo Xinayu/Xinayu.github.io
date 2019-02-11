@@ -80,31 +80,27 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS手册/" class="animsition-link">CSS手册<small>(1)</small></a></li>
+				    <li><a href="/categories/Bom解析/" class="animsition-link">Bom解析<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Dom编程艺术/" class="animsition-link">Dom编程艺术<small>(11)</small></a></li>
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(13)</small></a></li>
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript框架/" class="animsition-link">JavaScript框架<small>(2)</small></a></li>
+				    <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">Nodejs疯狂试探<small>(4)</small></a></li>
 				    
-				    <li><a href="/categories/Swiper3-0手册/" class="animsition-link">Swiper3.0手册<small>(3)</small></a></li>
+				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(10)</small></a></li>
 				    
-				    <li><a href="/categories/THREE-js/" class="animsition-link">THREE.js<small>(5)</small></a></li>
+				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(15)</small></a></li>
 				    
-				    <li><a href="/categories/TX-解决方案/" class="animsition-link">TX-解决方案<small>(8)</small></a></li>
+				    <li><a href="/categories/Vue开发/" class="animsition-link">Vue开发<small>(3)</small></a></li>
 				    
-				    <li><a href="/categories/Vue使用手册/" class="animsition-link">Vue使用手册<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/canvas攻略/" class="animsition-link">canvas攻略<small>(2)</small></a></li>
+				    <li><a href="/categories/css世界/" class="animsition-link">css世界<small>(3)</small></a></li>
 				    
 				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
-				    
-				    <li><a href="/categories/jQuery使用手册/" class="animsition-link">jQuery使用手册<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/弹性布局/" class="animsition-link">弹性布局<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -212,31 +208,31 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="基本插件的安装"><a href="#基本插件的安装" class="headerlink" title="基本插件的安装"></a>基本插件的安装</h2><p>GulpJs的安装依赖nodejs，所以先安装nodejs</p>
+      		<h4 id="基本插件的安装"><a href="#基本插件的安装" class="headerlink" title="基本插件的安装"></a>基本插件的安装</h4><p>GulpJs的安装依赖nodejs，所以先安装nodejs</p>
 <p>打开nodejs里面的cmd文件，安装gulp全局变量</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g gulp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g gulp</span><br></pre></td></tr></table></figure>
 <p>安装项目开发所需要的依赖项</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
 <p>安装用来压缩js文件的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-uglify</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-uglify</span><br></pre></td></tr></table></figure>
 <p>安装用来压缩css文件的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-minify-css</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-minify-css</span><br></pre></td></tr></table></figure>
 <p>解析less的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-less</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-less</span><br></pre></td></tr></table></figure>
 <p>安装用来合并的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-concat</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-concat</span><br></pre></td></tr></table></figure>
 <p>用来检查js代码的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-jshint</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-jshint</span><br></pre></td></tr></table></figure>
 <p>用来重命名的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-rename</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-rename</span><br></pre></td></tr></table></figure>
 <p>搭建服务器的插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-connect</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp-connect</span><br></pre></td></tr></table></figure>
 <p>一起安装</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp gulp-uglify gulp-minify-css gulp-concat gulp-jshint gulp-rename</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save-dev gulp gulp-uglify gulp-minify-css gulp-concat gulp-jshint gulp-rename</span><br></pre></td></tr></table></figure>
 <ul>
-<li><h3 id="在项目根目录下建一个以gulpfile-js命名的文本"><a href="#在项目根目录下建一个以gulpfile-js命名的文本" class="headerlink" title="在项目根目录下建一个以gulpfile.js命名的文本"></a>在项目根目录下建一个以<code>gulpfile.js</code>命名的文本</h3></li>
+<li><h5 id="在项目根目录下建一个以gulpfile-js命名的文本"><a href="#在项目根目录下建一个以gulpfile-js命名的文本" class="headerlink" title="在项目根目录下建一个以gulpfile.js命名的文本"></a>在项目根目录下建一个以<code>gulpfile.js</code>命名的文本</h5></li>
 </ul>
-<h2 id="文件的压缩示例"><a href="#文件的压缩示例" class="headerlink" title="文件的压缩示例"></a>文件的压缩示例</h2><p>编辑根目录下的<code>gulifile.js</code>文件 <copy></copy></p>
+<h4 id="文件的压缩示例"><a href="#文件的压缩示例" class="headerlink" title="文件的压缩示例"></a>文件的压缩示例</h4><p>编辑根目录下的<code>gulifile.js</code>文件 <copy></copy></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);  <span class="comment">//定义依赖项</span></span><br><span class="line"></span><br><span class="line">concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>);   <span class="comment">//定义合并插件</span></span><br><span class="line"></span><br><span class="line">mincss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);   <span class="comment">//定义压缩css的插件</span></span><br><span class="line">minjs = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);         <span class="comment">//定义压缩js的插件</span></span><br><span class="line"></span><br><span class="line">rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>);<span class="comment">//定义重命名插件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义任务   第一个是任务名字，第二个是要执行哪些操作</span></span><br><span class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    gulp.src([<span class="string">'css/*.css'</span>])  <span class="comment">//操作css文件夹中所有的css文件</span></span><br><span class="line">    <span class="comment">// gulp.src(['css/a.css'.'css.b.css'])  //操作css文件夹中ab文件</span></span><br><span class="line">        .pipe(concat(<span class="string">'min.css'</span>))  <span class="comment">//执行合并插件并给合并完成的插件起一个名字</span></span><br><span class="line">        .pipe(mincss())         <span class="comment">//执行压缩插件</span></span><br><span class="line">        .pipe(rename(&#123;<span class="attr">suffix</span>:<span class="string">'.xianyu'</span>&#125;))<span class="comment">//执行重命名插件</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'css1'</span>))<span class="comment">//把执行以上操作后的文件放在css1文件夹里面</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    gulp.src([<span class="string">'js/*.js'</span>])  <span class="comment">//操作js文件夹中所有的js文件</span></span><br><span class="line">    <span class="comment">// gulp.src(['js/a.js'.'js.b.js'])  //操作js文件夹中ab文件</span></span><br><span class="line">        .pipe(concat(<span class="string">'min.js'</span>))  <span class="comment">//执行合并插件并给合并完成的插件起一个名字</span></span><br><span class="line">        .pipe(minjs())         <span class="comment">//执行压缩插件</span></span><br><span class="line">        .pipe(rename(&#123;<span class="attr">suffix</span>:<span class="string">'.xianyu'</span>&#125;))<span class="comment">//执行重命名插件</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'js'</span>))<span class="comment">//把执行以上操作后的文件放在js文件夹里面</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'css'</span>,<span class="string">'js'</span>]);  <span class="comment">//执行任务名为css的任务</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//自动执行压缩任务</span></span><br><span class="line">gulp.watch(<span class="string">'css/*.css'</span>,[<span class="string">'css'</span>]);   <span class="comment">//如果css文件夹下任何一个css有变动，则执行名字为css的任务</span></span><br><span class="line">gulp.watch(<span class="string">'js/*.js'</span>,[<span class="string">'js'</span>]);      <span class="comment">//如果js文件夹下任何一个js有变动，则执行名字为js的任务</span></span><br></pre></td></tr></table></figure>
 <p>运行 gulp：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gulp</span><br></pre></td></tr></table></figure>

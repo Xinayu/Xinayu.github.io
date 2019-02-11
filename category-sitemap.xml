@@ -7,92 +7,78 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/Swiper3-0%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-07-05T06:15:32.913Z</lastmod>
+        <loc>https://github.com/Xinayu/categories/Nodejs%E7%96%AF%E7%8B%82%E8%AF%95%E6%8E%A2/</loc>
+        <lastmod>2019-02-11T06:29:42.089Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/Vue%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-07-05T06:19:03.505Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/categories/Gulp%E4%BD%BF%E7%94%A8%E5%8F%82%E8%80%83/</loc>
-        <lastmod>2018-07-05T09:14:51.099Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/categories/%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/</loc>
-        <lastmod>2018-07-06T12:19:07.822Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/categories/hexo%E5%8A%9F%E8%83%BD%E6%95%B4%E5%90%88/</loc>
-        <lastmod>2018-07-19T03:20:37.582Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/categories/JavaScript%E6%A1%86%E6%9E%B6/</loc>
-        <lastmod>2018-07-25T10:32:20.502Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/categories/TX-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-        <lastmod>2018-08-07T06:28:58.823Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://github.com/Xinayu/categories/canvas%E6%94%BB%E7%95%A5/</loc>
-        <lastmod>2018-08-30T09:52:38.371Z</lastmod>
+        <loc>https://github.com/Xinayu/categories/Bom%E8%A7%A3%E6%9E%90/</loc>
+        <lastmod>2019-02-11T06:35:14.387Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://github.com/Xinayu/categories/THREE-js/</loc>
-        <lastmod>2018-10-08T05:39:05.824Z</lastmod>
+        <lastmod>2019-02-11T06:47:06.746Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/CSS%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-11-07T07:55:10.832Z</lastmod>
+        <loc>https://github.com/Xinayu/categories/Dom%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/</loc>
+        <lastmod>2019-02-11T06:50:52.961Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/Vue%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2019-02-11T06:56:00.692Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://github.com/Xinayu/categories/JS%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-        <lastmod>2018-11-20T04:53:55.752Z</lastmod>
+        <lastmod>2019-02-11T07:04:19.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/categories/jQuery%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</loc>
-        <lastmod>2018-12-05T03:24:53.024Z</lastmod>
+        <loc>https://github.com/Xinayu/categories/hexo%E5%8A%9F%E8%83%BD%E6%95%B4%E5%90%88/</loc>
+        <lastmod>2019-02-11T07:06:31.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/Gulp%E4%BD%BF%E7%94%A8%E5%8F%82%E8%80%83/</loc>
+        <lastmod>2019-02-11T07:25:26.711Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/css%E4%B8%96%E7%95%8C/</loc>
+        <lastmod>2019-02-11T08:13:35.442Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/categories/TX-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+        <lastmod>2019-02-11T08:44:37.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://github.com/Xinayu/categories/JS%E5%87%BA%E6%B7%B1%E5%85%A5%E6%B5%85/</loc>
-        <lastmod>2018-12-26T06:37:06.329Z</lastmod>
+        <lastmod>2019-02-11T08:51:55.568Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
