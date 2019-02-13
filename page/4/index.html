@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,7 +227,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/20/Dom--Document和DocumentFragment/">Document和DocumentFragment</a></h3>
+                    <h3><a href="/2018/11/20/Dom--Node集合接口/">集合接口</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
@@ -245,14 +245,15 @@
                 <div class="col-md-8">
                     <p>
                       
-                        Document表示在浏览器中已经加载好的网页，提供一个接口用于操作网页，他是真实的DOM，每一次的DOM操作会引起DOM树的重新渲染
-属性继承自Node，节点类型是Node.DOCUMENT_NODE
-DocumentFragment表示一个没有父级文件的最小文档对象。它被当做一个轻量版的 Document 使用，用于存储已排好版的或尚未打理好格式的XML片段。最大的区别是因它不是真实DOM树的一部分，它的变化不会引起DOM树的重新渲
+                        NodeList和HTMLCollection包含多个节点，两者区别在于，NodeList包含各种类型的节点，HTMLCollection只包含HTML元素节点。
+NodeList 接口类数组，有length属性和forEach方法，可以通过以下方式获得：
+// Node.childNodesdocument.element.childNodes   document.querySelectorAll()   //等节点搜索方法
+继承的
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/11/20/Dom--Document和DocumentFragment/">详情...</a>
+                        <a href="/2018/11/20/Dom--Node集合接口/">详情...</a>
                     </p>
                     
                 </div>

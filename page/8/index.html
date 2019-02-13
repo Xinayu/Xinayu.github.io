@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,41 +227,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--逐帧动画/">逐帧动画</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
-          2018-06-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/css/'>css</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        实现逐帧动画@-webkit-keyframes sprite-slogan &#123;    0% &#123;        background-position-y: 0    &#125;    100% &#123;        background-position-y: -10800px    &#125;&#125;.page-index .slogan &#123;    position: absolute; 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--逐帧动画/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2018/06/05/CSS--兼容措施/">兼容措施</a></h3>
                     <span>
                         <span class="post-meta">
@@ -286,6 +251,49 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/06/05/CSS--兼容措施/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/05/CSS--flex布局/">flex布局</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
+          2018-06-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/css/'>css</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        弹性布局是未来布局的发展趋势，现代浏览器均对flex实现了不同程度的支持，但是如果要兼容老版本的浏览器，则还是应该回归原始的布局方式。
+基本概念
+容器和项目
+
+弹性布局的实现需要一个容器，也就是flex容器。只要把父元素的display设置为flex，则他的子元素就全部成为了flex项目
+
+主轴和交叉轴
+
+主轴（main axis）处于水平方向，是x轴。起点叫main start，终点叫做main end。交叉轴（cross axis）
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/05/CSS--flex布局/">详情...</a>
                     </p>
                     
                 </div>
@@ -581,7 +589,7 @@ ECMAScript 的数据类型
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/09/22/JS--call 和 apply/">call和apply</a></h3>
+                    <h3><a href="/2017/09/22/JS--数组型对象的实现/">数组型对象的实现</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
@@ -599,17 +607,12 @@ ECMAScript 的数据类型
                 <div class="col-md-8">
                     <p>
                       
-                        每个函数都有call和apply方法，可以用来改变this的指向，或者说，用call和apply来帮助对象，去调用某个函数的方法
-使用场景比如某个对象想用它本身没有的方法，但是又不想重写，就可以使用call和apply去调用其他函数的方法 
-Array.prototype.slice.call(arguments)
-这时候的this并不是一个Array，因为需要借用Array类的方法，所以使用了call
-再来看一个栗子： 
-var ca
+                        在jQuery中，如果调用$函数访问一个元素，例如console.log($(&#39;div&#39;));，则会返回一个数组型对象。可以借助循环添加的方式实现 var o = &#123;&#125;;array = ['p','a']for(i=0;i&lt;array.length;i++)&#123;  o[i] = arry[i];&#125;o.length = array.length;console.log(o);		
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/09/22/JS--call 和 apply/">详情...</a>
+                        <a href="/2017/09/22/JS--数组型对象的实现/">详情...</a>
                     </p>
                     
                 </div>

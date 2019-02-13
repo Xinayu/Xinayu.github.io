@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img4.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img7.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,7 +227,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/09/22/JS--数组型对象的实现/">数组型对象的实现</a></h3>
+                    <h3><a href="/2017/09/22/JS--call 和 apply/">call和apply</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
@@ -245,12 +245,17 @@
                 <div class="col-md-8">
                     <p>
                       
-                        在jQuery中，如果调用$函数访问一个元素，例如console.log($(&#39;div&#39;));，则会返回一个数组型对象。可以借助循环添加的方式实现 var o = &#123;&#125;;array = ['p','a']for(i=0;i&lt;array.length;i++)&#123;  o[i] = arry[i];&#125;o.length = array.length;console.log(o);		
+                        每个函数都有call和apply方法，可以用来改变this的指向，或者说，用call和apply来帮助对象，去调用某个函数的方法
+使用场景比如某个对象想用它本身没有的方法，但是又不想重写，就可以使用call和apply去调用其他函数的方法 
+Array.prototype.slice.call(arguments)
+这时候的this并不是一个Array，因为需要借用Array类的方法，所以使用了call
+再来看一个栗子： 
+var ca
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/09/22/JS--数组型对象的实现/">详情...</a>
+                        <a href="/2017/09/22/JS--call 和 apply/">详情...</a>
                     </p>
                     
                 </div>
@@ -374,43 +379,6 @@ function Children() &#123;&#125;Children.prototype.langua
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/08/21/JS--arguments/">arguments和重载</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-08-20T16:00:00.000Z" itemprop="datePublished">
-          2017-08-21
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        函数被调用的时候，会接收两个附加参数，this和arguments。
-arguments是一个对象。当arguments（实参）和parameters（形参）的个数不匹配时，不会导致错误，多余的实参会被忽略。  
-function cat(a,b) &#123;    console.log(cat.length); 		//函数的形参个数    console.log(arguments.length);   //函数的实参个数&#1
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/08/21/JS--arguments/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2017/08/21/JS--minijQuery的实现/">minijquery的实现</a></h3>
                     <span>
                         <span class="post-meta">
@@ -437,6 +405,43 @@ function cat(a,b) &#123;    console.log(cat.length); 		//函数的形参个数  
                     
                     <p class="pull-right readMore">
                         <a href="/2017/08/21/JS--minijQuery的实现/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/21/JS--arguments/">arguments和重载</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-20T16:00:00.000Z" itemprop="datePublished">
+          2017-08-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        函数被调用的时候，会接收两个附加参数，this和arguments。
+arguments是一个对象。当arguments（实参）和parameters（形参）的个数不匹配时，不会导致错误，多余的实参会被忽略。  
+function cat(a,b) &#123;    console.log(cat.length); 		//函数的形参个数    console.log(arguments.length);   //函数的实参个数&#1
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/21/JS--arguments/">详情...</a>
                     </p>
                     
                 </div>

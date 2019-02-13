@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -506,42 +506,6 @@ A callback is a function that is passed as an argument to another function and i
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/20/设计模式--参与者模式/">参与者模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
-          2018-11-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在特定的作用域中执行给定的函数，并将参数原封不动地传递。
-我们在写兼容浏览器的绑定函数时，没有考虑参数的传递//事件绑定方法var A = &#123;&#125;;A.event.on = function (dom,type,fn) &#123;    // w3c标准事件    if(dom.addEventListener)&#123;        dom.addEventListener(type,fn,false);   
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/11/20/设计模式--参与者模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2018/11/20/Dom--概述/">DOM 概述</a></h3>
                     <span>
                         <span class="post-meta">
@@ -580,7 +544,43 @@ DOM 只是一个接口规范，可以用各
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/20/Dom--Node集合接口/">集合接口</a></h3>
+                    <h3><a href="/2018/11/20/设计模式--参与者模式/">参与者模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在特定的作用域中执行给定的函数，并将参数原封不动地传递。
+我们在写兼容浏览器的绑定函数时，没有考虑参数的传递//事件绑定方法var A = &#123;&#125;;A.event.on = function (dom,type,fn) &#123;    // w3c标准事件    if(dom.addEventListener)&#123;        dom.addEventListener(type,fn,false);   
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/设计模式--参与者模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/Dom--Document和DocumentFragment/">Document和DocumentFragment</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
@@ -598,15 +598,14 @@ DOM 只是一个接口规范，可以用各
                 <div class="col-md-8">
                     <p>
                       
-                        NodeList和HTMLCollection包含多个节点，两者区别在于，NodeList包含各种类型的节点，HTMLCollection只包含HTML元素节点。
-NodeList 接口类数组，有length属性和forEach方法，可以通过以下方式获得：
-// Node.childNodesdocument.element.childNodes   document.querySelectorAll()   //等节点搜索方法
-继承的
+                        Document表示在浏览器中已经加载好的网页，提供一个接口用于操作网页，他是真实的DOM，每一次的DOM操作会引起DOM树的重新渲染
+属性继承自Node，节点类型是Node.DOCUMENT_NODE
+DocumentFragment表示一个没有父级文件的最小文档对象。它被当做一个轻量版的 Document 使用，用于存储已排好版的或尚未打理好格式的XML片段。最大的区别是因它不是真实DOM树的一部分，它的变化不会引起DOM树的重新渲
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/11/20/Dom--Node集合接口/">详情...</a>
+                        <a href="/2018/11/20/Dom--Document和DocumentFragment/">详情...</a>
                     </p>
                     
                 </div>
