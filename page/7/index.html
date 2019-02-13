@@ -192,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -413,7 +413,7 @@ html
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--Vuex/">Vuex</a></h3>
+                    <h3><a href="/2018/07/02/Vue--搭建项目/">搭建项目</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
@@ -431,13 +431,21 @@ html
                 <div class="col-md-8">
                     <p>
                       
-                        vuex是数据仓库，同时也是状态管理器
-使用方法新建js文件写入store.js   //引入依赖import  Vue from 'vue';import  Vuex from 'vuex';Vue.use(Vuex);const state =&#123;  //state是状态  count:1       //count是公用的数据，放在状态里面&#125;;//暴露出去export default new Vuex.Store
+                        在使用vue搭建项目之前，要安装所需依赖
+安装 nodejs
+安装 webpack:$ npm install webpack -g
+安装 vue-cli:$ npm install vue-cli -g
+鉴于国内网络限制，可以选择切换镜像源npm install -g cnpm --registry=https://registry.npm.taobao.orgnpm install不推荐使用国内镜像
+
+
+
+初始化项目文件
+创建一个名
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--Vuex/">详情...</a>
+                        <a href="/2018/07/02/Vue--搭建项目/">详情...</a>
                     </p>
                     
                 </div>
@@ -485,7 +493,7 @@ html
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--搭建项目/">搭建项目</a></h3>
+                    <h3><a href="/2018/07/02/Vue--Vuex/">Vuex</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
@@ -503,21 +511,13 @@ html
                 <div class="col-md-8">
                     <p>
                       
-                        在使用vue搭建项目之前，要安装所需依赖
-安装 nodejs
-安装 webpack:$ npm install webpack -g
-安装 vue-cli:$ npm install vue-cli -g
-鉴于国内网络限制，可以选择切换镜像源npm install -g cnpm --registry=https://registry.npm.taobao.orgnpm install不推荐使用国内镜像
-
-
-
-初始化项目文件
-创建一个名
+                        vuex是数据仓库，同时也是状态管理器
+使用方法新建js文件写入store.js   //引入依赖import  Vue from 'vue';import  Vuex from 'vuex';Vue.use(Vuex);const state =&#123;  //state是状态  count:1       //count是公用的数据，放在状态里面&#125;;//暴露出去export default new Vuex.Store
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--搭建项目/">详情...</a>
+                        <a href="/2018/07/02/Vue--Vuex/">详情...</a>
                     </p>
                     
                 </div>
@@ -566,7 +566,7 @@ html
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--逐帧动画/">逐帧动画</a></h3>
+                    <h3><a href="/2018/06/05/CSS--flex布局/">flex布局</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
@@ -584,12 +584,20 @@ html
                 <div class="col-md-8">
                     <p>
                       
-                        实现逐帧动画@-webkit-keyframes sprite-slogan &#123;    0% &#123;        background-position-y: 0    &#125;    100% &#123;        background-position-y: -10800px    &#125;&#125;.page-index .slogan &#123;    position: absolute; 
+                        弹性布局是未来布局的发展趋势，现代浏览器均对flex实现了不同程度的支持，但是如果要兼容老版本的浏览器，则还是应该回归原始的布局方式。
+基本概念
+容器和项目
+
+弹性布局的实现需要一个容器，也就是flex容器。只要把父元素的display设置为flex，则他的子元素就全部成为了flex项目
+
+主轴和交叉轴
+
+主轴（main axis）处于水平方向，是x轴。起点叫main start，终点叫做main end。交叉轴（cross axis）
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--逐帧动画/">详情...</a>
+                        <a href="/2018/06/05/CSS--flex布局/">详情...</a>
                     </p>
                     
                 </div>
