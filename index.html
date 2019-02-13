@@ -86,7 +86,9 @@
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
+				    <li><a href="/categories/JS事件/" class="animsition-link">JS事件<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(17)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
@@ -190,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -225,16 +227,18 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/22/JS--常用操作/">常用操作</a></h3>
+                    <h3><a href="/2019/02/11/JS事件--其他事件/">其他事件</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-21T16:00:00.000Z" itemprop="datePublished">
-          2019-01-22
+      <time datetime="2019-02-10T16:00:00.000Z" itemprop="datePublished">
+          2019-02-11
       </time>
     
     
     | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -243,17 +247,12 @@
                 <div class="col-md-8">
                     <p>
                       
-                        宿主环境
-判断安卓和苹果终端
-var u = navigator.userAgent;var isAndroid = u.indexOf('Android') &gt; -1 || u.indexOf('Adr') &gt; -1; //android终端var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-
-判断是否ie
-isie: /MSIE \d+\.\d+
+                        session 历史事件hashchange 事件:URL 的 hash 部分（即#号后面的部分，包括#号）发生变化时触发,一般在window对象上监听// URL 是 http://www.example.com/window.addEventListener('hashchange', myFunction);function myFunction(e) &#123;  console.log(e.oldURL);  console
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/22/JS--常用操作/">详情...</a>
+                        <a href="/2019/02/11/JS事件--其他事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -265,16 +264,18 @@ isie: /MSIE \d+\.\d+
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/13/Bom--window.matchMedia()/">window.matchMedia()</a></h3>
+                    <h3><a href="/2019/02/09/JS事件--触摸事件/">触摸事件</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-13T03:06:12.000Z" itemprop="datePublished">
-          2019-01-13
+      <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">
+          2019-02-09
       </time>
     
     
     | 
-    <a href='/tags/Bom解析/'>Bom解析</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -283,16 +284,19 @@ isie: /MSIE \d+\.\d+
                 <div class="col-md-8">
                     <p>
                       
-                        该属性是css媒体查询列表转化成一个 MediaQueryList 实例，用js去操作
-var mdl = window.matchMedia('(min-width: 400px)');mdl instanceof MediaQueryList // true
-MediaQueryList 接口的实例属性
-MediaQueryList.media
-MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
+                        概述浏览器的触摸API由三个部分组成
+
+Touch：一个触摸点
+TouchList：多个触摸点的集合
+TouchEvent：触摸引发的事件实例
+
+很多时候，触摸事件和鼠标事件同时触发，即使这个时候并没有用到鼠标。这是为了让那些只定义鼠标事件、没有定义触摸事件的代码，在触摸屏的情况下仍然能用。如果想避免这种情况，可以用event.preventDefault方法阻止发出鼠标事件。
+Touch接口单个触点产生Touch实例var touch
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/13/Bom--window.matchMedia()/">详情...</a>
+                        <a href="/2019/02/09/JS事件--触摸事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -304,16 +308,18 @@ MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/12/Bom--DOMContentLoaded和load/">DOMContentLoaded和load</a></h3>
+                    <h3><a href="/2019/02/09/JS事件--拖拉事件/">拖拉事件</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-12T03:06:12.000Z" itemprop="datePublished">
-          2019-01-12
+      <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">
+          2019-02-09
       </time>
     
     
     | 
-    <a href='/tags/Bom解析/'>Bom解析</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -322,20 +328,14 @@ MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
                 <div class="col-md-8">
                     <p>
                       
-                        DOMContentLoaded：当初始的 HTML 文档被完全加载和解析完成之后触发，而无需等待样式表、图像和子框架的完成加载。
-load：检测一个完全加载的页面，当一个资源及其依赖资源已完成加载时，将触发load事件。
-HTML文档的加载与页面的首次渲染当我们输入一个页面地址时：
+                        拖拉事件的种类网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都是可以直接拖拉的。为了让元素节点可拖拉，可以将该节点的draggable属性设为true。&lt;!-- 如果不想让图片等可以拖拉，设置值为false即可 --&gt;&lt;div draggable="true"&gt;  此区域可拖拉&lt;/div&gt;
 
-1、浏览器首先下载该地址所对应的 html 页面。
-
-2、浏览器解析 html 页面的 DOM 结构。
-
-3、开启下载线程对文档中的所有资源按优先级排序
+一旦某个元素节点的draggable属性设为true，就无法再用鼠标选中该节点内部的文字或
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/12/Bom--DOMContentLoaded和load/">详情...</a>
+                        <a href="/2019/02/09/JS事件--拖拉事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -347,16 +347,18 @@ HTML文档的加载与页面的首次渲染当我们输入一个页面地址时�
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/04/Nodejs--Thunk函数和Generator函数/">Thunk函数和Generator函数</a></h3>
+                    <h3><a href="/2019/02/08/JS事件--表单事件/">表单模型</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-04T03:06:12.000Z" itemprop="datePublished">
-          2019-01-04
+      <time datetime="2019-02-07T16:00:00.000Z" itemprop="datePublished">
+          2019-02-08
       </time>
     
     
     | 
-    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -365,14 +367,15 @@ HTML文档的加载与页面的首次渲染当我们输入一个页面地址时�
                 <div class="col-md-8">
                     <p>
                       
-                        ThunkThunk用于传名调用，即把参数放进一个临时函数中，再将这个临时函数传入函数体。
-function f(m)&#123;  return m * 2;     &#125;f(x + 5);// 等同于var thunk = function () &#123;  return x + 5;&#125;;function main(thunk)&#123;  return thunk() * 2;&#125;
-x是参数，将其放
+                        表单事件的种类
+input事件
+  input事件当&lt;input&gt;、&lt;select&gt;、&lt;textarea&gt;的值发生变化时触发。对于复选框（&lt;input type=checkbox&gt;）或单选框（&lt;input type=radio&gt;），用户改变选项时，也会触发这个事件。另外，对于打开contenteditable属性的元素，只要值发生变化，也会触发input事件。
+  input事
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/04/Nodejs--Thunk函数和Generator函数/">详情...</a>
+                        <a href="/2019/02/08/JS事件--表单事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -384,16 +387,18 @@ x是参数，将其放
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/03/Nodejs--Express的使用/">Express框架</a></h3>
+                    <h3><a href="/2019/02/07/JS事件--进度事件/">键盘事件</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-03T03:06:12.000Z" itemprop="datePublished">
-          2019-01-03
+      <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">
+          2019-02-07
       </time>
     
     
     | 
-    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -402,14 +407,16 @@ x是参数，将其放
                 <div class="col-md-8">
                     <p>
                       
-                        Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。
-使用 Express 可以快速地搭建一个完整功能的网站。
-搭建服务器//引入expressvar express = require('express');var app = express();//引入服务器模块，监听端口app.listen('18000',function () &#1
+                        进度事件种类进度事件用来描述资源加载的进度，主要由 AJAX 请求、&lt;img&gt;、&lt;audio&gt;、&lt;video&gt;、&lt;style&gt;、&lt;link&gt;等外部资源的加载触发，继承了ProgressEvent接口。它主要包含以下几种事件。
+
+abort：外部资源中止加载时（比如用户取消）触发。如果发生错误导致中止，不会触发该事件。
+error：由于错误导致外部资源无法加载时触发。
+load：
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/03/Nodejs--Express的使用/">详情...</a>
+                        <a href="/2019/02/07/JS事件--进度事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -421,16 +428,18 @@ x是参数，将其放
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/02/Nodejs--创建web服务器/">创建web服务器</a></h3>
+                    <h3><a href="/2019/02/07/JS事件--键盘事件/">键盘模型</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-02T03:06:12.000Z" itemprop="datePublished">
-          2019-01-02
+      <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">
+          2019-02-07
       </time>
     
     
     | 
-    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -439,28 +448,18 @@ x是参数，将其放
                 <div class="col-md-8">
                     <p>
                       
-                        Web服务器的功能：
+                        键盘事件的分类键盘事件由用户击打键盘触发，主要有keydown、keypress、keyup三个事件，它们都继承了KeyboardEvent接口。
 
-接受HTTP请求（GET、POST、UPDATE、DELETE、PUT、PATCH）
+keydown：按下键盘时触发。
+keypress：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。
+keyup：松开键盘时触发该事件。
 
-处理HTTP请求（自己处理，或请求别的程序处理）
-
-做出响应（返回页面、文件、各类数据等）
-
-
-常见请求种类：
-
-请求文件：包括静态文件（网页、图片、前端JavaScript文件、css文件……），及由程序处理得到的文件
-
-完成特定的操作：如登陆、获取特定数据
-
-
-使用nodejs可以搭建web服务器而且不依赖其他服务器软件（
+KeyboardEvent 的实例属
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/02/Nodejs--创建web服务器/">详情...</a>
+                        <a href="/2019/02/07/JS事件--键盘事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -472,16 +471,18 @@ x是参数，将其放
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/01/Nodejs--开发环境的搭建/">开发环境的搭建</a></h3>
+                    <h3><a href="/2019/02/05/JS事件--Event对象/">Event对象</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-01T03:06:12.000Z" itemprop="datePublished">
-          2019-01-01
+      <time datetime="2019-02-04T16:00:00.000Z" itemprop="datePublished">
+          2019-02-05
       </time>
     
     
     | 
-    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -490,23 +491,17 @@ x是参数，将其放
                 <div class="col-md-8">
                     <p>
                       
-                        
-采用linux系统部署服务器，使用xshell连接。
-$ ssh root@ip port
-
-安装nodejs
-
-
-$ yum install nodejs$ node -v  //检查node版本
-切换镜像源：
-$ npm config set strict-ssl false //取消严格模式$ npm install -g cnpm --registry=https://registry.npm.taobao.org/
-
-安装n
+                        事件触发后会产生一个Event对象，作为参数传递给监听函数Event对象本身就是一个构造函数，可以用来生成新的实例。event = new Event(type, options);
+事件触发相当于new一个Event函数，然后传递给监听函数,所以继承了Event.prototype
+实例属性
+bubbles：当前事件是否会冒泡,只读
+eventPhase：事件所处阶段。0：没有发生，1：捕获，2：到达节点，3：冒泡
+cancelabl
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/01/Nodejs--开发环境的搭建/">详情...</a>
+                        <a href="/2019/02/05/JS事件--Event对象/">详情...</a>
                     </p>
                     
                 </div>
@@ -518,16 +513,18 @@ $ npm config set strict-ssl false //取消严格模式$ npm install -g cnpm --re
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/30/Dom--DOM载入事件/">DOM载入事件</a></h3>
+                    <h3><a href="/2019/02/05/JS事件--鼠标事件/">鼠标事件</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-11-30T03:06:12.000Z" itemprop="datePublished">
-          2018-11-30
+      <time datetime="2019-02-04T16:00:00.000Z" itemprop="datePublished">
+          2019-02-05
       </time>
     
     
     | 
-    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -536,23 +533,18 @@ $ npm config set strict-ssl false //取消严格模式$ npm install -g cnpm --re
                 <div class="col-md-8">
                     <p>
                       
-                        DOM就绪和渲染结束。
+                        每个鼠标事件会产生一个MouseEvent实例，MouseEvent接口代表鼠标相关事件，继承了Event接口并且拥有独有的方法和属性。var event = new MouseEvent(type, options);
+实例属性按下对应的键盘：
 
-DOM就绪是指浏览器已经接收到整个HTML并且DOM解析完成；
-渲染结束是指浏览器已经接收到HTML中引用的所有样式文件、图片文件、以及Iframe等资源并渲染结束。
-
-DOM API 在页面载入问题上主要提供了三个接口：
-
-DOMContentLoaded事件；
-load事件；
-document.readyState属性，及其对应的readystatechange事件。
-
-DOMContentLoaded页面
+altKey：Alt 键
+ctrlKey：Ctrl 键
+metaKey：Meta 键（Mac 键盘是一个四瓣的小花，Windows 键盘是 Windows 键）
+shiftKey：Shift
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/11/30/Dom--DOM载入事件/">详情...</a>
+                        <a href="/2019/02/05/JS事件--鼠标事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -564,16 +556,18 @@ DOMContentLoaded页面
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/29/Dom--Document节点/">Document节点</a></h3>
+                    <h3><a href="/2019/02/04/JS事件--事件模型/">事件模型</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-11-29T03:06:12.000Z" itemprop="datePublished">
-          2018-11-29
+      <time datetime="2019-02-03T16:00:00.000Z" itemprop="datePublished">
+          2019-02-04
       </time>
     
     
     | 
-    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -582,16 +576,17 @@ DOMContentLoaded页面
                 <div class="col-md-8">
                     <p>
                       
-                        document节点代表存在的网页，继承了EventTarget接口、Node接口、ParentNode接口。这意味着，这些接口的方法都可以在document对象上调用。除此之外，document对象还有很多自己的属性和方法。获取方式：
+                        监听函数浏览器的事件模型，是通过监听函数对事件作出反应。就是事件驱动。JavaScript 有三种方法，可以为事件绑定监听函数。
 
-正常网页，document或window.document
-iframe框架里面的网页，使用iframe节点的contentDocument属性
-Ajax 操作返回的文档，使用XMLHttpReque
+HTML 的 on- 属性
+  &lt;div onClick="console.log(2)"&gt;    &lt;button onClick="console.log(1)"&gt;点击&lt;/button&gt;&lt;/div&gt;
+
+函数要加圆括号只在冒泡阶段触发可以通过setAttrib
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/11/29/Dom--Document节点/">详情...</a>
+                        <a href="/2019/02/04/JS事件--事件模型/">详情...</a>
                     </p>
                     
                 </div>
@@ -603,16 +598,18 @@ Ajax 操作返回的文档，使用XMLHttpReque
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/11/28/Dom--StyleSheet 接口/">StyleSheet 接口</a></h3>
+                    <h3><a href="/2019/02/03/JS事件--EventTarget 接口/">EventTarget 接口</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-11-28T03:06:12.000Z" itemprop="datePublished">
-          2018-11-28
+      <time datetime="2019-02-02T16:00:00.000Z" itemprop="datePublished">
+          2019-02-03
       </time>
     
     
     | 
-    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
     
     
 </span>
@@ -621,14 +618,16 @@ Ajax 操作返回的文档，使用XMLHttpReque
                 <div class="col-md-8">
                     <p>
                       
-                        StyleSheet代表网页的一张样式表，其中可以是&lt;link&gt;元素加载的样式表和&lt;style&gt;元素内嵌的样式表
-获取StyleSheet可以使用document对象的styleSheets属性，返回当前页面所有的StyleSheet(类数组，有length)
-var sheets = document.styleSheets;var sheet = document.styleSheets[0];sheet i
+                        所有Node节点部署了EventTarget接口，用于事件操作（监听和触发），主要有三个方法：addEventListener、removeEventListener、dispatchEvent
+监听事件 addEventListener一旦事件发生，就会执行回调函数，默认只在冒泡阶段触发。target.addEventListener(type, listener[, useCapture]);
+
+type：事件名称，大小写敏感。
+l
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/11/28/Dom--StyleSheet 接口/">详情...</a>
+                        <a href="/2019/02/03/JS事件--EventTarget 接口/">详情...</a>
                     </p>
                     
                 </div>

@@ -86,7 +86,9 @@
 				    
 				    <li><a href="/categories/Gulp使用参考/" class="animsition-link">Gulp使用参考<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(16)</small></a></li>
+				    <li><a href="/categories/JS事件/" class="animsition-link">JS事件<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/JS出深入浅/" class="animsition-link">JS出深入浅<small>(17)</small></a></li>
 				    
 				    <li><a href="/categories/JS设计模式/" class="animsition-link">JS设计模式<small>(12)</small></a></li>
 				    
@@ -190,7 +192,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img8.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -225,11 +227,169 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/09/TX--评论组件/">评论组件</a></h3>
+                    <h3><a href="/2018/08/20/3JS--各种光源/">各种光源</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-07-08T16:00:00.000Z" itemprop="datePublished">
-          2018-07-09
+      <time datetime="2018-08-20T08:42:53.000Z" itemprop="datePublished">
+          2018-08-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.js提供了一系列的光源，各有用途：
+
+
+
+光源名称
+描述
+
+
+
+
+AmbientLight（环境光源）
+颜色会直接作用物体的当前颜色上
+
+
+PointLight（点光源）
+一个点向所有方向
+
+
+SpotLight（聚光灯）
+聚光灯效果（范围）例如台灯
+
+
+DirectionalLight（方向光源）
+平行光源 例如太阳光
+
+
+HemisphereLight（半球光）
+创造自然室外光线，模拟反光和光线微弱的天空，太阳升降
+
+
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/20/3JS--各种光源/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/18/3JS--场景对象THREE.Scene/">THREE.Scene常用方法和属性</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-18T08:42:53.000Z" itemprop="datePublished">
+          2018-08-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.Scence 场景是所有对象的容器，所有对象和元素都会被放到场景中才能渲染。
+
+
+
+方法（属性）
+描述
+
+
+
+
+add(object)
+用于向场景中添加对象。使用该方法还可以创建对象组。
+
+
+children
+用于返回一个场景中所有对象的列表，包括摄像机和光源。
+
+
+getObjectByName(name,recursive)
+在创建对象时可以指定唯一的标识 name，使用该方法可以查找特定名字的对象。 当参数 recur
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/18/3JS--场景对象THREE.Scene/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/14/JS--基本包装类型/">基本包装类型</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-13T16:00:00.000Z" itemprop="datePublished">
+          2018-08-14
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        js数据类型分为两种，基本数据类型和引用类型。
+引用类型能拥有属性和方法，但是基本数据类型不能。然而有些时候，我们却能够对基本数据类型调用相关方法，其实，在基本数据类型中又包括有基本包装类型：字符串，数字和布尔值。他们对应的构造函数是String，Number和Boolean。
+来看一道题：
+var str = 'string';console.log(str.length)
+理论上，基本数据类型没有属性和方法，但是我们在控制台可以打印
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/14/JS--基本包装类型/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/14/TX--横竖屏/">横竖屏</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-14T04:07:21.000Z" itemprop="datePublished">
+          2018-07-14
       </time>
     
     
@@ -243,15 +403,13 @@
                 <div class="col-md-8">
                     <p>
                       
-                        使用方法 引用css和js文件  css       
-  &lt;link rel="stylesheet" href="css/comment.css"&gt;
-  js    
-  &lt;script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"&gt;&lt;/script&gt;&lt;script src="//ossweb-img.qq.com/images
+                        如果页面不涉及软键盘，尽量使用css解决
+CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position:relative; overflow:hidden;width:100%; height:100%;padding:0;margin:0;&#125;    html::before &#123;content: ""; positio
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/09/TX--评论组件/">详情...</a>
+                        <a href="/2018/07/14/TX--横竖屏/">详情...</a>
                     </p>
                     
                 </div>
@@ -263,237 +421,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/05/hexo--添加复制功能/">添加复制功能</a></h3>
+                    <h3><a href="/2018/07/10/TX--预加载/">预加载</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-07-05T08:42:53.000Z" itemprop="datePublished">
-          2018-07-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        hexo自带的代码段没有复制功能，有时候不是很方便，我们使用clipboard.js完善该功能。
-引入插件每个主题使用的模板语言不一样，这里以.pug为栗子cd你的博客目录，然后打开 theme -&gt; layout -&gt; _partial -&gt;head.pug，加入外链script(type='text/javascript', src='https://cdn.bootcss.com/clipboard.js/1.5
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/05/hexo--添加复制功能/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/04/hexo--添加本地搜索/">添加本地搜索</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-04T05:56:08.000Z" itemprop="datePublished">
-          2018-07-04
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        随着文章数量的不断增加，目录和标签已经不能满足我们的需求，添加本地搜索有助于我们对所需资源进行快捷定位
-安装搜索插件cd你的博客目录，鼠标右键选择Git Bash Here  $ npm install hexo-generator-searchdb --save
-修改站点配置文件在_config.yml添加搜索支持 search：    path: search.xml    field: post    format: html  
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/04/hexo--添加本地搜索/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/04/hexo--Hexo+Github/">Hexo + Github</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-04T04:47:50.000Z" itemprop="datePublished">
-          2018-07-04
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        利用Hexo+Github搭建个人博客
-安装Git + nodejsGit: https://www.git-scm.com/download/Node.js: https://nodejs.org/zh-cn/
-安装hexo$ npm install hexo-cli -g                   //全局安装hexo$ hexo init blog		            //创建blog文件并且初始化$ cd blo
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/04/hexo--Hexo+Github/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--Vuex/">Vuex</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
-          2018-07-02
-      </time>
-    
-    
-    | 
-    <a href='/tags/vue2-0/'>vue2.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        vuex是数据仓库，同时也是状态管理器
-使用方法新建js文件写入store.js   //引入依赖import  Vue from 'vue';import  Vuex from 'vuex';Vue.use(Vuex);const state =&#123;  //state是状态  count:1       //count是公用的数据，放在状态里面&#125;;//暴露出去export default new Vuex.Store
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--Vuex/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--搭建项目/">搭建项目</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
-          2018-07-02
-      </time>
-    
-    
-    | 
-    <a href='/tags/vue2-0/'>vue2.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在使用vue搭建项目之前，要安装所需依赖
-安装 nodejs
-安装 webpack:$ npm install webpack -g
-安装 vue-cli:$ npm install vue-cli -g
-鉴于国内网络限制，可以选择切换镜像源npm install -g cnpm --registry=https://registry.npm.taobao.orgnpm install不推荐使用国内镜像
-
-
-
-初始化项目文件
-创建一个名
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--搭建项目/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--Axios+Mock/">Axios+Mock</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
-          2018-07-02
-      </time>
-    
-    
-    | 
-    <a href='/tags/vue2-0/'>vue2.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        目录结构Axios用于前后端通信，mock.js用于模拟随机数据，搭配使用旨在脱离后端进行开发测试。
-|-- data                            // 目录示例     |-- api.js                     // 统一管理axios所有的请求     |-- index.js            	    // 拦截请求     |-- mock-data.js           
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--Axios+Mock/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/06/14/TX--弹窗组件/">弹窗组件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-06-14T04:07:21.000Z" itemprop="datePublished">
-          2018-06-14
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
       </time>
     
     
@@ -507,14 +439,16 @@
                 <div class="col-md-8">
                     <p>
                       
-                        为了增强团队的协作和高效开发，提升代码质量 ，综合整理解决方案。
-在文档底部添加引用  &lt;script src="//ossweb-img.qq.com/images/js/comm/showDialog.min.js"&gt;&lt;/script&gt;
-结构  &lt;div class="pop" id=""&gt; &lt;a href="javascript:showDialog.hide()" class="clos
+                        当网页图片比较多的时候，使用预加载动画，可以提高用户体验
+引用  预加载效果使用loder.js实现，前往下载
+&lt;script src="js/loder.js"&gt;&lt;/script&gt;
+添加结构根据设计稿灵活添加结构和样式，比如我要实现一个数字动态增加的预加载效果，给数字一个类名，方便抓取 
+&lt;!-- 参考样式 --&gt;  &lt;div id="loader" class="loader"&gt;   
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/14/TX--弹窗组件/">详情...</a>
+                        <a href="/2018/07/10/TX--预加载/">详情...</a>
                     </p>
                     
                 </div>
@@ -526,16 +460,16 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--兼容措施/">兼容措施</a></h3>
+                    <h3><a href="/2018/07/10/TX--KV视频/">KV视频使用方法</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
-          2018-06-05
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
       </time>
     
     
     | 
-    <a href='/tags/css/'>css</a>
+    <a href='/tags/供应商/'>供应商</a>
     
     
 </span>
@@ -544,12 +478,15 @@
                 <div class="col-md-8">
                     <p>
                       
-                        透明度opcaity .ele&#123;  opacity: 1;  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);  &#125;/*支持grba*/　.ele&#123;       background:rgba(0,0,0,0.5); 　　　　filter:progid:DXImageTransform.Microsoft.gradient(start
+                        基于video原生标签，用于kv视频展示参考结构
+&lt;video autoplay="autoplay" class="big-video" loop&gt;    Your browser does not support the video tag.&lt;/video&gt;
+参考样式
+.big-video &#123;position: absolute;top: 0;left: 50%;width: 1920px;heig
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--兼容措施/">详情...</a>
+                        <a href="/2018/07/10/TX--KV视频/">详情...</a>
                     </p>
                     
                 </div>
@@ -561,16 +498,16 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--逐帧动画/">逐帧动画</a></h3>
+                    <h3><a href="/2018/07/10/TX--常用功能/">常用功能</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
-          2018-06-05
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
       </time>
     
     
     | 
-    <a href='/tags/css/'>css</a>
+    <a href='/tags/供应商/'>供应商</a>
     
     
 </span>
@@ -579,12 +516,125 @@
                 <div class="col-md-8">
                     <p>
                       
-                        实现逐帧动画@-webkit-keyframes sprite-slogan &#123;    0% &#123;        background-position-y: 0    &#125;    100% &#123;        background-position-y: -10800px    &#125;&#125;.page-index .slogan &#123;    position: absolute; 
+                        复制文字//复制链接function copy(str) &#123;    var save = function(e) &#123;        e.clipboardData.setData('text/plain', str)        e.preventDefault();    &#125;    document.addEventListener('copy', save)    document.execComma
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--逐帧动画/">详情...</a>
+                        <a href="/2018/07/10/TX--常用功能/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--Swiper3效果样式/">Swiper3.0效果样式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>,
+    
+    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        整合提取各个效果对应的样式，按需所取，去除冗余
+渐变样式 /* Fade */.swiper-container-fade.swiper-container-free-mode .swiper-slide &#123;-webkit-transition-timing-function: ease-out;-moz-transition-timing-function: ease-out;-ms-transition-timing-fu
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--Swiper3效果样式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--Swiper3局部组件/">Swiper3.0局部组件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>,
+    
+    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        最好不要直接直接引用完整的swiper的css文件要根据页面中是否包括滑动块（slides）、分页器(pagination)、前进按钮和动画等进行精简
+前进后退按钮 /* Arrows */.swiper-button-prev,.swiper-button-next &#123;position: absolute;top: 50%;width: 27px;height: 44px;margin-top: -22px;z-index:
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--Swiper3局部组件/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--Swiper3使用方法/">Swiper3.0使用方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>,
+    
+    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        基本结构Swiper: 整个滑动对象，有时特指滑块释放后仍然正向移动直到贴合边缘的过程(过渡)container: Swiper的容器，包括滑块（slides）、封套（wrapper)、分页器(pagination)、前进按钮等wrapper: 触控的对象，可触摸区域，移动的块的集合，过渡时会随slide切换产生位移slider: 切换的滑块，可以包含文字、图片、html元素或另外一个Swiperpagination: 分页器，指示sl
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--Swiper3使用方法/">详情...</a>
                     </p>
                     
                 </div>
