@@ -104,6 +104,8 @@
 				    
 				    <li><a href="/categories/hexo功能整合/" class="animsition-link">hexo功能整合<small>(3)</small></a></li>
 				    
+				    <li><a href="/categories/浏览器模型/" class="animsition-link">浏览器模型<small>(5)</small></a></li>
+				    
 				</ul>
         	</li>
 			
@@ -192,7 +194,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -227,6 +229,166 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2018/11/21/Dom--Node接口/">Node接口</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-21T03:06:12.000Z" itemprop="datePublished">
+          2018-11-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Node是DOM的最小单位，所有的DOM节点都继承了Node接口的属性和方法。
+属性
+Node.prototype.nodeType
+document.nodeType
+返回节点类型，常用的属性：
+
+元素节点（element）：1，对应常量Node.ELEMENT_NODE
+属性节点（attr）：2，对应常量Node.ATTRIBUTE_NODE
+文本节点（text）：3，对应常量Node.TEXT_NODE
+
+
+Node.protot
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/21/Dom--Node接口/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/JS--回掉函数，同步异步/">回掉函数，同步异步</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T05:58:35.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        回掉函数函数和普通对象一样可以当作参数传递。当函数用于传参时，该函数就是回掉函数。
+
+A callback is a function that is passed as an argument to another function and is executed after its parent function has completed.
+
+同步和异步js是单线程执行的，所以如果遇到阻塞操作，他并不会傻傻等待阻塞操作执行完，而是
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/JS--回掉函数，同步异步/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/Dom--Node集合接口/">集合接口</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        NodeList和HTMLCollection包含多个节点，两者区别在于，NodeList包含各种类型的节点，HTMLCollection只包含HTML元素节点。
+NodeList 接口类数组，有length属性和forEach方法，可以通过以下方式获得：
+// Node.childNodesdocument.element.childNodes   document.querySelectorAll()   //等节点搜索方法
+继承的
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/Dom--Node集合接口/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/Dom--Document和DocumentFragment/">Document和DocumentFragment</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Document表示在浏览器中已经加载好的网页，提供一个接口用于操作网页，他是真实的DOM，每一次的DOM操作会引起DOM树的重新渲染
+属性继承自Node，节点类型是Node.DOCUMENT_NODE
+DocumentFragment表示一个没有父级文件的最小文档对象。它被当做一个轻量版的 Document 使用，用于存储已排好版的或尚未打理好格式的XML片段。最大的区别是因它不是真实DOM树的一部分，它的变化不会引起DOM树的重新渲
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/Dom--Document和DocumentFragment/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2018/11/20/设计模式--参与者模式/">参与者模式</a></h3>
                     <span>
                         <span class="post-meta">
@@ -252,6 +414,44 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/11/20/设计模式--参与者模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/20/Dom--概述/">DOM 概述</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-20T03:06:12.000Z" itemprop="datePublished">
+          2018-11-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/Dom编程艺术/'>Dom编程艺术</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。
+浏览器会根据DOM模型，将结构化文档（比如 HTML 和XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有规范的对外接口。
+
+DOM 只是一个接口规范，可以用各
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/20/Dom--概述/">详情...</a>
                     </p>
                     
                 </div>
@@ -394,182 +594,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/11/06/设计模式--命令模式（绘图命令）/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/11/01/设计模式--命令模式（视图模板）/">命令模式（视图模板）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-11-01T08:13:33.000Z" itemprop="datePublished">
-          2018-11-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        将请求和实现解耦并封装成独立的对象，从而使得不同的请求对客户端的实现参数化。他将创建模块的逻辑封装在一个对象里，这个对象提供一个参数化的请求接口，请求部分比较简单，只需要按照给定的参数格式书写指令即可。//模板实现的模块var viewCommand = (function() &#123;    //方法集合    var Action = &#123;        //创建方法        creat:function() &#
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/11/01/设计模式--命令模式（视图模板）/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/11/01/设计模式--策略模式/">策略模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-11-01T05:20:37.000Z" itemprop="datePublished">
-          2018-11-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        和状态模式类似，能灵活管理分支结构，区别在于，策略模式内部不需要管理状态，各个状态间没有依赖关系。最常用的就是封装一系列的不会相互影响的功能，比如算法，在有需要的时候调用即可。// 策略模式封装一个价格算法var PriceStragtegy = function () &#123;    var stragtegy = &#123;        // 100返30        return30:function (preice) 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/11/01/设计模式--策略模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/31/设计模式--状态模式/">状态模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-31T06:16:03.000Z" itemprop="datePublished">
-          2018-10-31
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        当一个对象的内部状态发生改变时，会导致其行为的改变。状态模式用于解决分支判断语句的臃肿。将不同的判断结果封装在状态对象内，然后改状态对象返回一个可以被调用的接口方法。//结果状态对象var ResultState = (    function()&#123;        //判断结构保存在内部状态中        var States = &#123;            //每种状态作为一种独立方法保存            s
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/31/设计模式--状态模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/31/设计模式--观察者模式/">观察者模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-31T02:18:05.000Z" itemprop="datePublished">
-          2018-10-31
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        观察者模式又被称为发布-订阅者模式或者消息机制。主要作用是定义了一种依赖关系，解决了主体对象与观察者之间的耦合。我们需要一个观察者对象，里面至少要包含一个消息容器和三个方法：订阅消息，取消订阅，发送订阅。
-//将观察者放入闭包中，页面加载立即执行var Observer = (function () &#123;    // 消息容器，所有订阅的消息会放在这里    var _message = &#123;&#125;    retu
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/31/设计模式--观察者模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/30/设计模式--外观模式/">外观模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-30T08:37:16.000Z" itemprop="datePublished">
-          2018-10-30
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        外观模式就是为一组复杂的子系统接口提供一个更高级的统一接口，通过这个接口可以使子系统接口更加容易访问比如我们在使用点击事件时，有多种方法，可以直接通过document绑定，可以通过监听事件进行绑定，然而并不是每个方法都实用，因为要考虑到浏览器的兼容性问题。我们可以使用外观模式对点击事件进行优化：//外观模式 dom元素，type类型，fn回掉function addEvent(dom,type,fn)&#123;    //处理支持 a
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/30/设计模式--外观模式/">详情...</a>
                     </p>
                     
                 </div>
