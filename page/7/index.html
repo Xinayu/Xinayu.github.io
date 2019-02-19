@@ -203,7 +203,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img7.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img8.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -238,7 +238,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/08/20/3JS--规范参考/">THREE 规范参考</a></h3>
+                    <h3><a href="/2018/08/20/3JS--各种光源/">各种光源</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-08-20T08:42:53.000Z" itemprop="datePublished">
@@ -256,12 +256,42 @@
                 <div class="col-md-8">
                     <p>
                       
-                        var renderer;function initThree() &#123;    width = document.getElementById('canvas-frame').clientWidth;    height = document.getElementById('canvas-frame').clientHeight;    renderer = new THREE.WebGLRenderer(&#123;     
+                        THREE.js提供了一系列的光源，各有用途：
+
+
+
+光源名称
+描述
+
+
+
+
+AmbientLight（环境光源）
+颜色会直接作用物体的当前颜色上
+
+
+PointLight（点光源）
+一个点向所有方向
+
+
+SpotLight（聚光灯）
+聚光灯效果（范围）例如台灯
+
+
+DirectionalLight（方向光源）
+平行光源 例如太阳光
+
+
+HemisphereLight（半球光）
+创造自然室外光线，模拟反光和光线微弱的天空，太阳升降
+
+
+
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/08/20/3JS--规范参考/">详情...</a>
+                        <a href="/2018/08/20/3JS--各种光源/">详情...</a>
                     </p>
                     
                 </div>
@@ -402,7 +432,7 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--常用功能/">常用功能</a></h3>
+                    <h3><a href="/2018/07/10/TX--Swiper3使用方法/">Swiper3.0使用方法</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
@@ -411,7 +441,9 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
     
     
     | 
-    <a href='/tags/供应商/'>供应商</a>
+    <a href='/tags/供应商/'>供应商</a>,
+    
+    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
     
     
 </span>
@@ -420,12 +452,12 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
                 <div class="col-md-8">
                     <p>
                       
-                        复制文字//复制链接function copy(str) &#123;    var save = function(e) &#123;        e.clipboardData.setData('text/plain', str)        e.preventDefault();    &#125;    document.addEventListener('copy', save)    document.execComma
+                        基本结构Swiper: 整个滑动对象，有时特指滑块释放后仍然正向移动直到贴合边缘的过程(过渡)container: Swiper的容器，包括滑块（slides）、封套（wrapper)、分页器(pagination)、前进按钮等wrapper: 触控的对象，可触摸区域，移动的块的集合，过渡时会随slide切换产生位移slider: 切换的滑块，可以包含文字、图片、html元素或另外一个Swiperpagination: 分页器，指示sl
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--常用功能/">详情...</a>
+                        <a href="/2018/07/10/TX--Swiper3使用方法/">详情...</a>
                     </p>
                     
                 </div>
@@ -465,6 +497,44 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/10/TX--预加载/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--KV视频/">KV视频使用方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        基于video原生标签，用于kv视频展示参考结构
+&lt;video autoplay="autoplay" class="big-video" loop&gt;    Your browser does not support the video tag.&lt;/video&gt;
+参考样式
+.big-video &#123;position: absolute;top: 0;left: 50%;width: 1920px;heig
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--KV视频/">详情...</a>
                     </p>
                     
                 </div>
@@ -552,7 +622,7 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--KV视频/">KV视频使用方法</a></h3>
+                    <h3><a href="/2018/07/10/TX--常用功能/">常用功能</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
@@ -570,52 +640,12 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
                 <div class="col-md-8">
                     <p>
                       
-                        基于video原生标签，用于kv视频展示参考结构
-&lt;video autoplay="autoplay" class="big-video" loop&gt;    Your browser does not support the video tag.&lt;/video&gt;
-参考样式
-.big-video &#123;position: absolute;top: 0;left: 50%;width: 1920px;heig
+                        复制文字//复制链接function copy(str) &#123;    var save = function(e) &#123;        e.clipboardData.setData('text/plain', str)        e.preventDefault();    &#125;    document.addEventListener('copy', save)    document.execComma
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--KV视频/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--Swiper3使用方法/">Swiper3.0使用方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
-          2018-07-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>,
-    
-    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        基本结构Swiper: 整个滑动对象，有时特指滑块释放后仍然正向移动直到贴合边缘的过程(过渡)container: Swiper的容器，包括滑块（slides）、封套（wrapper)、分页器(pagination)、前进按钮等wrapper: 触控的对象，可触摸区域，移动的块的集合，过渡时会随slide切换产生位移slider: 切换的滑块，可以包含文字、图片、html元素或另外一个Swiperpagination: 分页器，指示sl
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--Swiper3使用方法/">详情...</a>
+                        <a href="/2018/07/10/TX--常用功能/">详情...</a>
                     </p>
                     
                 </div>
