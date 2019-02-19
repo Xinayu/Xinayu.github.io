@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>https://github.com/Xinayu/2019/01/27/ES6--Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/</loc>
+        <lastmod>2019-02-19T08:18:58.993Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/2019/01/26/ES6--rest%E5%8F%82%E6%95%B0%E4%B8%8E%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
+        <lastmod>2019-02-19T07:33:13.799Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/2019/11/20/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B--%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96/</loc>
+        <lastmod>2019-02-19T02:45:36.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://github.com/Xinayu/2019/07/05/CSS--%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87/</loc>
         <lastmod>2019-02-18T06:44:46.272Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,7 +63,7 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/2019/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window.matchMedia()/</loc>
+        <loc>https://github.com/Xinayu/2019/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B--window.matchMedia()/</loc>
         <lastmod>2019-02-18T06:10:49.626Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

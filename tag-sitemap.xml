@@ -121,13 +121,6 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B/</loc>
-        <lastmod>2019-02-18T06:10:54.550Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://github.com/Xinayu/tags/DOMContentLoaded/</loc>
         <lastmod>2019-02-18T06:10:54.550Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -165,6 +158,34 @@
     <url>
         <loc>https://github.com/Xinayu/tags/z-index/</loc>
         <lastmod>2019-02-18T06:44:46.272Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B/</loc>
+        <lastmod>2019-02-19T02:45:36.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/tags/%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96/</loc>
+        <lastmod>2019-02-19T02:45:36.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/tags/ES6/</loc>
+        <lastmod>2019-02-19T08:18:58.993Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/tags/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/</loc>
+        <lastmod>2019-02-19T08:18:58.993Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
