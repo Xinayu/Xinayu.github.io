@@ -80,6 +80,10 @@
             <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             <ul class="sb-submenu">
                 
+                <li><a href="/categories/Bom解析/" class="animsition-link">
+                        Bom解析<small>(
+                            2)</small></a></li>
+                
                 <li><a href="/categories/Dom编程艺术/" class="animsition-link">
                         Dom编程艺术<small>(
                             11)</small></a></li>
@@ -106,7 +110,7 @@
                 
                 <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">
                         Nodejs疯狂试探<small>(
-                            4)</small></a></li>
+                            8)</small></a></li>
                 
                 <li><a href="/categories/THREE-js/" class="animsition-link">
                         THREE.js<small>(
@@ -122,7 +126,7 @@
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
-                            5)</small></a></li>
+                            6)</small></a></li>
                 
                 <li><a href="/categories/hexo功能整合/" class="animsition-link">
                         hexo功能整合<small>(
@@ -130,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            8)</small></a></li>
+                            9)</small></a></li>
                 
             </ul>
         </li>
@@ -228,11 +232,11 @@
 <li><p><code>DOMContentLoaded</code> :网页下载并解析完成以后，浏览器就会在document对象上触发 </p>
 <blockquote>
 <p>仅仅完成了网页的解析（整张页面的 DOM 生成了），所有外部资源（样式表、脚本、iframe 等等）可能还没有下载结束。也就是说，这个事件比load事件，发生时间早得多。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'DOM生成'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </blockquote>
+  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'DOM生成'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>readystatechange()</code>：当 <code>Document</code> 对象和 <code>XMLHttpRequest</code> 对象的<code>readyState</code>属性发生变化时触发</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// loading：网页正在夹杂</span></span><br><span class="line"><span class="comment">// interactive：网页解析完成，外部资源仍在加载</span></span><br><span class="line"><span class="comment">// complete：网页解析完成，外部资源加载完成，即将出发load事件</span></span><br><span class="line"><span class="built_in">document</span>.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">document</span>.readyState === <span class="string">'interactive'</span>) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// loading：网页正在夹杂</span></span><br><span class="line"><span class="comment">// interactive：网页解析完成，外部资源仍在加载</span></span><br><span class="line"><span class="comment">// complete：网页解析完成，外部资源加载完成，即将出发load事件</span></span><br><span class="line"><span class="built_in">document</span>.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.readyState === <span class="string">'interactive'</span>) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="窗口事件"><a href="#窗口事件" class="headerlink" title="窗口事件"></a>窗口事件</h4><ul>
@@ -266,8 +270,8 @@
     </a>
     
     
-    <a class="pull-right" href="/2019/02/09/JS事件--触摸事件/">
-        触摸事件 →
+    <a class="pull-right" href="/2019/02/09/JS事件--拖拉事件/">
+        拖拉事件 →
     </a>
     
 </nav>

@@ -80,6 +80,10 @@
             <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             <ul class="sb-submenu">
                 
+                <li><a href="/categories/Bom解析/" class="animsition-link">
+                        Bom解析<small>(
+                            2)</small></a></li>
+                
                 <li><a href="/categories/Dom编程艺术/" class="animsition-link">
                         Dom编程艺术<small>(
                             11)</small></a></li>
@@ -106,7 +110,7 @@
                 
                 <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">
                         Nodejs疯狂试探<small>(
-                            4)</small></a></li>
+                            8)</small></a></li>
                 
                 <li><a href="/categories/THREE-js/" class="animsition-link">
                         THREE.js<small>(
@@ -122,7 +126,7 @@
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
-                            5)</small></a></li>
+                            6)</small></a></li>
                 
                 <li><a href="/categories/hexo功能整合/" class="animsition-link">
                         hexo功能整合<small>(
@@ -130,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            8)</small></a></li>
+                            9)</small></a></li>
                 
             </ul>
         </li>
@@ -221,8 +225,9 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h4 id="透明度opcaity"><a href="#透明度opcaity" class="headerlink" title="透明度opcaity "></a>透明度<code>opcaity</code> <copy></copy></h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.ele</span>&#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">filter</span>: progid:DXImageTransform.Microsoft.<span class="built_in">Alpha</span>(opacity=100);  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*支持grba*/</span></span><br><span class="line">　<span class="selector-class">.ele</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:<span class="built_in">rgba</span>(0,0,0,0.5); </span><br><span class="line">　　　　<span class="attribute">filter</span>:progid:DXImageTransform.Microsoft.<span class="built_in">gradient</span>(startcolorstr=#7F000000,endcolorstr=#7F000000);</span><br><span class="line"> &#125;　　　</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">　　//rgba透明值：  0.1　　0.2　　0.3　　0.4　　 0.5　　0.6　　0.7　　0.8　　0.9</span></span><br><span class="line"><span class="comment">　　//IE下filter值：19　　 33　　 4c　　 66　　  7f　　 99　　 b2　　 c8　　  e5</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+      		<h4 id="透明度opcaity"><a href="#透明度opcaity" class="headerlink" title="透明度opcaity "></a>透明度<code>opcaity</code> <copy></copy></h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.ele</span>&#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  filter：alpha(opacity=100)  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*支持grba*/</span></span><br><span class="line">　<span class="selector-class">.ele</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:<span class="built_in">rgba</span>(0,0,0,0.5); </span><br><span class="line">　　　　<span class="attribute">filter</span>:progid:DXImageTransform.Microsoft.<span class="built_in">gradient</span>(startcolorstr=#7F000000,endcolorstr=#7F000000);</span><br><span class="line"> &#125;　　　</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">　　//rgba透明值：  0.1　　0.2　　0.3　　0.4　　 0.5　　0.6　　0.7　　0.8　　0.9</span></span><br><span class="line"><span class="comment">　　//IE下filter值：19　　 33　　 4c　　 66　　  7f　　 99　　 b2　　 c8　　  e5</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <h4 id="让ie低版本支持inlline-block"><a href="#让ie低版本支持inlline-block" class="headerlink" title="让ie低版本支持inlline-block "></a>让ie低版本支持<code>inlline-block</code> <copy></copy></h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.ele</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  *display: inline;</span><br><span class="line">  *<span class="selector-tag">zoom</span>: 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="低版本ie清除浮动"><a href="#低版本ie清除浮动" class="headerlink" title="低版本ie清除浮动"></a>低版本ie清除浮动</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">''</span>；</span><br><span class="line">    display:block;</span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">    <span class="attribute">visibility</span>:hidden;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span>&#123;</span><br><span class="line">    *zoom:1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="解决Chrome在应用transition时页面闪动的问题？"><a href="#解决Chrome在应用transition时页面闪动的问题？" class="headerlink" title="解决Chrome在应用transition时页面闪动的问题？ "></a>解决Chrome在应用transition时页面闪动的问题？ <copy></copy></h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-transform-style</span><span class="selector-pseudo">:preserve-3d</span>;</span><br><span class="line"><span class="comment">/* 或者 */</span></span><br><span class="line"><span class="selector-tag">-webkit-backface-visibility</span><span class="selector-pseudo">:hidden</span>;</span><br></pre></td></tr></table></figure>
 <h4 id="解决移动端的滑动事件总是出现无法侦听被动事件"><a href="#解决移动端的滑动事件总是出现无法侦听被动事件" class="headerlink" title="解决移动端的滑动事件总是出现无法侦听被动事件"></a>解决移动端的滑动事件总是出现无法侦听被动事件</h4><p>在使用有些移动端插件时，如果使用了滑动事件，可能会报错 <copy></copy></p>
 <p><code>Unable to preventDefault inside passive event listener due to target being treated as passive</code></p>
@@ -235,19 +240,20 @@
 <h4 id="改变文字选中的样式"><a href="#改变文字选中的样式" class="headerlink" title="改变文字选中的样式"></a>改变文字选中的样式</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">figure</span><span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#95fff1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">figure</span><span class="selector-pseudo">::-moz-selection</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#95fff1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="判断是ipx"><a href="#判断是ipx" class="headerlink" title="判断是ipx"></a>判断是ipx</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">@<span class="keyword">media</span> only screen and (device-width: <span class="number">375px</span>) and (device-height: <span class="number">812px</span>) and (-webkit-device-pixel-ratio:<span class="number">3</span>) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="禁止移动端浏览器上下反弹"><a href="#禁止移动端浏览器上下反弹" class="headerlink" title="禁止移动端浏览器上下反弹"></a>禁止移动端浏览器上下反弹</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchmove'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">&#125;, &#123;</span><br><span class="line">    passive: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="消除移动端点击标签出现蓝底"><a href="#消除移动端点击标签出现蓝底" class="headerlink" title="消除移动端点击标签出现蓝底"></a>消除移动端点击标签出现蓝底</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.example</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-tap-highlight-color</span>:transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2018/06/05/CSS--逐帧动画/" style="float: left;">
-        ← 逐帧动画
+    <a class="pull-left" href="/2018/06/14/TX--弹窗组件/" style="float: left;">
+        ← 弹窗组件
     </a>
     
     
-    <a class="pull-right" href="/2018/06/05/CSS--flex布局/">
-        flex布局 →
+    <a class="pull-right" href="/2018/06/05/CSS--移动端1px问题/">
+        移动端1px问题 →
     </a>
     
 </nav>

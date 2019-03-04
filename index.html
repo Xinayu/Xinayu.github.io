@@ -80,6 +80,10 @@
             <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             <ul class="sb-submenu">
                 
+                <li><a href="/categories/Bom解析/" class="animsition-link">
+                        Bom解析<small>(
+                            2)</small></a></li>
+                
                 <li><a href="/categories/Dom编程艺术/" class="animsition-link">
                         Dom编程艺术<small>(
                             11)</small></a></li>
@@ -106,7 +110,7 @@
                 
                 <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">
                         Nodejs疯狂试探<small>(
-                            4)</small></a></li>
+                            8)</small></a></li>
                 
                 <li><a href="/categories/THREE-js/" class="animsition-link">
                         THREE.js<small>(
@@ -122,7 +126,7 @@
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
-                            5)</small></a></li>
+                            6)</small></a></li>
                 
                 <li><a href="/categories/hexo功能整合/" class="animsition-link">
                         hexo功能整合<small>(
@@ -130,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            8)</small></a></li>
+                            9)</small></a></li>
                 
             </ul>
         </li>
@@ -203,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img6.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img4.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -423,6 +427,45 @@ zoom的缩放改变了文档流的大小，会引起元素实际占据
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2019/02/09/JS事件--拖拉事件/">拖拉事件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">
+          2019-02-09
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        拖拉事件的种类网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都是可以直接拖拉的。为了让元素节点可拖拉，可以将该节点的draggable属性设为true。&lt;!-- 如果不想让图片等可以拖拉，设置值为false即可 --&gt;&lt;div draggable="true"&gt;  此区域可拖拉&lt;/div&gt;
+
+一旦某个元素节点的draggable属性设为true，就无法再用鼠标选中该节点内部的文字或
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/09/JS事件--拖拉事件/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2019/02/09/JS事件--触摸事件/">触摸事件</a></h3>
                     <span>
                         <span class="post-meta">
@@ -467,11 +510,11 @@ Touch接口单个触点产生Touch实例var touch
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/02/09/JS事件--拖拉事件/">拖拉事件</a></h3>
+                    <h3><a href="/2019/02/08/JS事件--表单事件/">表单模型</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">
-          2019-02-09
+      <time datetime="2019-02-07T16:00:00.000Z" itemprop="datePublished">
+          2019-02-08
       </time>
     
     
@@ -487,14 +530,15 @@ Touch接口单个触点产生Touch实例var touch
                 <div class="col-md-8">
                     <p>
                       
-                        拖拉事件的种类网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都是可以直接拖拉的。为了让元素节点可拖拉，可以将该节点的draggable属性设为true。&lt;!-- 如果不想让图片等可以拖拉，设置值为false即可 --&gt;&lt;div draggable="true"&gt;  此区域可拖拉&lt;/div&gt;
-
-一旦某个元素节点的draggable属性设为true，就无法再用鼠标选中该节点内部的文字或
+                        表单事件的种类
+input事件
+  input事件当&lt;input&gt;、&lt;select&gt;、&lt;textarea&gt;的值发生变化时触发。对于复选框（&lt;input type=checkbox&gt;）或单选框（&lt;input type=radio&gt;），用户改变选项时，也会触发这个事件。另外，对于打开contenteditable属性的元素，只要值发生变化，也会触发input事件。
+  input事
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/02/09/JS事件--拖拉事件/">详情...</a>
+                        <a href="/2019/02/08/JS事件--表单事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -537,46 +581,6 @@ Location.hostname：主机名，不
                     
                     <p class="pull-right readMore">
                         <a href="/2019/02/08/浏览器模型--Location对象/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/08/JS事件--表单事件/">表单模型</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-07T16:00:00.000Z" itemprop="datePublished">
-          2019-02-08
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/JS事件/'>JS事件</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        表单事件的种类
-input事件
-  input事件当&lt;input&gt;、&lt;select&gt;、&lt;textarea&gt;的值发生变化时触发。对于复选框（&lt;input type=checkbox&gt;）或单选框（&lt;input type=radio&gt;），用户改变选项时，也会触发这个事件。另外，对于打开contenteditable属性的元素，只要值发生变化，也会触发input事件。
-  input事
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/08/JS事件--表单事件/">详情...</a>
                     </p>
                     
                 </div>

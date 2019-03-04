@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>minijquery的实现 | YOUQUAN</title>
+  <title>Linux部署MongoDB | YOUQUAN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -80,6 +80,10 @@
             <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             <ul class="sb-submenu">
                 
+                <li><a href="/categories/Bom解析/" class="animsition-link">
+                        Bom解析<small>(
+                            2)</small></a></li>
+                
                 <li><a href="/categories/Dom编程艺术/" class="animsition-link">
                         Dom编程艺术<small>(
                             11)</small></a></li>
@@ -106,7 +110,7 @@
                 
                 <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">
                         Nodejs疯狂试探<small>(
-                            4)</small></a></li>
+                            8)</small></a></li>
                 
                 <li><a href="/categories/THREE-js/" class="animsition-link">
                         THREE.js<small>(
@@ -122,7 +126,7 @@
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
-                            5)</small></a></li>
+                            6)</small></a></li>
                 
                 <li><a href="/categories/hexo功能整合/" class="animsition-link">
                         hexo功能整合<small>(
@@ -130,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            8)</small></a></li>
+                            9)</small></a></li>
                 
             </ul>
         </li>
@@ -205,17 +209,17 @@
     <div class="container">
         <div class="row col-md-offset-2">
             <div class="col-md-8">
-                <h1>minijquery的实现</h1>
+                <h1>Linux部署MongoDB</h1>
                 <span class="post-meta">
-      <time datetime="2017-08-20T16:00:00.000Z" itemprop="datePublished">
-          2017-08-21
+      <time datetime="2019-01-01T03:06:12.000Z" itemprop="datePublished">
+          2019-01-01
       </time>
     
     
     | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
+    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>,
     
-    <a href='/tags/jQuery/'>jQuery</a>
+    <a href='/tags/MongoDB/'>MongoDB</a>
     
     
 </span>
@@ -223,20 +227,37 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//暴露jquer出去。挂在到window对象上</span></span><br><span class="line">  <span class="keyword">var</span> jQuery = <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//每次执行jquer函数，返回的是一个对象</span></span><br><span class="line">    <span class="comment">//因此，可以通过返回实例属性达到目的</span></span><br><span class="line">    <span class="keyword">return</span> jQuery.fn.init();</span><br><span class="line">    <span class="comment">//这样每次执行jquery就会返回对象jQuery.prototype，因此可以访问jQuery.prototype里面的属性和方法，实现链式操作</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//处理原型链，用fn代替怪异的prototype</span></span><br><span class="line">  jQuery.fn = jQuery.prototype = &#123;</span><br><span class="line">    init:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>; <span class="comment">//指向jQuery.prototype</span></span><br><span class="line">    &#125;,</span><br><span class="line">    jquery:<span class="string">'1.0.0'</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//实现继承</span></span><br><span class="line">  jQuery.extend = jQuery.fn.extend = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//添加静态方法</span></span><br><span class="line">  jQuery.extend(&#123;&#125;);</span><br><span class="line">  <span class="comment">//添加实例方法</span></span><br><span class="line">  jQuery.fn.extend(&#123;&#125;);</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+      		<h4 id="安装和配置"><a href="#安装和配置" class="headerlink" title="安装和配置"></a>安装和配置</h4><p>连接到服务器，进入根目录，下载安装包然后解压</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">$ wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-4.0.6.tgz</span><br><span class="line">$ tar -zxvf mongodb-linux-x86_64-ubuntu1604-4.0.6.tgz</span><br></pre></td></tr></table></figure>
+<p>创建文件夹把MongoDB移进去</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir mongodb</span><br><span class="line">$ mv mongodb-linux-x86_64-ubuntu1604-4.0.6 mongodb</span><br></pre></td></tr></table></figure>
+<p>进入mongodb，创建ata文件存放数据库文件,创建logs存放日志文件，<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> mongodb</span><br><span class="line">$ mkdir data</span><br><span class="line">$ mkdir logs</span><br><span class="line">$ <span class="built_in">cd</span> logs</span><br><span class="line">$ touch mongo.log</span><br></pre></td></tr></table></figure></p>
+<p>返回mongo目录，创建etc配置文件，进行配置<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ../</span><br><span class="line">$ mkdir etc</span><br><span class="line">$ <span class="built_in">cd</span> etc</span><br><span class="line">$ vi mongo.conf</span><br><span class="line">​`</span><br></pre></td></tr></table></figure></p>
+<p>在<code>vim</code>编辑器里面输入文本保存退出<br>​<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">dbpath=/mongodb/data</span><br><span class="line"></span><br><span class="line">#后台启动需要配置日志输出</span><br><span class="line">logpath=/mongodb/logs/mongo.log</span><br><span class="line"></span><br><span class="line">#自动追加日志</span><br><span class="line">logappend=true</span><br><span class="line"></span><br><span class="line">journal=true</span><br><span class="line">quiet=true</span><br><span class="line"></span><br><span class="line">#端口</span><br><span class="line">prot=27017</span><br></pre></td></tr></table></figure></p>
+<h4 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h4><p>返回到mongodb目录，进入bin目录<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ../</span><br><span class="line">$ <span class="built_in">cd</span> mongodb-linux-x86_64-ubuntu1604-4.0.6/bin/</span><br><span class="line">$ ./mongod -f /mongodb/etc/mongo.conf</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>删除文件<code>$ rm -rf xxx</code></p>
+</blockquote>
+<p>建立软链接：</p>
+<p><code>ln -s /mongodb/mongodb-linux-x86_64-rhel62-4.0.6/bin/mongo /usr/local/bin/mongo</code></p>
+<p><code>ln -s /mongodb/mongodb-linux-x86_64-rhel62-4.0.6/bin/mongod /usr/local/bin/mongod</code></p>
+<h4 id="创建一个集合"><a href="#创建一个集合" class="headerlink" title="创建一个集合"></a>创建一个集合</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">use demo</span><br></pre></td></tr></table></figure>
+<h4 id="创建管理员"><a href="#创建管理员" class="headerlink" title="创建管理员"></a>创建管理员</h4><p>首先使用非授权的模式进入<code>mongo</code>,创建数据库，然后新建账户密码(要先启动<code>mongod</code>:<code>mongod -f /mongodb/etc/mongo.conf</code>)<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ user admin</span><br><span class="line">$ db.createUser(&#123;user:<span class="string">'admin'</span>,<span class="built_in">pwd</span>:<span class="string">'admin'</span>,roles:[<span class="string">'root'</span>]&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果mongod用授权模式启动的话，mongo没有进行验证，是无法查看数据库的</p>
+<p>授权模式启动mongod：<code>mongod -f /mongodb/etc/mongo.conf --auth</code><br>验证查看：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ use admin</span><br><span class="line">$ db.auth(<span class="string">'myDemo'</span>,<span class="string">'myDemo'</span>)</span><br></pre></td></tr></table></figure></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2017/08/22/JS--继承/" style="float: left;">
-        ← 继承
+    <a class="pull-left" href="/2019/01/01/Nodejs--基本-开发环境的搭建/" style="float: left;">
+        ← 基本开发环境的搭建
     </a>
     
     
-    <a class="pull-right" href="/2017/08/21/JS--arguments/">
-        arguments和重载 →
+    <a class="pull-right" href="/2019/01/01/Nodejs--开发环境的搭建/">
+        开发环境的搭建 →
     </a>
     
 </nav>

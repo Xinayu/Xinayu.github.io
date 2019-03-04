@@ -80,6 +80,10 @@
             <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             <ul class="sb-submenu">
                 
+                <li><a href="/categories/Bom解析/" class="animsition-link">
+                        Bom解析<small>(
+                            2)</small></a></li>
+                
                 <li><a href="/categories/Dom编程艺术/" class="animsition-link">
                         Dom编程艺术<small>(
                             11)</small></a></li>
@@ -106,7 +110,7 @@
                 
                 <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">
                         Nodejs疯狂试探<small>(
-                            4)</small></a></li>
+                            8)</small></a></li>
                 
                 <li><a href="/categories/THREE-js/" class="animsition-link">
                         THREE.js<small>(
@@ -122,7 +126,7 @@
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
-                            5)</small></a></li>
+                            6)</small></a></li>
                 
                 <li><a href="/categories/hexo功能整合/" class="animsition-link">
                         hexo功能整合<small>(
@@ -130,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            8)</small></a></li>
+                            9)</small></a></li>
                 
             </ul>
         </li>
@@ -203,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img4.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -234,6 +238,317 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/23/JS--常见的封装/">常见的封装</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-22T16:00:00.000Z" itemprop="datePublished">
+          2017-08-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        <h4 id="命名空间（用对象的方式模拟）"><a href="#命名空间（用对象的方式模拟）" class="headerlink" title="命名空间（用对象的方式模拟）"></a>命名空间（用对象的方式模拟）</h4><p>首先用对象字面量的方式创建一个命名空间</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Game = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>添加模块，可以将相同功能或者属性的归类</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">Game.module1 = &#123;<span class="attr">name</span>:<span class="string">'p'</span>,<span class="attr">m</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;&#125;;</span><br></pre></td></tr></table></figure>
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/23/JS--常见的封装/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/22/JS--继承/">继承</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
+          2017-08-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        通过ES5的 Object.create实现 创建父类
+function Parent() &#123;&#125;Parent.prototype.headCount = 1;Parent.prototype.eat = function () &#123;console.log('eat')&#125;
+ 创建子类  
+function Children() &#123;&#125;Children.prototype.langua
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/22/JS--继承/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/22/JS--JS的原型继承/">原型继承</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished">
+          2017-08-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在js中，要想创建一个对象，不是通过实例化，而是通过选择一个对象作为原型去克隆它来达到目的。而且对象只能克隆函数对象里面的prototype属性，既是Function.prototye，由于只有函数才有prototype对象，所以，想要创建一个对象，就必须要用函数才能创建，这个函数通常被称为构造器函数。来看一下普通对象和函数对象的创建：var cat= &#123;&#125;;function demo()&#123;&#125;
+对
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/22/JS--JS的原型继承/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/21/JS--arguments/">arguments和重载</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-20T16:00:00.000Z" itemprop="datePublished">
+          2017-08-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        函数被调用的时候，会接收两个附加参数，this和arguments。
+arguments是一个对象。当arguments（实参）和parameters（形参）的个数不匹配时，不会导致错误，多余的实参会被忽略。  
+function cat(a,b) &#123;    console.log(cat.length); 		//函数的形参个数    console.log(arguments.length);   //函数的实参个数&#1
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/21/JS--arguments/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/15/JS--prototype 和 __proto__/">prototype 和 __proto__</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-14T16:00:00.000Z" itemprop="datePublished">
+          2017-08-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        关于prototype当一个新函数被创建时，会被赋予一个 prototype属性，这个属性是用来存放继承特性的地方只有函数才有prototype。
+var Demo = function () &#123;&#125;console.log(Demo.prototype)  // &#123;constructor: ƒ&#125;
+
+可以表示为 Demo.prototype={constructor: ƒ}
+
+因此我们可以对这个 pr
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/15/JS--prototype 和 __proto__/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/13/JS--JS的解析与执行过程/">JS的解析与执行过程</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-12T16:00:00.000Z" itemprop="datePublished">
+          2017-08-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在JS真正执行代码之前，会对代码有个预处理过程
+预处理阶段
+首先创建词法环境（这里是全局）
+
+把用声明的方式创建的函数和用var定义的变量扫描出来，把这些函数和变量的名字加到词法环境中（这里是全局）
+// LexcialEnvironment (词法环境)&#123;    a:undefined,   //a是变量的名字，右边是值    f:对函数的引用,  //f是函数的名字，右边引用(函数声明的方式)    g:undefined
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/13/JS--JS的解析与执行过程/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/10/JS--this的用法/">this的用法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-09T16:00:00.000Z" itemprop="datePublished">
+          2017-08-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        JavaScript的 this 总是指向一个对象，而具体指向哪个对象是在运行时基于函数的执行环境动态绑定的，而非函数被声明时的环境
+除去不常用的with 和eval 的情况，具体到实际应用中， this 的指向大致可以分为以下 4种
+作为对象的方法调用  此时this指向该对象  
+  var obj = &#123;  a: 1,  getA: function()&#123;    alert ( this === obj ); 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/10/JS--this的用法/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/08/10/JS--关于闭包/">关于闭包</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-08-09T16:00:00.000Z" itemprop="datePublished">
+          2017-08-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        闭包就是能够读取其他函数内部变量的函数。
+
+在Js中，如果一个函数在另外一个函数中定义，那么这个函数会访问到父函数里面定义的成员，形成闭包。或者说，一个函数能访问它被创建时所处的上下文环境，就是闭包。
+
+主要有三点：
+
+他是函数中的函数（无论嵌套多少层）
+无论他是在父函数内部调用还是被return出去外部接收后调用，都能记住原来父函数的词法环境
+
+//函数在内部被调用function f1() &#123;  var a = 2;  f
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/08/10/JS--关于闭包/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">

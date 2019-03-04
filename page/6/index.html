@@ -80,6 +80,10 @@
             <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             <ul class="sb-submenu">
                 
+                <li><a href="/categories/Bom解析/" class="animsition-link">
+                        Bom解析<small>(
+                            2)</small></a></li>
+                
                 <li><a href="/categories/Dom编程艺术/" class="animsition-link">
                         Dom编程艺术<small>(
                             11)</small></a></li>
@@ -106,7 +110,7 @@
                 
                 <li><a href="/categories/Nodejs疯狂试探/" class="animsition-link">
                         Nodejs疯狂试探<small>(
-                            4)</small></a></li>
+                            8)</small></a></li>
                 
                 <li><a href="/categories/THREE-js/" class="animsition-link">
                         THREE.js<small>(
@@ -122,7 +126,7 @@
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
-                            5)</small></a></li>
+                            6)</small></a></li>
                 
                 <li><a href="/categories/hexo功能整合/" class="animsition-link">
                         hexo功能整合<small>(
@@ -130,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            8)</small></a></li>
+                            9)</small></a></li>
                 
             </ul>
         </li>
@@ -203,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img7.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -234,6 +238,253 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/07/设计模式--迭代器模式/">迭代器模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-07T05:02:41.000Z" itemprop="datePublished">
+          2018-11-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在不暴露对象内部结构的同时，可以顺序地访问聚合对象内部的元素。常用于解决臃肿的循环问题。
+创建一个迭代器//迭代器var Iterator = function(container,items) &#123;    //如果父容器不存在获取document    var container = container &amp;&amp; document.getElementById(container) || document,    
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/07/设计模式--迭代器模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/06/设计模式--命令模式（绘图命令）/">命令模式（绘图命令）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-06T03:21:14.000Z" itemprop="datePublished">
+          2018-11-06
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        命令模式也可以用于解耦，比如使用canvas会经常调用一下内置方法，需要不停使用canvas元素的上下文引用，在多人项目开发中耦合度高，如果有人不小心改动了canvas的上下文，后果将无法估计。命令对象的内部，如果有人想要绘图，直接通过命令对象书写命令调用内部封装的方法完成即可。使用命令模式将canvas上下文引用对象安全封装在一个命令对象的内部。//创建一个命令var CanvasCommand = (function () &#12
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/06/设计模式--命令模式（绘图命令）/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/01/设计模式--命令模式（视图模板）/">命令模式（视图模板）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-01T08:13:33.000Z" itemprop="datePublished">
+          2018-11-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        将请求和实现解耦并封装成独立的对象，从而使得不同的请求对客户端的实现参数化。他将创建模块的逻辑封装在一个对象里，这个对象提供一个参数化的请求接口，请求部分比较简单，只需要按照给定的参数格式书写指令即可。//模板实现的模块var viewCommand = (function() &#123;    //方法集合    var Action = &#123;        //创建方法        creat:function() &#
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/01/设计模式--命令模式（视图模板）/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/01/设计模式--策略模式/">策略模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-01T05:20:37.000Z" itemprop="datePublished">
+          2018-11-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        和状态模式类似，能灵活管理分支结构，区别在于，策略模式内部不需要管理状态，各个状态间没有依赖关系。最常用的就是封装一系列的不会相互影响的功能，比如算法，在有需要的时候调用即可。// 策略模式封装一个价格算法var PriceStragtegy = function () &#123;    var stragtegy = &#123;        // 100返30        return30:function (preice) 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/01/设计模式--策略模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/31/设计模式--状态模式/">状态模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-31T06:16:03.000Z" itemprop="datePublished">
+          2018-10-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        当一个对象的内部状态发生改变时，会导致其行为的改变。状态模式用于解决分支判断语句的臃肿。将不同的判断结果封装在状态对象内，然后改状态对象返回一个可以被调用的接口方法。//结果状态对象var ResultState = (    function()&#123;        //判断结构保存在内部状态中        var States = &#123;            //每种状态作为一种独立方法保存            s
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/31/设计模式--状态模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/31/设计模式--观察者模式/">观察者模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-31T02:18:05.000Z" itemprop="datePublished">
+          2018-10-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        观察者模式又被称为发布-订阅者模式或者消息机制。主要作用是定义了一种依赖关系，解决了主体对象与观察者之间的耦合。我们需要一个观察者对象，里面至少要包含一个消息容器和三个方法：订阅消息，取消订阅，发送订阅。
+//将观察者放入闭包中，页面加载立即执行var Observer = (function () &#123;    // 消息容器，所有订阅的消息会放在这里    var _message = &#123;&#125;    retu
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/31/设计模式--观察者模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/10/30/设计模式--外观模式/">外观模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-10-30T08:37:16.000Z" itemprop="datePublished">
+          2018-10-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        外观模式就是为一组复杂的子系统接口提供一个更高级的统一接口，通过这个接口可以使子系统接口更加容易访问比如我们在使用点击事件时，有多种方法，可以直接通过document绑定，可以通过监听事件进行绑定，然而并不是每个方法都实用，因为要考虑到浏览器的兼容性问题。我们可以使用外观模式对点击事件进行优化：//外观模式 dom元素，type类型，fn回掉function addEvent(dom,type,fn)&#123;    //处理支持 a
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/10/30/设计模式--外观模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -337,331 +588,6 @@ var tween = new TWEEN.Tween(posSrc)     //注册.to(&#123;pos:640&#125;,3000)			
                     
                     <p class="pull-right readMore">
                         <a href="/2018/10/01/3JS--TWEEN补间动画/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/09/30/3JS--dat.gui 使用/">dat.gui使用</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-09-30T08:42:53.000Z" itemprop="datePublished">
-          2018-09-30
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        dat.GUI 是一个轻量级的图形用户界面库（GUI 组件），使用这个库可以很容易地创建出能够改变代码变量的界面组件。
-基本使用方法引用路径&lt;script src="https://cdn.bootcss.com/dat-gui/0.7.2/dat.gui.min.js"&gt;&lt;/script&gt;
-创建对象该对象用于存储需要动态改变的值。
-//创建一个对象存储需要动态改变的值var controls = &#123; 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/09/30/3JS--dat.gui 使用/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/09/03/3JS--常用操作/">常用操作</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-09-03T12:42:53.000Z" itemprop="datePublished">
-          2018-09-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        查找场景中的元素if (child instanceof THREE.PointCloud) &#123;	//do something&#125;
-相机随着鼠标移动window.onmousemove = function (event) &#123;    event = event || window.event;    //获取鼠标的位置    var mouseX = event.pageX/80;    var mouseY
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/09/03/3JS--常用操作/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/09/03/3JS--高级材质/">高级材质</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-09-03T04:42:53.000Z" itemprop="datePublished">
-          2018-09-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        THREE.MeshLambertMaterial（朗伯材质）该材质用于创建暗淡并不光亮的表面，会有光源反应。除了材质的基础属性之外还有独有的属性：
-
-
-
-名称
-描述
-
-
-
-
-ambient（环境色）
-材质的环境色，跟环境光一起作用，颜色相乘，默认白色
-
-
-emissive（发射的）
-该材质发射的颜色
-
-
-wrapAround
-true：启动lanbert光照技术。有了它，光下降得更微妙。如果网格有粗糙黑暗的地区，该属性可以将阴影变得柔
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/09/03/3JS--高级材质/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/09/03/3JS--粒子系统/">粒子系统</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-09-03T01:42:53.000Z" itemprop="datePublished">
-          2018-09-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        使用粒子系统可以创建数量多的物体，例如烟花、火焰、雨滴、雪花、云朵等等。Threejs提供了Points和Sprite两种创建方式。
-Points粒子系统points必须要通过WebGLRenderer渲染方式来创建。创建步骤：
-
-创建一个几何对象Geometry（也可以是外部导入的模型）。基于几何体自身的顶点集合geometry.vertices创建粒子（即将网格转化为粒子），每个顶点将代表粒子系统中的每个粒子。
-var starsG
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/09/03/3JS--粒子系统/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/09/03/3JS--基本材质/">基础材质</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-09-03T01:42:53.000Z" itemprop="datePublished">
-          2018-09-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        THREE.MeshBasicMaterial (基础材质)不受光照影响，会被渲染成简单的平面多边形，也可以显示几何体的线框，他还有其他属性
-
-
-
-名称
-描述
-
-
-
-
-color（颜色）
-材质颜色
-
-
-wireframe（线框）
-将材质渲染成线框
-
-
-wireframeLinewidth（线框宽度）
-线框宽度
-
-
-wireframeLinejoin（线框线段连接点）
-点如何连接
-
-
-shading（着色）
-如何着色
-
-
-vertexCo
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/09/03/3JS--基本材质/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/08/21/3JS--材质/">材质</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-08-21T08:42:53.000Z" itemprop="datePublished">
-          2018-08-21
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        材质结合几何体可以构成网格。材质就是物体的皮肤，决定结合体外表的样子。常用材质如下：
-
-
-
-名称
-描述
-
-
-
-
-MeshBasicMaterial（网格基础材质）
-基础材质
-
-
-MeshDepthMaterial（网格深度材质）
-根据网格到相机的距离，这种材质决定如何给网格染色
-
-
-MeshNormalMaterial（网格法向材质）
-简单材质，根据物体表面的法向向量计算颜色
-
-
-MeshFaceMaterial（网格面材质）
-这是一个
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/08/21/3JS--材质/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/08/20/3JS--规范参考/">THREE 规范参考</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-08-20T08:42:53.000Z" itemprop="datePublished">
-          2018-08-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        var renderer;function initThree() &#123;    width = document.getElementById('canvas-frame').clientWidth;    height = document.getElementById('canvas-frame').clientHeight;    renderer = new THREE.WebGLRenderer(&#123;     
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/08/20/3JS--规范参考/">详情...</a>
                     </p>
                     
                 </div>
