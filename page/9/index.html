@@ -122,7 +122,7 @@
                 
                 <li><a href="/categories/Vue开发/" class="animsition-link">
                         Vue开发<small>(
-                            3)</small></a></li>
+                            4)</small></a></li>
                 
                 <li><a href="/categories/css世界/" class="animsition-link">
                         css世界<small>(
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img9.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img3.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -316,16 +316,18 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/02/Vue--Axios+Mock/">Axios+Mock</a></h3>
+                    <h3><a href="/2018/07/03/Vue--生命周期/">生命周期</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
-          2018-07-02
+      <time datetime="2018-07-03T05:22:26.000Z" itemprop="datePublished">
+          2018-07-03
       </time>
     
     
     | 
-    <a href='/tags/vue2-0/'>vue2.0</a>
+    <a href='/tags/vue2-0/'>vue2.0</a>,
+    
+    <a href='/tags/生命周期/'>生命周期</a>
     
     
 </span>
@@ -334,13 +336,19 @@
                 <div class="col-md-8">
                     <p>
                       
-                        目录结构Axios用于前后端通信，mock.js用于模拟随机数据，搭配使用旨在脱离后端进行开发测试。
-|-- data                            // 目录示例     |-- api.js                     // 统一管理axios所有的请求     |-- index.js            	    // 拦截请求     |-- mock-data.js           
+                        一个vue实例的创建到销毁，就如同经历了一个人的一生，在某个特定的人生阶段，就应该去做特定的事情。
+
+图片有点长，但是我们只需要知道关键点就可以：vue干了什么？
+new一个vue之后，会进行数据劫持，模板编译，视图数据建立联系，元素挂载等等，我们关心的是数据劫持，元素挂载这两个动作
+
+beforecreated：el 和 data 并未初始化 
+created:完成了 data 数据的初始化，el没有（dom没有生成）
+beforeM
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/07/02/Vue--Axios+Mock/">详情...</a>
+                        <a href="/2018/07/03/Vue--生命周期/">详情...</a>
                     </p>
                     
                 </div>
@@ -377,6 +385,42 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/02/Vue--Vuex/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/02/Vue--Axios+Mock/">Axios+Mock</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-02T05:22:26.000Z" itemprop="datePublished">
+          2018-07-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/vue2-0/'>vue2.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        目录结构Axios用于前后端通信，mock.js用于模拟随机数据，搭配使用旨在脱离后端进行开发测试。
+|-- data                            // 目录示例     |-- api.js                     // 统一管理axios所有的请求     |-- index.js            	    // 拦截请求     |-- mock-data.js           
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/02/Vue--Axios+Mock/">详情...</a>
                     </p>
                     
                 </div>
@@ -469,7 +513,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--兼容措施/">兼容措施</a></h3>
+                    <h3><a href="/2018/06/05/CSS--逐帧动画/">逐帧动画</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
@@ -487,12 +531,12 @@
                 <div class="col-md-8">
                     <p>
                       
-                        透明度opcaity .ele&#123;  opacity: 1;  filter：alpha(opacity=100)  &#125;/*支持grba*/　.ele&#123;       background:rgba(0,0,0,0.5); 　　　　filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F00
+                        实现逐帧动画@-webkit-keyframes sprite-slogan &#123;    0% &#123;        background-position-y: 0    &#125;    100% &#123;        background-position-y: -10800px    &#125;&#125;.page-index .slogan &#123;    position: absolute; 
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--兼容措施/">详情...</a>
+                        <a href="/2018/06/05/CSS--逐帧动画/">详情...</a>
                     </p>
                     
                 </div>
@@ -545,7 +589,7 @@ CSS像素CSS 中的长度单位，在CSS 中使用的 px都是指CSS像素。
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--flex布局/">flex布局</a></h3>
+                    <h3><a href="/2018/06/05/CSS--兼容措施/">兼容措施</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
@@ -563,55 +607,12 @@ CSS像素CSS 中的长度单位，在CSS 中使用的 px都是指CSS像素。
                 <div class="col-md-8">
                     <p>
                       
-                        弹性布局是未来布局的发展趋势，现代浏览器均对flex实现了不同程度的支持，但是如果要兼容老版本的浏览器，则还是应该回归原始的布局方式。
-基本概念
-容器和项目
-
-弹性布局的实现需要一个容器，也就是flex容器。只要把父元素的display设置为flex，则他的子元素就全部成为了flex项目
-
-主轴和交叉轴
-
-主轴（main axis）处于水平方向，是x轴。起点叫main start，终点叫做main end。交叉轴（cross axis）
+                        透明度opcaity .ele&#123;  opacity: 1;  filter：alpha(opacity=100)  &#125;/*支持grba*/　.ele&#123;       background:rgba(0,0,0,0.5); 　　　　filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F00
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--flex布局/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--逐帧动画/">逐帧动画</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
-          2018-06-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/css/'>css</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        实现逐帧动画@-webkit-keyframes sprite-slogan &#123;    0% &#123;        background-position-y: 0    &#125;    100% &#123;        background-position-y: -10800px    &#125;&#125;.page-index .slogan &#123;    position: absolute; 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--逐帧动画/">详情...</a>
+                        <a href="/2018/06/05/CSS--兼容措施/">详情...</a>
                     </p>
                     
                 </div>
