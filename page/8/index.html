@@ -90,7 +90,7 @@
                 
                 <li><a href="/categories/ES6/" class="animsition-link">
                         ES6<small>(
-                            2)</small></a></li>
+                            3)</small></a></li>
                 
                 <li><a href="/categories/Gulp使用参考/" class="animsition-link">
                         Gulp使用参考<small>(
@@ -134,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            9)</small></a></li>
+                            10)</small></a></li>
                 
             </ul>
         </li>
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img8.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -242,6 +242,99 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2018/08/18/3JS--场景对象THREE.Scene/">THREE.Scene常用方法和属性</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-18T08:42:53.000Z" itemprop="datePublished">
+          2018-08-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/THREE/'>THREE</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        THREE.Scence 场景是所有对象的容器，所有对象和元素都会被放到场景中才能渲染。
+
+
+
+方法（属性）
+描述
+
+
+
+
+add(object)
+用于向场景中添加对象。使用该方法还可以创建对象组。
+
+
+children
+用于返回一个场景中所有对象的列表，包括摄像机和光源。
+
+
+getObjectByName(name,recursive)
+在创建对象时可以指定唯一的标识 name，使用该方法可以查找特定名字的对象。 当参数 recur
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/18/3JS--场景对象THREE.Scene/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/08/14/JS--基本包装类型/">基本包装类型</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-08-13T16:00:00.000Z" itemprop="datePublished">
+          2018-08-14
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        js数据类型分为两种，基本数据类型和引用类型。
+引用类型能拥有属性和方法，但是基本数据类型不能。然而有些时候，我们却能够对基本数据类型调用相关方法，其实，在基本数据类型中又包括有基本包装类型：字符串，数字和布尔值。他们对应的构造函数是String，Number和Boolean。
+来看一道题：
+var str = 'string';console.log(str.length)
+理论上，基本数据类型没有属性和方法，但是我们在控制台可以打印
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/08/14/JS--基本包装类型/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2018/07/14/TX--横竖屏/">横竖屏</a></h3>
                     <span>
                         <span class="post-meta">
@@ -267,6 +360,154 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/14/TX--横竖屏/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--常用功能/">常用功能</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        复制文字//复制链接function copy(str) &#123;    var save = function(e) &#123;        e.clipboardData.setData('text/plain', str)        e.preventDefault();    &#125;    document.addEventListener('copy', save)    document.execComma
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--常用功能/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--KV视频/">KV视频使用方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        基于video原生标签，用于kv视频展示参考结构
+&lt;video autoplay="autoplay" class="big-video" loop&gt;    Your browser does not support the video tag.&lt;/video&gt;
+参考样式
+.big-video &#123;position: absolute;top: 0;left: 50%;width: 1920px;heig
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--KV视频/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--Swiper3使用方法/">Swiper3.0使用方法</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>,
+    
+    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        基本结构Swiper: 整个滑动对象，有时特指滑块释放后仍然正向移动直到贴合边缘的过程(过渡)container: Swiper的容器，包括滑块（slides）、封套（wrapper)、分页器(pagination)、前进按钮等wrapper: 触控的对象，可触摸区域，移动的块的集合，过渡时会随slide切换产生位移slider: 切换的滑块，可以包含文字、图片、html元素或另外一个Swiperpagination: 分页器，指示sl
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--Swiper3使用方法/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/07/10/TX--Swiper3局部组件/">Swiper3.0局部组件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
+          2018-07-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/供应商/'>供应商</a>,
+    
+    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        最好不要直接直接引用完整的swiper的css文件要根据页面中是否包括滑动块（slides）、分页器(pagination)、前进按钮和动画等进行精简
+前进后退按钮 /* Arrows */.swiper-button-prev,.swiper-button-next &#123;position: absolute;top: 50%;width: 27px;height: 44px;margin-top: -22px;z-index:
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/07/10/TX--Swiper3局部组件/">详情...</a>
                     </p>
                     
                 </div>
@@ -355,192 +596,6 @@ CSS@media all and (orientation : landscape )&#123;    html,body  &#123; position
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--KV视频/">KV视频使用方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
-          2018-07-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        基于video原生标签，用于kv视频展示参考结构
-&lt;video autoplay="autoplay" class="big-video" loop&gt;    Your browser does not support the video tag.&lt;/video&gt;
-参考样式
-.big-video &#123;position: absolute;top: 0;left: 50%;width: 1920px;heig
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--KV视频/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--常用功能/">常用功能</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
-          2018-07-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        复制文字//复制链接function copy(str) &#123;    var save = function(e) &#123;        e.clipboardData.setData('text/plain', str)        e.preventDefault();    &#125;    document.addEventListener('copy', save)    document.execComma
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--常用功能/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--Swiper3使用方法/">Swiper3.0使用方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
-          2018-07-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>,
-    
-    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        基本结构Swiper: 整个滑动对象，有时特指滑块释放后仍然正向移动直到贴合边缘的过程(过渡)container: Swiper的容器，包括滑块（slides）、封套（wrapper)、分页器(pagination)、前进按钮等wrapper: 触控的对象，可触摸区域，移动的块的集合，过渡时会随slide切换产生位移slider: 切换的滑块，可以包含文字、图片、html元素或另外一个Swiperpagination: 分页器，指示sl
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--Swiper3使用方法/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/10/TX--Swiper3局部组件/">Swiper3.0局部组件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">
-          2018-07-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>,
-    
-    <a href='/tags/Swiper3-0/'>Swiper3.0</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最好不要直接直接引用完整的swiper的css文件要根据页面中是否包括滑动块（slides）、分页器(pagination)、前进按钮和动画等进行精简
-前进后退按钮 /* Arrows */.swiper-button-prev,.swiper-button-next &#123;position: absolute;top: 50%;width: 27px;height: 44px;margin-top: -22px;z-index:
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/10/TX--Swiper3局部组件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/09/TX--评论组件/">评论组件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-08T16:00:00.000Z" itemprop="datePublished">
-          2018-07-09
-      </time>
-    
-    
-    | 
-    <a href='/tags/供应商/'>供应商</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        使用方法 引用css和js文件  css       
-  &lt;link rel="stylesheet" href="css/comment.css"&gt;
-  js    
-  &lt;script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"&gt;&lt;/script&gt;&lt;script src="//ossweb-img.qq.com/images
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/09/TX--评论组件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2018/07/09/TX--微社区分享功能/">评论组件</a></h3>
                     <span>
                         <span class="post-meta">
@@ -568,42 +623,6 @@ html
                     
                     <p class="pull-right readMore">
                         <a href="/2018/07/09/TX--微社区分享功能/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/07/05/hexo--添加复制功能/">添加复制功能</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-07-05T08:42:53.000Z" itemprop="datePublished">
-          2018-07-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        hexo自带的代码段没有复制功能，有时候不是很方便，我们使用clipboard.js完善该功能。
-引入插件每个主题使用的模板语言不一样，这里以.pug为栗子cd你的博客目录，然后打开 theme -&gt; layout -&gt; _partial -&gt;head.pug，加入外链script(type='text/javascript', src='https://cdn.bootcss.com/clipboard.js/1.5
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/07/05/hexo--添加复制功能/">详情...</a>
                     </p>
                     
                 </div>

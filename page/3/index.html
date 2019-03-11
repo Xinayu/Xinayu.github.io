@@ -90,7 +90,7 @@
                 
                 <li><a href="/categories/ES6/" class="animsition-link">
                         ES6<small>(
-                            2)</small></a></li>
+                            3)</small></a></li>
                 
                 <li><a href="/categories/Gulp使用参考/" class="animsition-link">
                         Gulp使用参考<small>(
@@ -134,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            9)</small></a></li>
+                            10)</small></a></li>
                 
             </ul>
         </li>
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img7.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img4.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -238,6 +238,98 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/02/01/浏览器模型--浏览器环境/">浏览器环境</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">
+          2019-02-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/浏览器/'>浏览器</a>,
+    
+    <a href='/tags/优化/'>优化</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        浏览器的组成浏览器的核心是两部分：渲染引擎和 JavaScript 解释器（又称 JavaScript 引擎）
+
+渲染引擎：将网页代码渲染为平面文档
+  不同浏览器有不同的渲染引擎：
+
+Firefox：Gecko 引擎
+Safari：WebKit 引擎
+Chrome：Blink 引擎
+IE: Trident 引擎
+Edge: EdgeHTML 引擎
+渲染引擎处理页面通常分为四个阶段：
+
+
+
+解析代码：HTML 代码解析为 DOM，CSS
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/01/浏览器模型--浏览器环境/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/01/27/ES6--Iterator迭代器/">Iterator迭代器</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-01-27T03:06:12.000Z" itemprop="datePublished">
+          2019-01-27
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/Iterator迭代器/'>Iterator迭代器</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Iterator是一种接口，为不同的数据结构提供统一的访问机制，一旦部署便可以被for...of遍历获取。
+这个接口部署在数据结构的Symbol.iterator属性(是一个函数)，或者说，一个数据结构只要具有Symbol.iterator属性，就可以认为是“可遍历的”（iterable）
+遍历过程
+创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。
+第一次调用指针对象的next方法，可以将指针
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/01/27/ES6--Iterator迭代器/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -306,47 +398,6 @@ isie: /MSIE \d+\.\d+
                     
                     <p class="pull-right readMore">
                         <a href="/2019/01/22/JS--常用操作/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/13/浏览器模型-window.matchMedia()/">window.matchMedia()</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-13T03:06:12.000Z" itemprop="datePublished">
-          2019-01-13
-      </time>
-    
-    
-    | 
-    <a href='/tags/浏览器模型/'>浏览器模型</a>,
-    
-    <a href='/tags/媒体查询/'>媒体查询</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        该属性是css媒体查询列表转化成一个 MediaQueryList 实例，用js去操作
-var mdl = window.matchMedia('(min-width: 400px)');mdl instanceof MediaQueryList // true
-MediaQueryList 接口的实例属性
-MediaQueryList.media
-MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/13/浏览器模型-window.matchMedia()/">详情...</a>
                     </p>
                     
                 </div>
@@ -438,18 +489,18 @@ MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/01/12/浏览器模型--DOMContentLoaded和load/">DOMContentLoaded和load</a></h3>
+                    <h3><a href="/2019/01/13/浏览器模型-window.matchMedia()/">window.matchMedia()</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-01-12T03:06:12.000Z" itemprop="datePublished">
-          2019-01-12
+      <time datetime="2019-01-13T03:06:12.000Z" itemprop="datePublished">
+          2019-01-13
       </time>
     
     
     | 
     <a href='/tags/浏览器模型/'>浏览器模型</a>,
     
-    <a href='/tags/DOMContentLoaded/'>DOMContentLoaded</a>
+    <a href='/tags/媒体查询/'>媒体查询</a>
     
     
 </span>
@@ -458,20 +509,16 @@ MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
                 <div class="col-md-8">
                     <p>
                       
-                        DOMContentLoaded：当初始的 HTML 文档被完全加载和解析完成之后触发，而无需等待样式表、图像和子框架的完成加载。
-load：检测一个完全加载的页面，当一个资源及其依赖资源已完成加载时，将触发load事件。
-HTML文档的加载与页面的首次渲染当我们输入一个页面地址时：
-
-1、浏览器首先下载该地址所对应的 html 页面。
-
-2、浏览器解析 html 页面的 DOM 结构。
-
-3、开启下载线程对文档中的所有资源按优先级排序
+                        该属性是css媒体查询列表转化成一个 MediaQueryList 实例，用js去操作
+var mdl = window.matchMedia('(min-width: 400px)');mdl instanceof MediaQueryList // true
+MediaQueryList 接口的实例属性
+MediaQueryList.media
+MediaQueryList.media属性返回一个字符串，表示对应的 MediaQue
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/01/12/浏览器模型--DOMContentLoaded和load/">详情...</a>
+                        <a href="/2019/01/13/浏览器模型-window.matchMedia()/">详情...</a>
                     </p>
                     
                 </div>
@@ -526,6 +573,51 @@ HTML文档的加载与页面的首次渲染当我们输入一个页面地址时�
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2019/01/12/浏览器模型--DOMContentLoaded和load/">DOMContentLoaded和load</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-01-12T03:06:12.000Z" itemprop="datePublished">
+          2019-01-12
+      </time>
+    
+    
+    | 
+    <a href='/tags/浏览器模型/'>浏览器模型</a>,
+    
+    <a href='/tags/DOMContentLoaded/'>DOMContentLoaded</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        DOMContentLoaded：当初始的 HTML 文档被完全加载和解析完成之后触发，而无需等待样式表、图像和子框架的完成加载。
+load：检测一个完全加载的页面，当一个资源及其依赖资源已完成加载时，将触发load事件。
+HTML文档的加载与页面的首次渲染当我们输入一个页面地址时：
+
+1、浏览器首先下载该地址所对应的 html 页面。
+
+2、浏览器解析 html 页面的 DOM 结构。
+
+3、开启下载线程对文档中的所有资源按优先级排序
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/01/12/浏览器模型--DOMContentLoaded和load/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2019/01/04/Nodejs--Thunk函数和Generator函数/">Thunk函数和Generator函数</a></h3>
                     <span>
                         <span class="post-meta">
@@ -552,94 +644,6 @@ x是参数，将其放
                     
                     <p class="pull-right readMore">
                         <a href="/2019/01/04/Nodejs--Thunk函数和Generator函数/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/03/Nodejs--Express的使用/">Express框架</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-03T03:06:12.000Z" itemprop="datePublished">
-          2019-01-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Express 是一个简洁而灵活的 node.js Web应用框架, 提供了一系列强大特性帮助你创建各种 Web 应用，和丰富的 HTTP 工具。
-使用 Express 可以快速地搭建一个完整功能的网站。
-搭建服务器//引入expressvar express = require('express');var app = express();//引入服务器模块，监听端口app.listen('18000',function () &#1
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/03/Nodejs--Express的使用/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/02/Nodejs--创建web服务器/">创建web服务器</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-02T03:06:12.000Z" itemprop="datePublished">
-          2019-01-02
-      </time>
-    
-    
-    | 
-    <a href='/tags/Nodejs疯狂试探/'>Nodejs疯狂试探</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Web服务器的功能：
-
-接受HTTP请求（GET、POST、UPDATE、DELETE、PUT、PATCH）
-
-处理HTTP请求（自己处理，或请求别的程序处理）
-
-做出响应（返回页面、文件、各类数据等）
-
-
-常见请求种类：
-
-请求文件：包括静态文件（网页、图片、前端JavaScript文件、css文件……），及由程序处理得到的文件
-
-完成特定的操作：如登陆、获取特定数据
-
-
-使用nodejs可以搭建web服务器而且不依赖其他服务器软件（
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/02/Nodejs--创建web服务器/">详情...</a>
                     </p>
                     
                 </div>

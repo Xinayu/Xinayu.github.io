@@ -90,7 +90,7 @@
                 
                 <li><a href="/categories/ES6/" class="animsition-link">
                         ES6<small>(
-                            2)</small></a></li>
+                            3)</small></a></li>
                 
                 <li><a href="/categories/Gulp使用参考/" class="animsition-link">
                         Gulp使用参考<small>(
@@ -134,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            9)</small></a></li>
+                            10)</small></a></li>
                 
             </ul>
         </li>
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -238,6 +238,77 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/14/设计模式--惰性模式/">惰性模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-14T05:03:38.000Z" itemprop="datePublished">
+          2018-11-14
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        用于减少每次代码执行时的重复性的分支判断，通过对对象重定义来屏蔽原对象中分支判断。比如我们在判断浏览器兼容性时，会有多个分支，每次执行时如果都重新进行判断，无疑是对资源的浪费，这就可以通过惰性模式来优化。有两种实现方法：立即执行和惰性执行
+立即执行当对象初始化的时候就立即执行，重写对象的方法//添加绑定事件方法onA.on = function(dom, type, fn) &#123;    //如果支持addEventListene
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/14/设计模式--惰性模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/11/07/设计模式--节流模式/">节流模式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-07T08:56:31.000Z" itemprop="datePublished">
+          2018-11-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS设计模式/'>JS设计模式</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        节流模式用于性能优化，比如js中的resize，mousemove等是会不间断触发的，我们就可以这么优化：//简单的节流模式//method ：方法//context ：上下文function throttle(method,context)&#123;    //清除定时器    clearTimeout(method.tId);    //300ms时间间隔后执行函数    method.tId=setTimeout(functio
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/11/07/设计模式--节流模式/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -514,80 +585,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2018/10/30/设计模式--原型模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/30/设计模式--工厂模式/">工厂模式</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-30T04:13:43.000Z" itemprop="datePublished">
-          2018-10-30
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS设计模式/'>JS设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        与创建型模式类似，工厂模式创建对象（视为工厂里的产品）时无需指定创建对象的具体类。
-工厂模式定义一个用于创建对象的接口，这个接口由子类决定实例化哪一个类。var productManager = &#123;&#125;;//不同的类型productManager.createProductA = function () &#123;    console.log('ProductA');&#125;productManager.cre
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/30/设计模式--工厂模式/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2018/10/01/3JS--TWEEN补间动画/">TWEEN补间动画</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2018-10-01T08:42:53.000Z" itemprop="datePublished">
-          2018-10-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/THREE/'>THREE</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        使用方法首先要用一个对象将需要进行补间动画的值包含进来
-var changeSrc = &#123;positionZ:1180&#125;
-然后在tween中注册使用该对象并且设置相关参数 
-var tween = new TWEEN.Tween(posSrc)     //注册.to(&#123;pos:640&#125;,3000)						//补间结束值 3000是持续时间.easing(TWEEN.Easing.Sinuso
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2018/10/01/3JS--TWEEN补间动画/">详情...</a>
                     </p>
                     
                 </div>

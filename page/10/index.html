@@ -90,7 +90,7 @@
                 
                 <li><a href="/categories/ES6/" class="animsition-link">
                         ES6<small>(
-                            2)</small></a></li>
+                            3)</small></a></li>
                 
                 <li><a href="/categories/Gulp使用参考/" class="animsition-link">
                         Gulp使用参考<small>(
@@ -134,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            9)</small></a></li>
+                            10)</small></a></li>
                 
             </ul>
         </li>
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img4.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -242,7 +242,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2018/06/05/CSS--flex布局/">flex布局</a></h3>
+                    <h3><a href="/2018/06/05/CSS--逐帧动画/">逐帧动画</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
@@ -260,20 +260,88 @@
                 <div class="col-md-8">
                     <p>
                       
-                        弹性布局是未来布局的发展趋势，现代浏览器均对flex实现了不同程度的支持，但是如果要兼容老版本的浏览器，则还是应该回归原始的布局方式。
-基本概念
-容器和项目
-
-弹性布局的实现需要一个容器，也就是flex容器。只要把父元素的display设置为flex，则他的子元素就全部成为了flex项目
-
-主轴和交叉轴
-
-主轴（main axis）处于水平方向，是x轴。起点叫main start，终点叫做main end。交叉轴（cross axis）
+                        实现逐帧动画@-webkit-keyframes sprite-slogan &#123;    0% &#123;        background-position-y: 0    &#125;    100% &#123;        background-position-y: -10800px    &#125;&#125;.page-index .slogan &#123;    position: absolute; 
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2018/06/05/CSS--flex布局/">详情...</a>
+                        <a href="/2018/06/05/CSS--逐帧动画/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/05/CSS--移动端1px问题/">移动端1px问题</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
+          2018-06-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/css/'>css</a>,
+    
+    <a href='/tags/1px/'>1px</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        为什么有些手机的1px看起来会比较胖呢？先梳理一下几个基本概念
+设备像素（物理像素）屏幕上的真实像素点，也叫做物理像素。一个像素点只显示一个颜色。所以物理像素越多能显示的颜色越多。
+设备独立像素操作系统定义的一种长度单位。iphone6的设备独立像素 375 * 667，正好是设备像素的一半
+CSS像素CSS 中的长度单位，在CSS 中使用的 px都是指CSS像素。
+如果设备像素和独立像素是相等的，那就不是Retina屏幕。为了追求更极
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/05/CSS--移动端1px问题/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2018/06/05/CSS--兼容措施/">兼容措施</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-06-05T01:16:35.000Z" itemprop="datePublished">
+          2018-06-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/css/'>css</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        透明度opcaity .ele&#123;  opacity: 1;  filter：alpha(opacity=100)  &#125;/*支持grba*/　.ele&#123;       background:rgba(0,0,0,0.5); 　　　　filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F00
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2018/06/05/CSS--兼容措施/">详情...</a>
                     </p>
                     
                 </div>
@@ -531,41 +599,6 @@ ECMAScript 的数据类型
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/09/22/JS--数组型对象的实现/">数组型对象的实现</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
-          2017-09-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在jQuery中，如果调用$函数访问一个元素，例如console.log($(&#39;div&#39;));，则会返回一个数组型对象。可以借助循环添加的方式实现 var o = &#123;&#125;;array = ['p','a']for(i=0;i&lt;array.length;i++)&#123;  o[i] = arry[i];&#125;o.length = array.length;console.log(o);		
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/09/22/JS--数组型对象的实现/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
                     <h3><a href="/2017/09/22/JS--call 和 apply/">call和apply</a></h3>
                     <span>
                         <span class="post-meta">
@@ -595,44 +628,6 @@ var ca
                     
                     <p class="pull-right readMore">
                         <a href="/2017/09/22/JS--call 和 apply/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2017/09/22/JS--关于对象/">关于对象</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2017-09-21T16:00:00.000Z" itemprop="datePublished">
-          2017-09-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        js中有普通对象和函数对象。
-普通对象都是 created by Object，继承了Object.prototype对象，所以普通对象从创建开始就有了对象（Object.prototype）的方法。
-那普通的对象的父类Object函数，它是Function函数创造的，即是 created by Function，所以他继承了Function.prototype对象。
-所以，普通的对象的父对象Object有自己的属性（来源于Functi
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2017/09/22/JS--关于对象/">详情...</a>
                     </p>
                     
                 </div>

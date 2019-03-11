@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://github.com/Xinayu/2019/02/26/ES6--promise,Generator%E5%87%BD%E6%95%B0%EF%BC%8Casync%E5%87%BD%E6%95%B0/</loc>
+        <lastmod>2019-03-11T08:45:06.251Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://github.com/Xinayu/2019/11/21/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B--%E8%B7%A8%E5%9F%9F/</loc>
+        <lastmod>2019-03-04T10:58:30.478Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://github.com/Xinayu/2018/07/03/Vue--%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
         <lastmod>2019-03-04T08:48:42.196Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -135,7 +151,7 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/2019/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B--window.matchMedia()/</loc>
+        <loc>https://github.com/Xinayu/2019/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window.matchMedia()/</loc>
         <lastmod>2019-02-18T06:10:49.626Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -143,7 +159,7 @@
     </url>
 
     <url>
-        <loc>https://github.com/Xinayu/2019/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window.matchMedia()/</loc>
+        <loc>https://github.com/Xinayu/2019/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B--window.matchMedia()/</loc>
         <lastmod>2019-02-18T06:10:49.626Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

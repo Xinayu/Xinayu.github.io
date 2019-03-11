@@ -90,7 +90,7 @@
                 
                 <li><a href="/categories/ES6/" class="animsition-link">
                         ES6<small>(
-                            2)</small></a></li>
+                            3)</small></a></li>
                 
                 <li><a href="/categories/Gulp使用参考/" class="animsition-link">
                         Gulp使用参考<small>(
@@ -134,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            9)</small></a></li>
+                            10)</small></a></li>
                 
             </ul>
         </li>
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img1.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -238,6 +238,50 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/21/浏览器模型--跨域/">跨域</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-21T03:06:12.000Z" itemprop="datePublished">
+          2019-11-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/浏览器模型/'>浏览器模型</a>,
+    
+    <a href='/tags/跨域/'>跨域</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        简介跨域，指的是浏览器不能执行其他网站的脚本。因为会产生CSRF跨域攻击
+
+如果用户登录一个A网站并且输入了银行账户，在本地保存了Cookies，当他再次访问A网站的时候回主动带上Cookies，所以如果此时有其他网站B利用js访问网站A，那么A网站就无法分辨是用户自主访问还是其他网页访问
+所以同源政策是很有必要的
+解决方案三种行为或收到同源政策的限制：
+
+Cookie、LocalStorage 和 IndexDB 无法读取。
+DOM 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/21/浏览器模型--跨域/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -390,6 +434,48 @@ zoom的缩放改变了文档流的大小，会引起元素实际占据
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2019/02/26/ES6--promise,Generator函数，async函数/">promise,Generator函数，async函数</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-02-26T03:06:12.000Z" itemprop="datePublished">
+          2019-02-26
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/promise/'>promise</a>,
+    
+    <a href='/tags/Generator函数/'>Generator函数</a>,
+    
+    <a href='/tags/async函数/'>async函数</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        promise将回调函数的返回状态转成用relsove和reject触发事件，用then和catch去捕获
+function demo() &#123;    /**      * @param &#123;relsove&#125; : 成功状态的回调函数     * @param &#123;reject&#125; : 失败状态的回调函数     * 这里的失败和成功是相对的，取决于用户希望返回哪一种结果     * */    
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/26/ES6--promise,Generator函数，async函数/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2019/02/11/JS事件--其他事件/">其他事件</a></h3>
                     <span>
                         <span class="post-meta">
@@ -416,6 +502,45 @@ zoom的缩放改变了文档流的大小，会引起元素实际占据
                     
                     <p class="pull-right readMore">
                         <a href="/2019/02/11/JS事件--其他事件/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/02/09/JS事件--拖拉事件/">拖拉事件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">
+          2019-02-09
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        拖拉事件的种类网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都是可以直接拖拉的。为了让元素节点可拖拉，可以将该节点的draggable属性设为true。&lt;!-- 如果不想让图片等可以拖拉，设置值为false即可 --&gt;&lt;div draggable="true"&gt;  此区域可拖拉&lt;/div&gt;
+
+一旦某个元素节点的draggable属性设为true，就无法再用鼠标选中该节点内部的文字或
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/09/JS事件--拖拉事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -471,11 +596,11 @@ Touch接口单个触点产生Touch实例var touch
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/02/09/JS事件--拖拉事件/">拖拉事件</a></h3>
+                    <h3><a href="/2019/02/08/JS事件--表单事件/">表单模型</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">
-          2019-02-09
+      <time datetime="2019-02-07T16:00:00.000Z" itemprop="datePublished">
+          2019-02-08
       </time>
     
     
@@ -491,14 +616,15 @@ Touch接口单个触点产生Touch实例var touch
                 <div class="col-md-8">
                     <p>
                       
-                        拖拉事件的种类网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都是可以直接拖拉的。为了让元素节点可拖拉，可以将该节点的draggable属性设为true。&lt;!-- 如果不想让图片等可以拖拉，设置值为false即可 --&gt;&lt;div draggable="true"&gt;  此区域可拖拉&lt;/div&gt;
-
-一旦某个元素节点的draggable属性设为true，就无法再用鼠标选中该节点内部的文字或
+                        表单事件的种类
+input事件
+  input事件当&lt;input&gt;、&lt;select&gt;、&lt;textarea&gt;的值发生变化时触发。对于复选框（&lt;input type=checkbox&gt;）或单选框（&lt;input type=radio&gt;），用户改变选项时，也会触发这个事件。另外，对于打开contenteditable属性的元素，只要值发生变化，也会触发input事件。
+  input事
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/02/09/JS事件--拖拉事件/">详情...</a>
+                        <a href="/2019/02/08/JS事件--表单事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -541,130 +667,6 @@ Location.hostname：主机名，不
                     
                     <p class="pull-right readMore">
                         <a href="/2019/02/08/浏览器模型--Location对象/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/08/JS事件--表单事件/">表单模型</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-07T16:00:00.000Z" itemprop="datePublished">
-          2019-02-08
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/JS事件/'>JS事件</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        表单事件的种类
-input事件
-  input事件当&lt;input&gt;、&lt;select&gt;、&lt;textarea&gt;的值发生变化时触发。对于复选框（&lt;input type=checkbox&gt;）或单选框（&lt;input type=radio&gt;），用户改变选项时，也会触发这个事件。另外，对于打开contenteditable属性的元素，只要值发生变化，也会触发input事件。
-  input事
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/08/JS事件--表单事件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/07/JS事件--进度事件/">键盘事件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">
-          2019-02-07
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/JS事件/'>JS事件</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        进度事件种类进度事件用来描述资源加载的进度，主要由 AJAX 请求、&lt;img&gt;、&lt;audio&gt;、&lt;video&gt;、&lt;style&gt;、&lt;link&gt;等外部资源的加载触发，继承了ProgressEvent接口。它主要包含以下几种事件。
-
-abort：外部资源中止加载时（比如用户取消）触发。如果发生错误导致中止，不会触发该事件。
-error：由于错误导致外部资源无法加载时触发。
-load：
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/07/JS事件--进度事件/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/07/JS事件--键盘事件/">键盘模型</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">
-          2019-02-07
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/JS事件/'>JS事件</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        键盘事件的分类键盘事件由用户击打键盘触发，主要有keydown、keypress、keyup三个事件，它们都继承了KeyboardEvent接口。
-
-keydown：按下键盘时触发。
-keypress：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。
-keyup：松开键盘时触发该事件。
-
-KeyboardEvent 的实例属
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/07/JS事件--键盘事件/">详情...</a>
                     </p>
                     
                 </div>

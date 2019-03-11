@@ -90,7 +90,7 @@
                 
                 <li><a href="/categories/ES6/" class="animsition-link">
                         ES6<small>(
-                            2)</small></a></li>
+                            3)</small></a></li>
                 
                 <li><a href="/categories/Gulp使用参考/" class="animsition-link">
                         Gulp使用参考<small>(
@@ -134,7 +134,7 @@
                 
                 <li><a href="/categories/浏览器模型/" class="animsition-link">
                         浏览器模型<small>(
-                            9)</small></a></li>
+                            10)</small></a></li>
                 
             </ul>
         </li>
@@ -207,7 +207,7 @@
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img2.jpg ) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img5.jpg ) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
@@ -242,11 +242,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/02/05/JS事件--Event对象/">Event对象</a></h3>
+                    <h3><a href="/2019/02/07/JS事件--进度事件/">键盘事件</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-02-04T16:00:00.000Z" itemprop="datePublished">
-          2019-02-05
+      <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">
+          2019-02-07
       </time>
     
     
@@ -262,17 +262,59 @@
                 <div class="col-md-8">
                     <p>
                       
-                        事件触发后会产生一个Event对象，作为参数传递给监听函数Event对象本身就是一个构造函数，可以用来生成新的实例。event = new Event(type, options);
-事件触发相当于new一个Event函数，然后传递给监听函数,所以继承了Event.prototype
-实例属性
-bubbles：当前事件是否会冒泡,只读
-eventPhase：事件所处阶段。0：没有发生，1：捕获，2：到达节点，3：冒泡
-cancelabl
+                        进度事件种类进度事件用来描述资源加载的进度，主要由 AJAX 请求、&lt;img&gt;、&lt;audio&gt;、&lt;video&gt;、&lt;style&gt;、&lt;link&gt;等外部资源的加载触发，继承了ProgressEvent接口。它主要包含以下几种事件。
+
+abort：外部资源中止加载时（比如用户取消）触发。如果发生错误导致中止，不会触发该事件。
+error：由于错误导致外部资源无法加载时触发。
+load：
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/02/05/JS事件--Event对象/">详情...</a>
+                        <a href="/2019/02/07/JS事件--进度事件/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/02/07/JS事件--键盘事件/">键盘模型</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">
+          2019-02-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        键盘事件的分类键盘事件由用户击打键盘触发，主要有keydown、keypress、keyup三个事件，它们都继承了KeyboardEvent接口。
+
+keydown：按下键盘时触发。
+keypress：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。
+keyup：松开键盘时触发该事件。
+
+KeyboardEvent 的实例属
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/07/JS事件--键盘事件/">详情...</a>
                     </p>
                     
                 </div>
@@ -327,6 +369,48 @@ shiftKey：Shift
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
+                    <h3><a href="/2019/02/05/JS事件--Event对象/">Event对象</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-02-04T16:00:00.000Z" itemprop="datePublished">
+          2019-02-05
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        事件触发后会产生一个Event对象，作为参数传递给监听函数Event对象本身就是一个构造函数，可以用来生成新的实例。event = new Event(type, options);
+事件触发相当于new一个Event函数，然后传递给监听函数,所以继承了Event.prototype
+实例属性
+bubbles：当前事件是否会冒泡,只读
+eventPhase：事件所处阶段。0：没有发生，1：捕获，2：到达节点，3：冒泡
+cancelabl
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/05/JS事件--Event对象/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
                     <h3><a href="/2019/02/04/JS事件--事件模型/">事件模型</a></h3>
                     <span>
                         <span class="post-meta">
@@ -358,6 +442,47 @@ HTML 的 on- 属性
                     
                     <p class="pull-right readMore">
                         <a href="/2019/02/04/JS事件--事件模型/">详情...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/02/03/JS事件--EventTarget 接口/">EventTarget 接口</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-02-02T16:00:00.000Z" itemprop="datePublished">
+          2019-02-03
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/JS事件/'>JS事件</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        所有Node节点部署了EventTarget接口，用于事件操作（监听和触发），主要有三个方法：addEventListener、removeEventListener、dispatchEvent
+监听事件 addEventListener一旦事件发生，就会执行回调函数，默认只在冒泡阶段触发。target.addEventListener(type, listener[, useCapture]);
+
+type：事件名称，大小写敏感。
+l
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/02/03/JS事件--EventTarget 接口/">详情...</a>
                     </p>
                     
                 </div>
@@ -404,47 +529,6 @@ JSON.parse()：将符合JSON~`规则的字符串转换成一个
                     
                     <p class="pull-right readMore">
                         <a href="/2019/02/03/JS--JSON理解/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/03/JS事件--EventTarget 接口/">EventTarget 接口</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-02-02T16:00:00.000Z" itemprop="datePublished">
-          2019-02-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/JS事件/'>JS事件</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        所有Node节点部署了EventTarget接口，用于事件操作（监听和触发），主要有三个方法：addEventListener、removeEventListener、dispatchEvent
-监听事件 addEventListener一旦事件发生，就会执行回调函数，默认只在冒泡阶段触发。target.addEventListener(type, listener[, useCapture]);
-
-type：事件名称，大小写敏感。
-l
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/03/JS事件--EventTarget 接口/">详情...</a>
                     </p>
                     
                 </div>
@@ -565,98 +649,6 @@ userAgent：浏览器的 User Agent 字符串，表示浏览器的厂商和版�
                     
                     <p class="pull-right readMore">
                         <a href="/2019/02/01/浏览器模型--Navigator 对象，Screen 对象/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/02/01/浏览器模型--浏览器环境/">浏览器环境</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">
-          2019-02-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/浏览器/'>浏览器</a>,
-    
-    <a href='/tags/优化/'>优化</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        浏览器的组成浏览器的核心是两部分：渲染引擎和 JavaScript 解释器（又称 JavaScript 引擎）
-
-渲染引擎：将网页代码渲染为平面文档
-  不同浏览器有不同的渲染引擎：
-
-Firefox：Gecko 引擎
-Safari：WebKit 引擎
-Chrome：Blink 引擎
-IE: Trident 引擎
-Edge: EdgeHTML 引擎
-渲染引擎处理页面通常分为四个阶段：
-
-
-
-解析代码：HTML 代码解析为 DOM，CSS
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/02/01/浏览器模型--浏览器环境/">详情...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/01/27/ES6--Iterator迭代器/">Iterator迭代器</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-01-27T03:06:12.000Z" itemprop="datePublished">
-          2019-01-27
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/Iterator迭代器/'>Iterator迭代器</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Iterator是一种接口，为不同的数据结构提供统一的访问机制，一旦部署便可以被for...of遍历获取。
-这个接口部署在数据结构的Symbol.iterator属性(是一个函数)，或者说，一个数据结构只要具有Symbol.iterator属性，就可以认为是“可遍历的”（iterable）
-遍历过程
-创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。
-第一次调用指针对象的next方法，可以将指针
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/01/27/ES6--Iterator迭代器/">详情...</a>
                     </p>
                     
                 </div>
